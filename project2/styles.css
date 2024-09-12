@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+/* Importerer en spesifikk font fra Google Fonts */
+
+/* Stil for hele body-elementet */
+body {
+  margin: 0; /* Fjerner standard margen */
+  display: flex; /* Bruker flexbox for å sentrere innholdet */
+  justify-content: center; /* Sentrerer innholdet horisontalt */
+  height: 100vh; /* Setter høyden til hele visningshøyden */
+  align-items: center; /* Sentrerer innholdet vertikalt */
+  background-color: limegreen; /* Setter bakgrunnsfargen til limegrønn */
+  font-family: "Protest Guerrilla", sans-serif; /* Bruker den importerte fonten med fallback til sans-serif */
+  font-size: 3rem; /* Setter skriftstørrelsen til 3rem */
+}

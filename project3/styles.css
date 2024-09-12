@@ -1,0 +1,6 @@
+/* Setter margen til 0 og sikrer at hele skjermen dekkes */
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: black;
+}
