@@ -1,0 +1,37 @@
+/* Setter margen til 0 og sikrer at hele skjermen dekkes */
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: black;
+}
+
+/* Stil for et hjerteikon med animasjon */
+span {
+  background: url("https://cdn1.iconfinder.com/data/icons/health-care-66/32/Heart_Beats-256.png");
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  pointer-events: none; /* Gjør elementet ikke-klikkbart */
+  background-size: cover;
+  left: 50%; /* Plasserer elementet i midten av skjermen horisontalt */
+  top: 50%; /* Plasserer elementet i midten av skjermen vertikalt */
+  transform: translate(-50%, -50%); /* Sentrerer elementet */
+  animation: animate 6s linear infinite; /* Legger til en kontinuerlig animasjon */
+}
+
+/* Definerer animasjonen som endrer plassering, gjennomsiktighet og farge */
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%); /* Startposisjon */
+    opacity: 1; /* Full synlighet */
+    filter: hue-rotate(0); /* Startfarge */
+  }
+  100% {
+    transform: translate(
+      -50%,
+      -5000%
+    ); /* Beveger elementet bort fra skjermen */
+    opacity: 0; /* Gjør elementet usynlig */
+    filter: hue-rotate(720deg); /* Endrer fargen gradvis */
+  }
+}
