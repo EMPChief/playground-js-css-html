@@ -1,0 +1,46 @@
+body {
+    background-color: goldenrod; /* Bakgrunnsfarge for kroppen */
+    margin: 0; /* Fjerner standard marg */
+    display: flex; /* Bruker flex-boks for layout */
+    flex-direction: column; /* Arrangerer elementer i kolonne */
+    align-items: center; /* Sentrerer elementer horisontalt */
+}
+
+.image-container {
+    text-align: center; /* Sentraliserer tekst og bilder i containeren */
+}
+
+.image-container img {
+    margin: 8px; /* Avstand mellom bilder */
+    border-radius: 12px; /* Runde hjørner på bildene */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Skyggeeffekt for bilder */
+    background-color: lightgreen; /* Bakgrunnsfarge for bilder */
+    width: 300px; /* Bredde på bildene */
+    height: 300px; /* Høyde på bildene */
+}
+
+.image-container img:hover {
+    transition: 0.6s ease-in-out; /* Overgangseffekt for hover-effekt på bilder */
+    transform: scale(1.05); /* Forstørrer bildet litt ved hover */
+}
+
+.btn {
+    background-color: silver; /* Bakgrunnsfarge for knappen */
+    border: none; /* Ingen kantlinje */
+    padding: 10px 18px; /* Polstring rundt teksten */
+    color: white; /* Tekstfarge */
+    border-radius: 12px; /* Runde hjørner på knappen */
+    font-size: 16px; /* Tekststørrelse */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Skyggeeffekt for knappen */
+    cursor: pointer; /* Endrer musepekeren til en hånd når over knappen */
+    margin-bottom: 3px; /* Avstand under knappen */
+}
+
+.btn:hover {
+    background-color: black; /* Bakgrunnsfarge når knappen er over */
+    color: white; /* Tekstfarge når knappen er over */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Endret skyggeeffekt ved hover */
+    opacity: 0.8; /* Gjør knappen litt gjennomsiktig ved hover */
+    transition: background-color 0.8s ease-out, color 0.8s ease-out, box-shadow 0.8s ease-out, transform 0.8s ease-out; /* Overgangseffekt for hover-effekt */
+    transform: scale(1.1); /* Øker størrelsen på knappen ved hover */
+}

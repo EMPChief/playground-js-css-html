@@ -1,0 +1,48 @@
+/* Setter margen til 0 og bruker flexbox for å sentrere innholdet både horisontalt og vertikalt */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Sentrerer innholdet horisontalt */
+  height: 100vh; /* Setter høyden til hele visningshøyden */
+  align-items: center; /* Sentrerer innholdet vertikalt */
+  background-color: aliceblue; /* Bakgrunnsfarge satt til aliceblue */
+  font-family: sans-serif; /* Bruker sans-serif skriftfamilie */
+}
+
+/* Stil for knappen */
+.btn {
+  background-color: pink; /* Bakgrunnsfarge for knappen */
+  padding: 20px 40px; /* Polstring rundt teksten */
+  border-radius: 5px; /* Avrundede kanter */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Legger til skyggeeffekt */
+  text-decoration: none; /* Fjerner understrek fra lenker */
+  color: black; /* Tekstfarge */
+  position: relative; /* Setter posisjonering relativt for ::before pseudo-elementet */
+  overflow: hidden; /* Skjuler alt som går utenfor knappens kant */
+}
+
+/* Stil for tekst i knappen */
+.btn span {
+  position: relative; /* Setter posisjonering relativt for å overstyre pseudo-elementet */
+  z-index: 1; /* Plasserer teksten over pseudo-elementet */
+}
+
+/* Pseudo-element som lager en bakgrunnseffekt ved hover */
+.btn::before {
+  content: ""; /* Innholdet for pseudo-elementet */
+  position: absolute; /* Absolutt posisjonering for å plassere det relativt til knappen */
+  background-color: orangered; /* Bakgrunnsfarge for effekten */
+  width: 0; /* Starter med null bredde */
+  height: 0; /* Starter med null høyde */
+  left: var(--xPos); /* Plassering horisontalt basert på CSS-variabel */
+  top: var(--yPos); /* Plassering vertikalt basert på CSS-variabel */
+  transform: translate(-50%, -50%); /* Sentrerer effekten ved å flytte den */
+  border-radius: 50%; /* Gjør effekten rund */
+  transition: width 0.5s, height 0.5s; /* Jevn overgang for bredde og høyde */
+}
+
+/* Endrer størrelse på bakgrunnseffekten når knappen hovres */
+.btn:hover::before {
+  width: 300px; /* Setter bredde når hovret */
+  height: 300px; /* Setter høyde når hovret */
+}

@@ -1,6 +1,58 @@
 /* Setter margen til 0 og sikrer at hele skjermen dekkes */
 body {
   margin: 0;
-  height: 100vh;
-  background-color: black;
+  display: flex; /* Bruker flexbox for å sentrere innholdet */
+  justify-content: center; /* Sentrerer innholdet horisontalt */
+  height: 100vh; /* Setter høyden til hele visningshøyden */
+  align-items: center; /* Sentrerer innholdet vertikalt */
+  font-family: cursive; /* Bruker cursive skriftfamilie */
+  background-color: gold; /* Bakgrunnsfarge satt til gull */
+}
+
+/* Stil for kalenderbeholderen */
+.calender-container {
+  background-color: gainsboro; /* Bakgrunnsfarge satt til gainsboro */
+  width: 300px; /* Fikset bredde for beholderen */
+  text-align: center; /* Sentrerer tekst */
+  border-radius: 10px; /* Avrundede kanter */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Legger til skygge */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Jevn overgang for transformasjon og skygge */
+  overflow: hidden; /* Hindrer overløp av innhold */
+}
+
+/* Når kalenderen hovres, skaleres den og får en sterkere skygge */
+.calender-container:hover {
+  transform: scale(1.05); /* Øker størrelsen litt */
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Øker skyggeeffekten */
+}
+
+/* Stil for månedsnavnet */
+.month-name {
+  margin: 0; /* Fjerner standard margen */
+  background-color: orangered; /* Bakgrunnsfarge for månedsnavnet */
+  color: white; /* Tekstfarge satt til hvit */
+  padding: 10px; /* Polstring rundt teksten */
+  font-size: 30px; /* Størrelsen på månedsnavnet */
+  font-weight: bold; /* Fet skrift */
+}
+
+/* Stil for ukedagens navn */
+.day-name {
+  font-size: 20px; /* Størrelsen på ukedagens navn */
+  color: blueviolet; /* Fargen på ukedagens navn */
+}
+
+/* Stil for dagens nummer */
+.day-number {
+  font-size: 80px; /* Størrelse på dagens nummer */
+  margin: 0; /* Fjerner margin */
+  font-weight: bold; /* Fet skrift */
+}
+
+/* Stil for årstallet */
+.year {
+  margin: 20px 0; /* Legger til vertikal margin */
+  font-size: 20px; /* Størrelse på årstallet */
+  color: darkblue; /* Farge på årstallet */
+  font-weight: 500; /* Middels fet skrift */
 }
