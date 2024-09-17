@@ -1,0 +1,163 @@
+/* Generelle stilregler */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkkhaki; /* Bakgrunnsfarge for hele siden */
+  display: flex; /* Flexbox for sentrering */
+  justify-content: center; /* Sentrerer innholdet horisontalt */
+  align-items: center; /* Sentrerer innholdet vertikalt */
+  height: 100vh; /* Full høyde på viewport */
+}
+
+.weather-card {
+  /* Stil for kortet som inneholder søke- og værseksjon */
+  width: 90%;
+  max-width: 470px;
+  background: linear-gradient(135deg, #00feba, #5b8ff9);
+  color: #fff;
+  margin: auto;
+  text-align: center;
+  padding: 40px;
+  border-radius: 50px; /* Runde hjørner */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animasjon for hover-effekt */
+}
+
+.weather-card:hover {
+  /* Hover-effekt for kortet */
+  transform: translateY(-10px); /* Løfter kortet ved hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.weather-search-section {
+  /* Stil for seksjonen som inneholder søkefeltet */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.city-search-input {
+  /* Inputfelt for å skrive inn bynavn */
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  color: #555;
+  padding: 15px 25px;
+  height: 65px;
+  border-radius: 30px; /* Runde hjørner */
+  flex: 1;
+  margin-right: 16px;
+  font-size: 18px;
+  transition: background 0.3s, box-shadow 0.3s; /* Glatt overgangseffekt */
+}
+
+.city-search-input:hover {
+  background: #fff; /* Endrer bakgrunn ved hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skyggeeffekt ved hover */
+}
+
+.search-weather-button {
+  /* Stil for søkeknappen */
+  border: 0;
+  outline: 0;
+  background: #00feba;
+  border-radius: 50%; /* Runde knapper */
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s, box-shadow 0.3s; /* Glatt overgangseffekt */
+}
+
+.search-weather-button img {
+  width: 16px;
+}
+
+.search-weather-button:hover {
+  background: #5b8ff9; /* Endrer bakgrunn ved hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skyggeeffekt ved hover */
+}
+
+.weather-condition-icon {
+  /* Ikon for værforhold */
+  width: 160px;
+  margin-top: 25px;
+  transition: transform 0.3s; /* Glatt overgangseffekt */
+}
+
+.weather-condition-icon:hover {
+  transform: scale(1.1); /* Forstørrer ikonet ved hover */
+}
+
+.weather-display-section h1 {
+  /* Stil for temperaturvisning */
+  font-size: 60px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.weather-display-section h2 {
+  /* Stil for by- og landvisning */
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+.weather-details-section {
+  /* Seksjon for detaljert værinfo */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  margin-top: 40px;
+}
+
+.weather-detail-column {
+  /* Kolonne for værdetaljer som fuktighet og vind */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-detail-column img {
+  width: 40px;
+  margin-right: 15px;
+  transition: transform 0.3s; /* Glatt overgangseffekt */
+}
+
+.weather-detail-column img:hover {
+  transform: scale(1.1); /* Forstørrer ikonet ved hover */
+}
+
+.current-humidity,
+.current-wind-speed {
+  font-size: 28px;
+  margin-top: -6px;
+}
+
+.current-humidity:hover,
+.current-wind-speed:hover {
+  opacity: 0.8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skyggeeffekt ved hover */
+}
+
+.weather-display-section {
+  display: none; /* Skjuler værseksjonen som standard */
+}
+
+.error-message {
+  text-align: left;
+  color: #f00; /* Rød tekstfarge for feilmeldinger */
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+  display: none; /* Skjult som standard */
+}

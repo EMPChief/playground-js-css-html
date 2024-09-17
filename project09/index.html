@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Kobler til CSS-fil -->
+  </head>
+  <body>
+    <div class="weather-card">
+      <!-- Kortet som inneholder søkefeltet og værinfo -->
+
+      <div class="weather-search-section">
+        <!-- Seksjonen for bysøk -->
+        <input
+          type="text"
+          class="city-search-input"
+          placeholder="Enter city name"
+          spellcheck="false"
+          aria-label="Search for city"
+        />
+        <!-- Inputfeltet for å skrive inn byens navn -->
+        <button class="search-weather-button">
+          <!-- Knappen for å søke etter byen -->
+          <img src="assets/search.png" alt="Search button icon" />
+        </button>
+      </div>
+
+      <div class="error-message">
+        <!-- Seksjon for feilmelding -->
+        <p>City not found</p>
+      </div>
+
+      <div class="weather-display-section">
+        <!-- Seksjonen for å vise værinformasjon, som er skjult som standard -->
+        <img
+          src="assets/snow.png"
+          alt="Weather icon"
+          class="weather-condition-icon"
+        />
+        <!-- Ikonet som viser værtilstanden -->
+
+        <h1 class="current-temperature">37°C</h1>
+        <!-- Tekst som viser nåværende temperatur -->
+        <h2 class="city-name">Oslo</h2>
+        <!-- Tekst som viser bynavn og land -->
+
+        <div class="weather-details-section">
+          <!-- Seksjonen som viser detaljert værinfo som fuktighet og vind -->
+          <div class="weather-detail-column">
+            <!-- Kolonne for fuktighet -->
+            <img src="assets/humidity.png" alt="Humidity icon" />
+            <div>
+              <p class="current-humidity">37%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="weather-detail-column">
+            <!-- Kolonne for vindhastighet -->
+            <img src="assets/wind.png" alt="Wind speed icon" />
+            <div>
+              <p class="current-wind-speed">47 km/h</p>
+              <p>Wind speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <!-- Kobler til JavaScript-fil -->
+  </body>
+</html>

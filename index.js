@@ -1,55 +1,55 @@
 const projects = [
   {
-    name: "Heart Trail Animation",
+    name: "01. Heart Trail Animation",
     icon: "fas fa-heart",
-    link: "project1/index.html",
+    link: "project01/index.html",
   },
   {
-    name: "Auto Text Effect Animation",
+    name: "02. Auto Text Effect Animation",
     icon: "fas fa-pen",
-    link: "project2/index.html",
+    link: "project02/index.html",
   },
   {
-    name: "Mini Calender",
+    name: "03. Mini Calender",
     icon: "fas fa-calendar",
-    link: "project3/index.html",
+    link: "project03/index.html",
   },
   {
-    name: "Button Ripple Effect",
+    name: "04. Button Ripple Effect",
     icon: "fas fa-bolt",
-    link: "project4/index.html",
+    link: "project04/index.html",
   },
   {
-    name: "Random Image Generator",
+    name: "05. Random Image Generator",
     icon: "fas fa-image",
-    link: "project5/index.html",
+    link: "project05/index.html",
   },
   {
-    name: "Dark Mode",
+    name: "06. Dark Mode",
     icon: "fas fa-moon",
-    link: "project6/index.html",
+    link: "project06/index.html",
   },
   {
-    name: "Background Slider",
-    icon: "fas fa-palette",
-    link: "project7/index.html",
+    name: "07. Dad Jokes Generator",
+    icon: "fas fa-quote-right",
+    link: "project07/index.html",
   },
   {
-    name: "Responsive Navigation Menu",
-    icon: "fas fa-bars",
-    link: "project8/index.html",
+    name: "08. Feedback UI",
+    icon: "fas fa-comments",
+    link: "project08/index.html",
   },
   {
-    name: "Responsive Sticky Navigation",
-    icon: "fas fa-arrow-up",
-    link: "project9/index.html",
+    name: "09. Weather App",
+    icon: "fas fa-sun",
+    link: "project09/index.html",
   },
   {
-    name: "Animated Progress Bar",
-    icon: "fas fa-chart-bar",
+    name: "10. Todo List",
+    icon: "fas fa-list",
     link: "project10/index.html",
   },
-];  
+];
 
 const projectList = document.getElementById("projectList");
 
