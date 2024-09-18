@@ -1,17 +1,91 @@
-/* Stil for "back"-lenken */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff; /* Lys bakgrunn for moderne utseende */
+  color: #333; /* Mørkere tekst for bedre lesbarhet */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Arial", sans-serif; /* Font for teksten */
+}
+
+.rating-item .icon {
+  font-size: 50px; /* Størrelse på ikonene */
+  color: #ffcc00; /* Farge på ikoner */
+}
+
+.feedback-container {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Hvit bakgrunn med litt gjennomsiktighet */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Skygge for dybdeeffekt */
+  border-radius: 12px; /* Runde hjørner */
+  padding: 30px; /* Innvendig marg */
+  width: 90%; /* Bredde */
+  max-width: 500px; /* Maksimal bredde */
+  text-align: center; /* Sentralisert tekst */
+  font-size: 22px; /* Størrelse på tekst */
+}
+
+.submit-review {
+  background-color: #4caf50; /* Grønn for moderne utseende */
+  border: none; /* Ingen kant */
+  color: white; /* Hvit tekstfarge */
+  padding: 15px 30px; /* Innvendig marg for knappen */
+  border-radius: 8px; /* Runde hjørner på knappen */
+  font-size: 18px; /* Størrelse på tekst på knappen */
+  cursor: pointer; /* Vis pekeren ved hover */
+  transition: background-color 0.3s; /* Overgangseffekt ved hover */
+}
+
+.submit-review:hover {
+  background-color: #45a049; /* Mørkere grønn ved hover */
+}
+
+.ratings-wrapper {
+  display: flex; /* Flexbox for vurderingsalternativer */
+  justify-content: space-around; /* Plassering av vurderinger */
+  padding: 20px 0; /* Innvendig marg for vurderingscontainer */
+  margin: 20px 0; /* Marg for vurderingscontainer */
+}
+
+.rating-item {
+  cursor: pointer; /* Vis pekeren ved hover */
+  padding: 15px 25px; /* Innvendig marg */
+  border-radius: 5px; /* Runde hjørner */
+  margin: 10px; /* Marg mellom vurderinger */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Overgangseffekter ved hover */
+}
+
+.rating-item:hover,
+.rating-item.active {
+  background-color: #6200ea; /* Farge ved hover og aktiv vurdering */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skygge ved hover */
+  color: white; /* Hvit tekst ved hover */
+}
+
+.title {
+  margin: 10px; /* Marg for tittelen */
+  font-size: 32px; /* Størrelse på tittelen */
+}
+
+/* Stil for "tilbake"-lenke */
 .back {
-  position: absolute; /* Gjør at vi kan plassere elementet hvor som helst på siden */
-  top: 20px; /* Avstand fra toppen av siden */
-  left: 20px; /* Avstand fra venstre side av siden */
+  position: absolute; /* Plassering av elementet */
+  top: 20px; /* Avstand fra toppen */
+  left: 20px; /* Avstand fra venstre side */
   text-decoration: none; /* Fjerner understreking på lenken */
   font-size: 18px; /* Størrelse på teksten */
   color: white; /* Farge på teksten */
-  background-color: rgba(0, 0, 0, 0.5); /* Halvgjennomsiktig bakgrunnsfarge */
+  background-color: rgba(0, 0, 0, 0.6); /* Halvgjennomsiktig bakgrunnsfarge */
   padding: 10px 15px; /* Innvendig marg */
   border-radius: 5px; /* Runde hjørner */
 }
 
-/* Hover-effekt for "back"-lenken */
 .back:hover {
-  background-color: rgba(0, 0, 0, 0.7); /* Endrer bakgrunnsfargen ved hover */
+  background-color: rgba(0, 0, 0, 0.8); /* Endrer bakgrunnsfargen ved hover */
 }

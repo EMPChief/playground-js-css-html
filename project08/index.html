@@ -2,13 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Angir tegnsettet som brukes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Feed Back UI</title>
+    <!-- Responsiv design for mobil -->
+    <title>Feedback UI</title>
+    <!-- Tittel på siden -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- Kobler til CSS-stilark -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Kobler til Font Awesome for ikoner -->
   </head>
   <body>
-    <a class="back" href="../index.html"><p>back</p></a>
+    <!-- Tilbake-link til hovedsiden -->
+    <a class="back" href="../index.html"><p>Back</p></a>
 
+    <!-- Hovedcontainer for tilbakemelding -->
+    <div class="feedback-container" id="feedback-container">
+      <h1 class="title" id="title">Give us your Feedback</h1>
+      <!-- Overskrift for tilbakemeldingssiden -->
+
+      <!-- Container for vurderingsalternativer -->
+      <div class="ratings-wrapper" id="ratings-wrapper">
+        <!-- Hver vurdering representeres av en rating-item -->
+        <div class="rating-item">
+          <i class="icon fas fa-frown"></i>
+          <!-- Ikon for "Unhappy" -->
+          <small>Unhappy</small>
+          <!-- Tekst for vurdering -->
+        </div>
+        <div class="rating-item">
+          <i class="icon fas fa-meh"></i>
+          <!-- Ikon for "Neutral" -->
+          <small>Neutral</small>
+          <!-- Tekst for vurdering -->
+        </div>
+        <div class="rating-item">
+          <i class="icon fas fa-smile"></i>
+          <!-- Ikon for "Satisfied" -->
+          <small>Satisfied</small>
+          <!-- Tekst for vurdering -->
+        </div>
+      </div>
+
+      <!-- Knapp for å sende tilbakemelding -->
+      <button class="submit-review" id="submit-review">Send Review</button>
+    </div>
+
+    <!-- Kobler til JavaScript-filen for interaktivitet -->
     <script src="index.js"></script>
   </body>
 </html>
