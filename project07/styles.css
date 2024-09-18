@@ -1,0 +1,83 @@
+/* Grunnleggende stil for body, setter en gradientbakgrunn og sentrerer innholdet */
+body {
+  margin: 0;
+  background: linear-gradient(to right bottom, limegreen, #0575e6, limegreen);
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+/* Stil for "back"-lenken */
+.back {
+  position: absolute; /* Gjør at vi kan plassere elementet hvor som helst på siden */
+  top: 20px; /* Avstand fra toppen av siden */
+  left: 20px; /* Avstand fra venstre side av siden */
+  text-decoration: none; /* Fjerner understreking på lenken */
+  font-size: 18px; /* Størrelse på teksten */
+  color: white; /* Farge på teksten */
+  background-color: rgba(0, 0, 0, 0.5); /* Halvgjennomsiktig bakgrunnsfarge */
+  padding: 10px 15px; /* Innvendig marg */
+  border-radius: 5px; /* Runde hjørner */
+}
+
+/* Hover-effekt for "back"-lenken */
+.back:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Endrer bakgrunnsfargen ved hover */
+}
+
+/* Stil for hovedcontaineren som holder heading og knappen */
+.container {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  width: 85%;
+  height: 85%;
+  text-align: center;
+  color: blue;
+}
+
+/* Stil for overskriften (heading) */
+.heading {
+  font-size: 50px;
+  font-weight: 900;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-bottom: 40px;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+/* Stil for knappen som genererer en ny vits */
+.buttonforjoke {
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  width: 300px;
+  color: blue;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Stil for knappen ved hover-effekt */
+.buttonforjoke:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transition: all 500ms ease;
+  transform: scale(1.1);
+}
+
+/* Stil for knappen ved disabled-effekt */
+button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}

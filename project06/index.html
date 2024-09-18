@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Mode</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Toggle</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="back" href="../index.html"><p>back</p></a>
+    <!-- Checkbox som styrer dark mode, den er usynlig, men fungerer som input -->
+    <input type="checkbox" id="dark-mode-checkbox" class="toggle-checkbox" />
+
+    <!-- Label som representerer selve bryteren -->
+    <label for="dark-mode-checkbox" class="toggle-switch">
+      <div class="toggle-circle"></div>
+    </label>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

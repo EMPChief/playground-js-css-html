@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dad Jokes Generator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
+    <!-- Laster inn eksternt CSS-stilark for å style siden -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="back" href="../index.html"><p>back</p></a>
+    <!-- Hovedcontainer for innholdet, inkludert heading, vits og knapp -->
+    <div class="container">
+      <!-- Overskrift for siden, beskriver funksjonen som en Dad Jokes Generator -->
+      <h1 class="heading">Dad Jokes Generator</h1>
+
+      <!-- Avsnitt som viser en tilfeldig vits, vitsen oppdateres dynamisk via JavaScript -->
+      <p class="joke" id="joke">Oy click on the button to get a joke</p>
+
+      <!-- Knapp som genererer en ny vits når den klikkes -->
+      <button class="buttonforjoke" id="buttonforjoke">Tell Me A Joke</button>
+    </div>
+
+    <!-- Laster inn eksternt JavaScript for å håndtere interaktiviteten på siden -->
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

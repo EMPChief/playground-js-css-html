@@ -1,14 +1,20 @@
+/* Body styling for background and padding */
 body {
   background-color: #f8f9fa;
   padding-top: 3rem;
 }
+
+/* Project card styles */
 .project-card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px); /* Lifts the card on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adds shadow on hover */
 }
+
+/* Icon styling inside the project cards */
 .project-icon {
   font-size: 2rem;
   margin-bottom: 1rem;
