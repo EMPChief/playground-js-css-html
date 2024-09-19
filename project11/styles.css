@@ -1,0 +1,126 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif; /* Setting a classic font */
+}
+
+/* Background style for the body */
+body {
+  background: linear-gradient(to right, limegreen, darkgreen); /* Smooth gradient background */
+}
+
+/* Main app container */
+.app {
+  background-color: #fff; /* White background for the app */
+  width: 90%; /* Responsive width */
+  max-width: 600px; /* Maximum width */
+  margin: 100px auto 0; /* Centering the app with margin */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Inner spacing */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Style for the back link */
+.back {
+  position: absolute; /* Positioning the back link */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+  text-decoration: none; /* No underline */
+  font-size: 18px; /* Text size */
+  color: white; /* Text color */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px 15px; /* Inner margin */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Hover effect for the back link */
+.back:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+/* Header style */
+.header {
+  font-size: 28px; /* Font size for the header */
+  color: aquamarine; /* Header color */
+  font-weight: bold; /* Bold font */
+  border-bottom: 2px solid #ccc; /* Bottom border */
+  padding-bottom: 20px; /* Padding below */
+  text-align: center; /* Center text */
+}
+
+/* Style for the quiz section */
+.quiz {
+  padding: 20px; /* Inner spacing for quiz section */
+}
+
+/* Style for quiz questions */
+.question {
+  font-size: 24px; /* Font size for questions */
+  font-weight: bold; /* Bold for questions */
+  margin-bottom: 15px; /* Margin below the question */
+  color: blueviolet; /* Question text color */
+}
+
+/* Style for answer buttons */
+.answer-button {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack buttons vertically */
+}
+
+/* General button styles */
+.buttonforquiz {
+  background: #fff; /* White background for buttons */
+  color: #000; /* Black text color */
+  border: 1px solid #000; /* Border for buttons */
+  border-radius: 5px; /* Rounded corners */
+  width: 100%; /* Full width */
+  padding: 10px; /* Inner padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 15px; /* Font size for buttons */
+  margin-bottom: 10px; /* Space between buttons */
+}
+
+/* Hover effect for quiz buttons */
+.buttonforquiz:hover:not([disabled]) {
+  background-color: #000; /* Background changes to black on hover */
+  color: #fff; /* Text changes to white on hover */
+  transition: all 300ms ease; /* Smooth transition */
+}
+
+/* Style for disabled buttons */
+.btn:disabled {
+  cursor: no-drop; /* Change cursor to indicate disabled state */
+}
+
+/* Style for the next button */
+.nextbutton {
+  background-color: greenyellow; /* Background color for the next button */
+  color: #fff; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  width: 100%; /* Full width */
+  padding: 10px; /* Inner padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 15px; /* Font size */
+  font-weight: bold; /* Bold font */
+  margin: 20px auto 0; /* Spacing for the button */
+  display: none; /* Hidden initially */
+}
+
+/* Hover effect for the next button */
+.nextbutton:hover {
+  background-color: orangered; /* Background color on hover */
+  color: #000; /* Black text color on hover */
+  transition: all 300ms ease; /* Smooth transition */
+}
+
+/* Styles for correct and incorrect answers */
+.correct {
+  background: green; /* Green background for correct answers */
+}
+
+.incorrect {
+  background: red; /* Red background for incorrect answers */
+}

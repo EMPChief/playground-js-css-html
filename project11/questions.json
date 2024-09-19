@@ -1,0 +1,119 @@
+[
+    {
+        "question": "What is the capital of France?",
+        "answers": [
+            { "text": "New York", "correct": false },
+            { "text": "Paris", "correct": true },
+            { "text": "London", "correct": false },
+            { "text": "Berlin", "correct": false }
+        ]
+    },
+    {
+        "question": "What is the largest country in the world?",
+        "answers": [
+            { "text": "Russia", "correct": false },
+            { "text": "Canada", "correct": false },
+            { "text": "China", "correct": true },
+            { "text": "USA", "correct": false }
+        ]
+    },
+    {
+        "question": "What is the smallest country in the world?",
+        "answers": [
+            { "text": "Vatican City", "correct": true },
+            { "text": "Monaco", "correct": false },
+            { "text": "San Marino", "correct": false },
+            { "text": "Liechtenstein", "correct": false }
+        ]
+    },
+    {
+        "question": "What does CPU stand for?",
+        "answers": [
+            { "text": "Central Processing Unit", "correct": true },
+            { "text": "Computer Personal Unit", "correct": false },
+            { "text": "Central Programming Unit", "correct": false },
+            { "text": "Control Processing Unit", "correct": false }
+        ]
+    },
+    {
+        "question": "Which company developed the Windows operating system?",
+        "answers": [
+            { "text": "Apple", "correct": false },
+            { "text": "Microsoft", "correct": true },
+            { "text": "IBM", "correct": false },
+            { "text": "Linux", "correct": false }
+        ]
+    },
+    {
+        "question": "What does HTML stand for?",
+        "answers": [
+            { "text": "Hypertext Markup Language", "correct": true },
+            { "text": "Hyperlink and Text Markup Language", "correct": false },
+            { "text": "High-Level Text Markup Language", "correct": false },
+            { "text": "Hypertext Multi Language", "correct": false }
+        ]
+    },
+    {
+        "question": "What is the main function of the operating system?",
+        "answers": [
+            { "text": "Manage hardware and software resources", "correct": true },
+            { "text": "Run applications only", "correct": false },
+            { "text": "Perform calculations", "correct": false },
+            { "text": "Connect to the internet", "correct": false }
+        ]
+    },
+    {
+        "question": "Which language is primarily used for web development?",
+        "answers": [
+            { "text": "Python", "correct": false },
+            { "text": "Java", "correct": false },
+            { "text": "JavaScript", "correct": true },
+            { "text": "C++", "correct": false }
+        ]
+    },
+    {
+        "question": "What is an IP address?",
+        "answers": [
+            { "text": "Internet Protocol address", "correct": true },
+            { "text": "Internal Process address", "correct": false },
+            { "text": "Interconnected Protocol address", "correct": false },
+            { "text": "Internet Private address", "correct": false }
+        ]
+    },
+    {
+        "question": "What does the acronym 'RAM' stand for?",
+        "answers": [
+            { "text": "Random Access Memory", "correct": true },
+            { "text": "Read Access Memory", "correct": false },
+            { "text": "Rapid Access Memory", "correct": false },
+            { "text": "Run Access Memory", "correct": false }
+        ]
+    },
+    {
+        "question": "Which protocol is used to send emails?",
+        "answers": [
+            { "text": "FTP", "correct": false },
+            { "text": "SMTP", "correct": true },
+            { "text": "HTTP", "correct": false },
+            { "text": "TCP", "correct": false }
+        ]
+    },
+    {
+        "question": "What does CSS stand for?",
+        "answers": [
+            { "text": "Cascading Style Sheets", "correct": true },
+            { "text": "Creative Style System", "correct": false },
+            { "text": "Computer Style Sheets", "correct": false },
+            { "text": "Colorful Style Sheets", "correct": false }
+        ]
+    },
+    {
+        "question": "What is a browser?",
+        "answers": [
+            { "text": "A software application for accessing the internet", "correct": true },
+            { "text": "A type of virus", "correct": false },
+            { "text": "A hardware component", "correct": false },
+            { "text": "An email client", "correct": false }
+        ]
+    }
+]
