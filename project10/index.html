@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <a class="back" href="../index.html"><p>back</p></a>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- "Back"-lenke -->
+    <a class="back-link" href="../index.html">Back</a>
 
+    <!-- Hovedcontainer -->
+    <div class="body-container">
+      <!-- Todo-app -->
+      <div class="todo-app" id="todo-app">
+        <!-- Overskrift -->
+        <h2 class="todo-title">
+          Todo List <img src="assets/icon.png" alt="List icon" />
+        </h2>
 
+        <!-- Rad med input og knapp -->
+        <div class="input-row">
+          <input
+            autofocus
+            type="text"
+            class="input-field"
+            id="input-box"
+            placeholder="Add your new todo"
+          />
+          <button class="add-button" id="input-button" onclick="addTask()">
+            Add
+          </button>
+        </div>
+
+        <!-- Liste over todo-elementer -->
+        <ul class="todo-list" id="list-container">
+          <!-- <li class="todo-item completed">Buy milk</li>
+          <li class="todo-item">Buy eggs</li>
+          <li class="todo-item">Buy bread</li> -->
+        </ul>
+      </div>
+    </div>
 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

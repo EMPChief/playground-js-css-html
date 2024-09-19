@@ -48,5 +48,55 @@
     "name": "10. Todo List",
     "icon": "fas fa-list",
     "link": "project10/index.html"
+  },
+  {
+    "name": "11. Expense Tracker",
+    "icon": "fas fa-coins",
+    "link": "project11/index.html"
+  },
+  {
+    "name": "12. Typing Game",
+    "icon": "fas fa-keyboard",
+    "link": "project12/index.html"
+  },
+  {
+    "name": "13. Image Slider",
+    "icon": "fas fa-images",
+    "link": "project13/index.html"
+  },
+  {
+    "name": "14. Color Picker",
+    "icon": "fas fa-paint-brush",
+    "link": "project14/index.html"
+  },
+  {
+    "name": "15. Form Validation",
+    "icon": "fas fa-check-circle",
+    "link": "project15/index.html"
+  },
+  {
+    "name": "16. Quotes Generator",
+    "icon": "fas fa-comment",
+    "link": "project16/index.html"
+  },
+  {
+    "name": "17. Stopwatch",
+    "icon": "fas fa-stopwatch",
+    "link": "project17/index.html"
+  },
+  {
+    "name": "18. Calculator",
+    "icon": "fas fa-calculator",
+    "link": "project18/index.html"
+  },
+  {
+    "name": "19. Music Player",
+    "icon": "fas fa-music",
+    "link": "project19/index.html"
+  },
+  {
+    "name": "20. Recipe Finder",
+    "icon": "fas fa-utensils",
+    "link": "project20/index.html"
   }
 ]

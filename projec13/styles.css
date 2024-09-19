@@ -1,0 +1,19 @@
+
+
+/* Stil for "back"-lenken */
+.back {
+    position: absolute; /* Gjør at vi kan plassere elementet hvor som helst på siden */
+    top: 20px; /* Avstand fra toppen av siden */
+    left: 20px; /* Avstand fra venstre side av siden */
+    text-decoration: none; /* Fjerner understreking på lenken */
+    font-size: 18px; /* Størrelse på teksten */
+    color: white; /* Farge på teksten */
+    background-color: rgba(0, 0, 0, 0.5); /* Halvgjennomsiktig bakgrunnsfarge */
+    padding: 10px 15px; /* Innvendig marg */
+    border-radius: 5px; /* Runde hjørner */
+  }
+  
+  /* Hover-effekt for "back"-lenken */
+  .back:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Endrer bakgrunnsfargen ved hover */
+  }
