@@ -1,19 +1,149 @@
+/* Global styles and font settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
 
+/* Body background and text color */
+body {
+  background: linear-gradient(to right, #4caf50, #388e3c);
+  color: #fff;
+}
 
-/* Stil for "back"-lenken */
-.back {
-    position: absolute; /* Gjør at vi kan plassere elementet hvor som helst på siden */
-    top: 20px; /* Avstand fra toppen av siden */
-    left: 20px; /* Avstand fra venstre side av siden */
-    text-decoration: none; /* Fjerner understreking på lenken */
-    font-size: 18px; /* Størrelse på teksten */
-    color: white; /* Farge på teksten */
-    background-color: rgba(0, 0, 0, 0.5); /* Halvgjennomsiktig bakgrunnsfarge */
-    padding: 10px 15px; /* Innvendig marg */
-    border-radius: 5px; /* Runde hjørner */
-  }
-  
-  /* Hover-effekt for "back"-lenken */
-  .back:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Endrer bakgrunnsfargen ved hover */
-  }
+/* Container for the password generator */
+.password-generator-container {
+  background-color: #fff;
+  color: #333;
+  width: 90%;
+  max-width: 600px;
+  margin: 100px auto;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Styling for the main title */
+.main-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Highlighted text color */
+.highlight {
+  color: #4caf50;
+}
+
+/* Container for password display elements */
+.password-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the password length input field */
+.password-length-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+/* Container for the generated password and copy button */
+.password-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Styling for the generated password input field */
+.generated-password-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  background: #e0e0e0;
+  color: #333;
+}
+
+/* Styling for the copy button */
+.copy-button {
+  cursor: pointer;
+  border: none;
+  background: #4caf50;
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+/* Styling for the copy button image */
+.copy-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hover effect for the copy button */
+.copy-button:hover {
+  background-color: #388e3c;
+}
+
+/* Styling for the generate button */
+.generate-button {
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #4caf50;
+  color: white;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for the generate button image */
+.generate-button img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Hover effect for the generate button */
+.generate-button:hover {
+  background-color: #388e3c;
+}
+
+/* Styling for the back link */
+.back-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for the back link */
+.back-link:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}

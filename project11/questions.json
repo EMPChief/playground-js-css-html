@@ -115,5 +115,68 @@
             { "text": "A hardware component", "correct": false },
             { "text": "An email client", "correct": false }
         ]
+    },
+    {
+        "question": "What does the acronym 'SQL' stand for?",
+        "answers": [
+            { "text": "Structured Query Language", "correct": true },
+            { "text": "Sequential Query Language", "correct": false },
+            { "text": "Simple Query Language", "correct": false },
+            { "text": "Standard Query Language", "correct": false }
+        ]
+    },
+    {
+        "question": "Which of the following is a programming language?",
+        "answers": [
+            { "text": "HTML", "correct": false },
+            { "text": "CSS", "correct": false },
+            { "text": "JavaScript", "correct": true },
+            { "text": "XML", "correct": false }
+        ]
+    },
+    {
+        "question": "What is the primary function of a GPU?",
+        "answers": [
+            { "text": "Process data", "correct": false },
+            { "text": "Render images", "correct": true },
+            { "text": "Manage memory", "correct": false },
+            { "text": "Control input devices", "correct": false }
+        ]
+    },
+    {
+        "question": "Which type of software is an operating system?",
+        "answers": [
+            { "text": "Application software", "correct": false },
+            { "text": "System software", "correct": true },
+            { "text": "Utility software", "correct": false },
+            { "text": "Malware", "correct": false }
+        ]
+    },
+    {
+        "question": "What is the main purpose of a firewall?",
+        "answers": [
+            { "text": "Prevent unauthorized access", "correct": true },
+            { "text": "Increase internet speed", "correct": false },
+            { "text": "Clean viruses", "correct": false },
+            { "text": "Manage data storage", "correct": false }
+        ]
+    },
+    {
+        "question": "What is the most common type of database?",
+        "answers": [
+            { "text": "Relational Database", "correct": true },
+            { "text": "NoSQL Database", "correct": false },
+            { "text": "Object-oriented Database", "correct": false },
+            { "text": "Distributed Database", "correct": false }
+        ]
+    },
+    {
+        "question": "Which of the following is not an operating system?",
+        "answers": [
+            { "text": "Windows", "correct": false },
+            { "text": "Linux", "correct": false },
+            { "text": "MacOS", "correct": false },
+            { "text": "Python", "correct": true }
+        ]
     }
 ]

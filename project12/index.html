@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Mode</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <a class="back" href="../index.html"><p>back</p></a>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Back link to return to the main page -->
+    <a class="back-link" href="../index.html"><p>Back</p></a>
+
+    <div class="password-generator-container">
+      <h1 class="main-title">
+        Generate a<br />
+        <span class="highlight">Strong</span> Password
+      </h1>
+      <div class="password-display">
+        <!-- Input for specifying password length -->
+        <label for="password-length" class="hidden">Password Length</label>
+        <input
+          type="number"
+          class="password-length-input"
+          id="password-length"
+          value="15"
+        />
+
+        <!-- Input field for displaying the generated password -->
+        <label for="generated-password" class="hidden"
+          >Generated Password</label
+        >
+        <div class="password-container">
+          <input
+            type="text"
+            class="generated-password-input"
+            id="generated-password"
+            autofocus
+            placeholder="Generated Password"
+            readonly
+          />
+          <!-- Button to copy the generated password -->
+          <button class="copy-button" id="copy-button">
+            <img src="assets/copy.png" alt="Copy" />
+          </button>
+        </div>
+
+        <!-- Button to generate a new password -->
+        <button class="generate-button" id="generate-button">
+          <img src="assets/generate.png" alt="Generate Password" />
+          Generate Password
+        </button>
+      </div>
+    </div>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

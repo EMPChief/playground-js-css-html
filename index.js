@@ -15,7 +15,7 @@ fetch("projects.json")
         <div class="text-center">
             <i class="${project.icon} text-3xl text-indigo-600 mb-4"></i>
             <h5 class="text-xl font-semibold mb-3">${project.name}</h5>
-            <a href="${project.link}" class="inline-block bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700">Se Prosjekt</a>
+            <a href="${project.link}" class="inline-block bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700">Check it out</a>
         </div>
       `;
 
