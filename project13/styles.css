@@ -1,19 +1,160 @@
+/* General body styling */
+body {
+  display: flex;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #2196f3, #21cbf3);
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
 
+/* Main container for the dictionary app */
+.dictionary-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #333;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
 
-/* Stil for "back"-lenken */
-.back {
+/* Page heading styling */
+.page-heading {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Search input field styling */
+.search-input {
+  width: 80%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #2196f3;
+  border-radius: 10px;
+  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.search-input:hover {
+  background-color: #fff;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #0d47a1;
+  background-color: #fff;
+}
+
+/* Instructional text styling */
+.instruction-text {
+  font-size: 1em;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Result container styling */
+.result-container {
+  margin-top: 20px;
+  display: none;
+  color: #333;
+}
+
+/* Word display styling */
+.word-display {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #0d47a1;
+}
+
+/* Meaning display styling */
+.meaning-display {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Styling for the word title and meaning spans */
+.word-title,
+.word-meaning {
+  color: #0d47a1;
+}
+
+/* Styling for the back link */
+.back-link {
   position: absolute;
   top: 20px;
   left: 20px;
   text-decoration: none;
   font-size: 18px;
-  color: white;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 15px;
   border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-/* Hover-effekt for "back"-lenken */
-.back:hover {
+/* Hover and focus effects for the back link */
+.back-link:hover,
+.back-link:focus {
   background-color: rgba(0, 0, 0, 0.7);
+  outline: none;
+}
+
+/* Accessibility focus styles */
+.back-link:focus {
+  outline: 2px solid #fff;
+}
+
+/* Adjustments for mobile responsiveness */
+@media (max-width: 480px) {
+  .page-heading {
+    font-size: 2em;
+  }
+
+  .search-input {
+    font-size: 1em;
+  }
+
+  .word-display,
+  .meaning-display {
+    font-size: 1em;
+  }
+}
+
+/* Audio element styling */
+.pronunciation-audio {
+  margin-top: 20px;
+  width: 100%;
+  outline: none;
+}
+
+/* Custom styling for audio controls in WebKit browsers (Chrome, Safari) */
+.pronunciation-audio::-webkit-media-controls-panel {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.pronunciation-audio::-webkit-media-controls-play-button,
+.pronunciation-audio::-webkit-media-controls-mute-button,
+.pronunciation-audio::-webkit-media-controls-timeline,
+.pronunciation-audio::-webkit-media-controls-current-time-display,
+.pronunciation-audio::-webkit-media-controls-time-remaining-display,
+.pronunciation-audio::-webkit-media-controls-volume-slider {
+  color: #0d47a1;
+}
+
+/* Styling for audio controls in Firefox */
+.pronunciation-audio {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #0d47a1;
 }

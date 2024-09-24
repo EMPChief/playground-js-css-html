@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Metadata and stylesheet link -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>English Dictionary</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <a class="back" href="../index.html"><p>back</p></a>
-    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Back link to the main index page -->
+    <a class="back-link" href="../index.html">Back</a>
+
+    <!-- Main container for the dictionary app -->
+    <div class="dictionary-container" id="dictionary-container">
+      <!-- Page heading -->
+      <h1 class="page-heading">English Dictionary</h1>
+
+      <!-- Search input field -->
+      <input
+        type="text"
+        class="search-input"
+        id="search-input"
+        placeholder="Search for any word"
+      />
+
+      <!-- Instructional text -->
+      <p class="instruction-text" id="instruction-text">
+        Type a word and press enter (for example, "hello")
+      </p>
+
+      <!-- Container for displaying the search results -->
+      <div class="result-container" id="result-container">
+        <!-- Display the searched word -->
+        <p class="word-display" id="word-display">
+          Word Title: <span class="word-title" id="word-title">___</span>
+        </p>
+
+        <!-- Display the meaning of the word -->
+        <p class="meaning-display" id="meaning-display">
+          Meaning: <span class="word-meaning" id="word-meaning">___</span>
+        </p>
+
+        <!-- Audio pronunciation of the word -->
+        <audio
+          class="pronunciation-audio"
+          id="pronunciation-audio"
+          src=""
+          controls
+        ></audio>
+      </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
