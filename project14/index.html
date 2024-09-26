@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random quote generator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <a class="back" href="../index.html"><p>back</p></a>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator</title>
+    <!-- Linking external CSS for styling -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Navigation link to go back to homepage -->
+    <a class="back-link" href="../index.html">
+      <p>Back</p>
+    </a>
+
+    <!-- Main container for the random quote generator -->
+    <div class="quote-container" id="quote-container">
+      <h1 class="quote-title" id="quote-title">Random Quote Generator</h1>
+      <h2 class="quote-text" id="quote-text">
+        <!-- Replaced icons with text-based quotes -->
+        <span class="quote-left">“</span>
+        <span id="quote-content">Quote goes here</span>
+        <span class="quote-right">”</span>
+      </h2>
+      <p class="quote-author" id="author-name">~ Author</p>
+      <!-- Button to fetch a new quote -->
+      <button class="quote-btn" id="new-quote-btn">Get a New Quote</button>
+    </div>
+
+    <!-- Linking external JavaScript for functionality -->
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
