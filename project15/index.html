@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Mode</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <a class="back" href="../index.html"><p>back</p></a>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Picture Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Link to go back to the homepage -->
+    <a class="back-link" href="../index.html"><p>Back</p></a>
+
+    <!-- Main container for the anime picture generator -->
+    <div class="anime-generator-container">
+      <h1 class="anime-generator-title">Anime Picture Generator</h1>
+      <button class="anime-generate-button" id="generate-anime-btn">
+        Get Anime
+      </button>
+
+      <!-- Container for displaying the anime image and artist information -->
+      <div class="anime-display-container">
+        <img
+          class="anime-display-image"
+          src="https://c.files.bbci.co.uk/F382/production/_123883326_852a3a31-69d7-4849-81c7-8087bf630251.jpg"
+          alt="Anime Image"
+        />
+        <h3 class="anime-artist-name">Anime Artist Name</h3>
+      </div>
+    </div>
+
+    <!-- JavaScript file -->
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
