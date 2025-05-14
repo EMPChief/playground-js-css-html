@@ -1,102 +1,207 @@
-[
-  {
-    "name": "01. Heart Trail Animation",
-    "icon": "fas fa-heart",
-    "link": "project01/index.html"
-  },
-  {
-    "name": "02. Auto Text Effect Animation",
-    "icon": "fas fa-pen",
-    "link": "project02/index.html"
-  },
-  {
-    "name": "03. Mini Calender",
-    "icon": "fas fa-calendar",
-    "link": "project03/index.html"
-  },
-  {
-    "name": "04. Button Ripple Effect",
-    "icon": "fas fa-bolt",
-    "link": "project04/index.html"
-  },
-  {
-    "name": "05. Random Image Generator",
-    "icon": "fas fa-image",
-    "link": "project05/index.html"
-  },
-  {
-    "name": "06. Dark Mode",
-    "icon": "fas fa-moon",
-    "link": "project06/index.html"
-  },
-  {
-    "name": "07. Dad Jokes Generator",
-    "icon": "fas fa-quote-right",
-    "link": "project07/index.html"
-  },
-  {
-    "name": "08. Feedback UI",
-    "icon": "fas fa-comments",
-    "link": "project08/index.html"
-  },
-  {
-    "name": "09. Weather App",
-    "icon": "fas fa-sun",
-    "link": "project09/index.html"
-  },
-  {
-    "name": "10. Todo List",
-    "icon": "fas fa-list",
-    "link": "project10/index.html"
-  },
-  {
-    "name": "11. Simple Quiz",
-    "icon": "fas fa-question",
-    "link": "project11/index.html"
-  },
-  {
-    "name": "12. Generate Password",
-    "icon": "fas fa-key",
-    "link": "project12/index.html"
-  },
-  {
-    "name": "13. English Dictionary",
-    "icon": "fas fa-book",
-    "link": "project13/index.html"
-  },
-  {
-    "name": "14. Random quote generator",
-    "icon": "fas fa-quote-right",
-    "link": "project14/index.html"
-  },
-  {
-    "name": "15. Anime Picture Generator (api doesn't work anymore)",
-    "icon": "fas fa-dragon",
-    "link": "project15/index.html"
-  },
-  {
-    "name": "16. Quotes Generator",
-    "icon": "fas fa-comment",
-    "link": "project16/index.html"
-  },
-  {
-    "name": "17. Stopwatch",
-    "icon": "fas fa-stopwatch",
-    "link": "project17/index.html"
-  },
-  {
-    "name": "18. Calculator",
-    "icon": "fas fa-calculator",
-    "link": "project18/index.html"
-  },
-  {
-    "name": "19. Music Player",
-    "icon": "fas fa-music",
-    "link": "project19/index.html"
-  },
-  {
-    "name": "20. Recipe Finder",
-    "icon": "fas fa-utensils",
-    "link": "project20/index.html"
-  }
-]
+{
+  "version": "1.0.0",
+  "lastUpdated": "2024",
+  "author": "Bjørn-Magne",
+  "projects": [
+    {
+      "id": "01",
+      "name": "Heart Trail Animation",
+      "description": "Create beautiful heart-shaped trails that follow your mouse movement with smooth animations.",
+      "icon": "fas fa-heart",
+      "link": "project01/index.html",
+      "tags": ["animation", "mouse-events", "interactive"],
+      "difficulty": "beginner",
+      "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": "02",
+      "name": "Auto Text Effect Animation",
+      "description": "Text animation effects with customizable speed and styling options.",
+      "icon": "fas fa-pen",
+      "link": "project02/index.html",
+      "tags": ["animation", "text-effects", "typography"],
+      "difficulty": "beginner",
+      "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": "03",
+      "name": "Mini Calendar",
+      "description": "A compact and stylish calendar widget showing current date information.",
+      "icon": "fas fa-calendar",
+      "link": "project03/index.html",
+      "tags": ["date", "widget", "utility"],
+      "difficulty": "intermediate",
+      "technologies": ["HTML", "CSS", "JavaScript", "Date API"]
+    },
+    {
+      "id": "04",
+      "name": "Button Ripple Effect",
+      "description": "Create engaging ripple animations for button interactions.",
+      "icon": "fas fa-bolt",
+      "link": "project04/index.html",
+      "tags": ["animation", "interaction", "effects"],
+      "difficulty": "beginner",
+      "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": "05",
+      "name": "Random Image Generator",
+      "description": "Generate random images with customizable parameters and filters.",
+      "icon": "fas fa-image",
+      "link": "project05/index.html",
+      "tags": ["api", "images", "random"],
+      "difficulty": "intermediate",
+      "technologies": ["HTML", "CSS", "JavaScript", "External API"]
+    },
+    {
+      "id": "06",
+      "name": "Dark Mode",
+      "description": "Implement a smooth dark mode toggle with persistent user preferences.",
+      "icon": "fas fa-moon",
+      "link": "project06/index.html",
+      "tags": ["theme", "accessibility", "user-preference"],
+      "difficulty": "intermediate",
+      "technologies": ["HTML", "CSS", "JavaScript", "LocalStorage"]
+    },
+    {
+      "id": "07",
+      "name": "Dad Jokes Generator",
+      "description": "Fetch and display random dad jokes using an external API.",
+      "icon": "fas fa-quote-right",
+      "link": "project07/index.html",
+      "tags": ["api", "humor", "fetch"],
+      "difficulty": "beginner",
+      "technologies": ["HTML", "CSS", "JavaScript", "External API"]
+    },
+    {
+      "id": "08",
+      "name": "Feedback UI",
+      "description": "Interactive feedback form with emoji reactions and animations.",
+      "icon": "fas fa-comments",
+      "link": "project08/index.html",
+      "tags": ["ui", "interaction", "form"],
+      "difficulty": "intermediate",
+      "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": "09",
+      "name": "Weather App",
+      "description": "Real-time weather information with location-based updates.",
+      "icon": "fas fa-sun",
+      "link": "project09/index.html",
+      "tags": ["api", "weather", "geolocation"],
+      "difficulty": "advanced",
+      "technologies": ["HTML", "CSS", "JavaScript", "Weather API", "Geolocation API"]
+    },
+    {
+      "id": "10",
+      "name": "Todo List",
+      "description": "Feature-rich todo list with local storage and filtering options.",
+      "icon": "fas fa-list",
+      "link": "project10/index.html",
+      "tags": ["crud", "localStorage", "utility"],
+      "difficulty": "intermediate",
+      "technologies": ["HTML", "CSS", "JavaScript", "LocalStorage"]
+    },
+    {
+      "id": "11",
+      "name": "Simple Quiz",
+      "description": "Interactive quiz application with score tracking and results.",
+      "icon": "fas fa-question",
+      "link": "project11/index.html",
+      "tags": ["quiz", "interactive", "education"],
+      "difficulty": "intermediate",
+      "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": "12",
+      "name": "Password Generator",
+      "description": "Generate secure passwords with customizable options.",
+      "icon": "fas fa-key",
+      "link": "project12/index.html",
+      "tags": ["security", "utility", "random"],
+      "difficulty": "intermediate",
+      "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": "13",
+      "name": "English Dictionary",
+      "description": "Look up word definitions with pronunciation and examples.",
+      "icon": "fas fa-book",
+      "link": "project13/index.html",
+      "tags": ["api", "dictionary", "education"],
+      "difficulty": "advanced",
+      "technologies": ["HTML", "CSS", "JavaScript", "Dictionary API"]
+    },
+    {
+      "id": "14",
+      "name": "Random Quote Generator",
+      "description": "Display inspiring quotes with author attribution.",
+      "icon": "fas fa-quote-right",
+      "link": "project14/index.html",
+      "tags": ["api", "quotes", "inspiration"],
+      "difficulty": "beginner",
+      "technologies": ["HTML", "CSS", "JavaScript", "Quotes API"]
+    },
+    {
+      "id": "15",
+      "name": "Anime Picture Generator",
+      "description": "Generate random anime pictures using an external API (API Does not work anymore).",
+      "icon": "fas fa-dragon",
+      "link": "project15/index.html",
+      "tags": ["api", "anime", "images"],
+      "difficulty": "intermediate",
+      "technologies": ["HTML", "CSS", "JavaScript", "Anime API"]
+    },
+    {
+      "id": "16",
+      "name": "Quotes Generator",
+      "description": "Generate multiple types of quotes with category filtering.",
+      "icon": "fas fa-comment",
+      "link": "project16/index.html",
+      "tags": ["api", "quotes", "filter"],
+      "difficulty": "intermediate",
+      "technologies": ["HTML", "CSS", "JavaScript", "Quotes API"]
+    },
+    {
+      "id": "17",
+      "name": "Stopwatch",
+      "description": "Precise stopwatch with lap timing and split functionality.",
+      "icon": "fas fa-stopwatch",
+      "link": "project17/index.html",
+      "tags": ["timer", "utility", "interactive"],
+      "difficulty": "intermediate",
+      "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": "18",
+      "name": "Calculator",
+      "description": "Full-featured calculator with keyboard support.",
+      "icon": "fas fa-calculator",
+      "link": "project18/index.html",
+      "tags": ["calculator", "math", "keyboard-events"],
+      "difficulty": "intermediate",
+      "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": "19",
+      "name": "Music Player",
+      "description": "Custom audio player with playlist management.",
+      "icon": "fas fa-music",
+      "link": "project19/index.html",
+      "tags": ["audio", "player", "media"],
+      "difficulty": "advanced",
+      "technologies": ["HTML", "CSS", "JavaScript", "Web Audio API"]
+    },
+    {
+      "id": "20",
+      "name": "Recipe Finder",
+      "description": "Search and display recipes with detailed instructions.",
+      "icon": "fas fa-utensils",
+      "link": "project20/index.html",
+      "tags": ["api", "food", "search"],
+      "difficulty": "advanced",
+      "technologies": ["HTML", "CSS", "JavaScript", "Recipe API"]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+body {
+  font-family: sans-serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.primary,
+.secondary,
+.tertiary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+.marker {
+  width: 200px;
+  height: 25px;
+  margin: 15px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.sleeve {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 20px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cap {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.red {
+  background: linear-gradient(to right, #8b0000, #ff0000, #ff6347);
+}
+.blue {
+  background: linear-gradient(to right, #00008b, #0000ff, #87ceeb);
+}
+.yellow {
+  background: linear-gradient(to right, #ffd700, #ffff00, #ffea80);
+}
+.green {
+  background: linear-gradient(to right, #006400, #00ff00, #7cfc00);
+}
+.orange {
+  background: linear-gradient(to right, #ff8c00, #ffa500, #ffd580);
+}
+.purple {
+  background: linear-gradient(to right, #4b0082, #800080, #da70d6);
+}
+.red-orange {
+  background: linear-gradient(to right, #ff4500, #ff6347, #ffa07a);
+}
+.yellow-orange {
+  background: linear-gradient(to right, #ffd700, #ffa500, #ffc107);
+}
+.yellow-green {
+  background: linear-gradient(to right, #9acd32, #adff2f, #98fb98);
+}
+.blue-green {
+  background: linear-gradient(to right, #20b2aa, #00ced1, #48d1cc);
+}
+.blue-purple {
+  background: linear-gradient(to right, #6a5acd, #8a2be2, #9370db);
+}
+.red-purple {
+  background: linear-gradient(to right, #8b008b, #c71585, #d87093);
+  b
+}

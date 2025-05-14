@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Winter Sport Survey</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <!-- Main title of the survey -->
+      <h1 id="title">Winter Sport Survey</h1>
+      <!-- Description of the survey -->
+      <p id="description">
+        This is a yearly survey for Winter Sports Enthusiasts.
+      </p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Survey Form -->
+      <form id="survey-form" class="survey-form">
+        <!-- Section for personal information -->
+        <fieldset>
+          <legend>Your Information</legend>
+          <!-- Name input field -->
+          <div class="form-group">
+            <label id="name-label" for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+              aria-required="true"
+            />
+          </div>
+          <!-- Email input field -->
+          <div class="form-group">
+            <label id="email-label" for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+              aria-required="true"
+            />
+          </div>
+          <!-- Phone number input field -->
+          <div class="form-group">
+            <label id="phone-label" for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              required
+              aria-required="true"
+            />
+            <small>Format: 123-456-7890</small>
+          </div>
+          <!-- Age input field -->
+          <div class="form-group">
+            <label id="number-label" for="number">Age:</label>
+            <input
+              type="number"
+              id="number"
+              name="age"
+              min="18"
+              max="100"
+              placeholder="Enter your age"
+              required
+              aria-required="true"
+            />
+          </div>
+        </fieldset>
+
+        <!-- Section for favorite season selection -->
+        <fieldset>
+          <legend>Favorite Season</legend>
+          <select id="dropdown" name="season" required aria-required="true">
+            <option value="">Select your favorite season</option>
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="fall">Fall</option>
+            <option value="winter">Winter</option>
+          </select>
+        </fieldset>
+
+        <!-- Section for gender selection -->
+        <fieldset>
+          <legend>Gender</legend>
+          <div class="radio-group">
+            <!-- Male gender option -->
+            <div>
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+                required
+                aria-required="true"
+              />
+              <label for="male">Male</label>
+            </div>
+            <!-- Female gender option -->
+            <div>
+              <input
+                type="radio"
+                id="female"
+                name="gender"
+                value="female"
+                required
+                aria-required="true"
+              />
+              <label for="female">Female</label>
+            </div>
+            <!-- Other gender option -->
+            <div>
+              <input
+                type="radio"
+                id="other"
+                name="gender"
+                value="other"
+                required
+                aria-required="true"
+              />
+              <label for="other">Other</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Section for selecting favorite winter sports -->
+        <fieldset>
+          <legend>Favorite Winter Sport</legend>
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              id="snowboarding"
+              name="sport[]"
+              value="snowboarding"
+            />
+            <label for="snowboarding">Snowboarding</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="skiing" name="sport[]" value="skiing" />
+            <label for="skiing">Skiing</label>
+          </div>
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              id="snowmobiling"
+              name="sport[]"
+              value="snowmobiling"
+            />
+            <label for="snowmobiling">Snowmobiling</label>
+          </div>
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              id="snowshoeing"
+              name="sport[]"
+              value="snowshoeing"
+            />
+            <label for="snowshoeing">Snowshoeing</label>
+          </div>
+        </fieldset>
+
+        <!-- Section for describing favorite sport -->
+        <fieldset>
+          <legend>Why is it your favorite sport?</legend>
+          <textarea
+            id="favorite_sport_description"
+            name="favorite_sport_description"
+            placeholder="Describe why you love this sport..."
+            required
+            aria-required="true"
+          ></textarea>
+        </fieldset>
+
+        <!-- Section for additional comments -->
+        <fieldset>
+          <legend>Comments or Suggestions</legend>
+          <textarea
+            id="comment"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </fieldset>
+
+        <!-- Submit button -->
+        <button id="submit" type="submit">Submit Survey</button>
+      </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 Winter Sports Enthusiasts. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
