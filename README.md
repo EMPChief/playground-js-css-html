@@ -145,7 +145,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 📧 Contact
 
 Bjørn - [bjornmagnekristensen1999@gmail.com]
-Project Link: [https://github.com/EMPChief/rawdog]
+Project Link: [https://empchief.github.io/rawdog/]
 
 ---
 
