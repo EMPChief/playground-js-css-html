@@ -1,182 +1,721 @@
-[
-    {
-        "question": "What is the capital of France?",
-        "answers": [
-            { "text": "New York", "correct": false },
-            { "text": "Paris", "correct": true },
-            { "text": "London", "correct": false },
-            { "text": "Berlin", "correct": false }
-        ]
-    },
-    {
-        "question": "What is the largest country in the world?",
-        "answers": [
-            { "text": "Russia", "correct": false },
-            { "text": "Canada", "correct": false },
-            { "text": "China", "correct": true },
-            { "text": "USA", "correct": false }
-        ]
-    },
-    {
-        "question": "What is the smallest country in the world?",
-        "answers": [
-            { "text": "Vatican City", "correct": true },
-            { "text": "Monaco", "correct": false },
-            { "text": "San Marino", "correct": false },
-            { "text": "Liechtenstein", "correct": false }
-        ]
-    },
-    {
-        "question": "What does CPU stand for?",
-        "answers": [
-            { "text": "Central Processing Unit", "correct": true },
-            { "text": "Computer Personal Unit", "correct": false },
-            { "text": "Central Programming Unit", "correct": false },
-            { "text": "Control Processing Unit", "correct": false }
-        ]
-    },
-    {
-        "question": "Which company developed the Windows operating system?",
-        "answers": [
-            { "text": "Apple", "correct": false },
-            { "text": "Microsoft", "correct": true },
-            { "text": "IBM", "correct": false },
-            { "text": "Linux", "correct": false }
-        ]
-    },
-    {
-        "question": "What does HTML stand for?",
-        "answers": [
-            { "text": "Hypertext Markup Language", "correct": true },
-            { "text": "Hyperlink and Text Markup Language", "correct": false },
-            { "text": "High-Level Text Markup Language", "correct": false },
-            { "text": "Hypertext Multi Language", "correct": false }
-        ]
-    },
-    {
-        "question": "What is the main function of the operating system?",
-        "answers": [
-            { "text": "Manage hardware and software resources", "correct": true },
-            { "text": "Run applications only", "correct": false },
-            { "text": "Perform calculations", "correct": false },
-            { "text": "Connect to the internet", "correct": false }
-        ]
-    },
-    {
-        "question": "Which language is primarily used for web development?",
-        "answers": [
-            { "text": "Python", "correct": false },
-            { "text": "Java", "correct": false },
-            { "text": "JavaScript", "correct": true },
-            { "text": "C++", "correct": false }
-        ]
-    },
-    {
-        "question": "What is an IP address?",
-        "answers": [
-            { "text": "Internet Protocol address", "correct": true },
-            { "text": "Internal Process address", "correct": false },
-            { "text": "Interconnected Protocol address", "correct": false },
-            { "text": "Internet Private address", "correct": false }
-        ]
-    },
-    {
-        "question": "What does the acronym 'RAM' stand for?",
-        "answers": [
-            { "text": "Random Access Memory", "correct": true },
-            { "text": "Read Access Memory", "correct": false },
-            { "text": "Rapid Access Memory", "correct": false },
-            { "text": "Run Access Memory", "correct": false }
-        ]
-    },
-    {
-        "question": "Which protocol is used to send emails?",
-        "answers": [
-            { "text": "FTP", "correct": false },
-            { "text": "SMTP", "correct": true },
-            { "text": "HTTP", "correct": false },
-            { "text": "TCP", "correct": false }
-        ]
-    },
-    {
-        "question": "What does CSS stand for?",
-        "answers": [
-            { "text": "Cascading Style Sheets", "correct": true },
-            { "text": "Creative Style System", "correct": false },
-            { "text": "Computer Style Sheets", "correct": false },
-            { "text": "Colorful Style Sheets", "correct": false }
-        ]
-    },
-    {
-        "question": "What is a browser?",
-        "answers": [
-            { "text": "A software application for accessing the internet", "correct": true },
-            { "text": "A type of virus", "correct": false },
-            { "text": "A hardware component", "correct": false },
-            { "text": "An email client", "correct": false }
-        ]
-    },
-    {
-        "question": "What does the acronym 'SQL' stand for?",
-        "answers": [
-            { "text": "Structured Query Language", "correct": true },
-            { "text": "Sequential Query Language", "correct": false },
-            { "text": "Simple Query Language", "correct": false },
-            { "text": "Standard Query Language", "correct": false }
-        ]
-    },
-    {
-        "question": "Which of the following is a programming language?",
-        "answers": [
-            { "text": "HTML", "correct": false },
-            { "text": "CSS", "correct": false },
-            { "text": "JavaScript", "correct": true },
-            { "text": "XML", "correct": false }
-        ]
-    },
-    {
-        "question": "What is the primary function of a GPU?",
-        "answers": [
-            { "text": "Process data", "correct": false },
-            { "text": "Render images", "correct": true },
-            { "text": "Manage memory", "correct": false },
-            { "text": "Control input devices", "correct": false }
-        ]
-    },
-    {
-        "question": "Which type of software is an operating system?",
-        "answers": [
-            { "text": "Application software", "correct": false },
-            { "text": "System software", "correct": true },
-            { "text": "Utility software", "correct": false },
-            { "text": "Malware", "correct": false }
-        ]
-    },
-    {
-        "question": "What is the main purpose of a firewall?",
-        "answers": [
-            { "text": "Prevent unauthorized access", "correct": true },
-            { "text": "Increase internet speed", "correct": false },
-            { "text": "Clean viruses", "correct": false },
-            { "text": "Manage data storage", "correct": false }
-        ]
-    },
-    {
-        "question": "What is the most common type of database?",
-        "answers": [
-            { "text": "Relational Database", "correct": true },
-            { "text": "NoSQL Database", "correct": false },
-            { "text": "Object-oriented Database", "correct": false },
-            { "text": "Distributed Database", "correct": false }
-        ]
-    },
-    {
-        "question": "Which of the following is not an operating system?",
-        "answers": [
-            { "text": "Windows", "correct": false },
-            { "text": "Linux", "correct": false },
-            { "text": "MacOS", "correct": false },
-            { "text": "Python", "correct": true }
-        ]
-    }
-]
+{
+    "categories": [
+        "Technology",
+        "Science",
+        "History",
+        "Geography",
+        "Programming"
+    ],
+    "questions": [
+        {
+            "category": "Technology",
+            "question": "What is the capital of France?",
+            "answers": [
+                { "text": "New York", "correct": false },
+                { "text": "Paris", "correct": true },
+                { "text": "London", "correct": false },
+                { "text": "Berlin", "correct": false }
+            ]
+        },
+        {
+            "category": "Geography",
+            "question": "What is the largest country by land mass?",
+            "answers": [
+                { "text": "Russia", "correct": true },
+                { "text": "Canada", "correct": false },
+                { "text": "China", "correct": false },
+                { "text": "USA", "correct": false }
+            ]
+        },
+        {
+            "category": "Geography",
+            "question": "What is the smallest country in the world?",
+            "answers": [
+                { "text": "Vatican City", "correct": true },
+                { "text": "Monaco", "correct": false },
+                { "text": "San Marino", "correct": false },
+                { "text": "Liechtenstein", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What does CPU stand for?",
+            "answers": [
+                { "text": "Central Processing Unit", "correct": true },
+                { "text": "Computer Personal Unit", "correct": false },
+                { "text": "Central Programming Unit", "correct": false },
+                { "text": "Control Processing Unit", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "Which company developed the Windows operating system?",
+            "answers": [
+                { "text": "Apple", "correct": false },
+                { "text": "Microsoft", "correct": true },
+                { "text": "IBM", "correct": false },
+                { "text": "Linux", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "What does HTML stand for?",
+            "answers": [
+                { "text": "Hypertext Markup Language", "correct": true },
+                { "text": "Hyperlink and Text Markup Language", "correct": false },
+                { "text": "High-Level Text Markup Language", "correct": false },
+                { "text": "Hypertext Multi Language", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What is the main function of an operating system?",
+            "answers": [
+                { "text": "Manage hardware and software resources", "correct": true },
+                { "text": "Run applications only", "correct": false },
+                { "text": "Perform calculations", "correct": false },
+                { "text": "Connect to the internet", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "Which programming language is primarily used for web development?",
+            "answers": [
+                { "text": "Python", "correct": false },
+                { "text": "Java", "correct": false },
+                { "text": "JavaScript", "correct": true },
+                { "text": "C++", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What is an IP address?",
+            "answers": [
+                { "text": "Internet Protocol address", "correct": true },
+                { "text": "Internal Process address", "correct": false },
+                { "text": "Interconnected Protocol address", "correct": false },
+                { "text": "Internet Private address", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What does RAM stand for?",
+            "answers": [
+                { "text": "Random Access Memory", "correct": true },
+                { "text": "Read Access Memory", "correct": false },
+                { "text": "Rapid Access Memory", "correct": false },
+                { "text": "Run Access Memory", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "Which protocol is used to send emails?",
+            "answers": [
+                { "text": "FTP", "correct": false },
+                { "text": "SMTP", "correct": true },
+                { "text": "HTTP", "correct": false },
+                { "text": "TCP", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "What does CSS stand for?",
+            "answers": [
+                { "text": "Cascading Style Sheets", "correct": true },
+                { "text": "Creative Style System", "correct": false },
+                { "text": "Computer Style Sheets", "correct": false },
+                { "text": "Colorful Style Sheets", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What is a web browser?",
+            "answers": [
+                { "text": "A software application for accessing the internet", "correct": true },
+                { "text": "A type of virus", "correct": false },
+                { "text": "A hardware component", "correct": false },
+                { "text": "An email client", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "What does SQL stand for?",
+            "answers": [
+                { "text": "Structured Query Language", "correct": true },
+                { "text": "Sequential Query Language", "correct": false },
+                { "text": "Simple Query Language", "correct": false },
+                { "text": "Standard Query Language", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "Which of these is a programming language?",
+            "answers": [
+                { "text": "HTML", "correct": false },
+                { "text": "CSS", "correct": false },
+                { "text": "JavaScript", "correct": true },
+                { "text": "XML", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What is the primary function of a GPU?",
+            "answers": [
+                { "text": "Process data", "correct": false },
+                { "text": "Render graphics", "correct": true },
+                { "text": "Manage memory", "correct": false },
+                { "text": "Control input devices", "correct": false }
+            ]
+        },
+        {
+            "category": "Science",
+            "question": "What is the chemical symbol for gold?",
+            "answers": [
+                { "text": "Go", "correct": false },
+                { "text": "Ag", "correct": false },
+                { "text": "Au", "correct": true },
+                { "text": "Gd", "correct": false }
+            ]
+        },
+        {
+            "category": "Science",
+            "question": "What is the speed of light in vacuum?",
+            "answers": [
+                { "text": "299,792 kilometers per second", "correct": true },
+                { "text": "300,000 kilometers per second", "correct": false },
+                { "text": "199,792 kilometers per second", "correct": false },
+                { "text": "250,000 kilometers per second", "correct": false }
+            ]
+        },
+        {
+            "category": "History",
+            "question": "In which year did World War II end?",
+            "answers": [
+                { "text": "1944", "correct": false },
+                { "text": "1945", "correct": true },
+                { "text": "1946", "correct": false },
+                { "text": "1943", "correct": false }
+            ]
+        },
+        {
+            "category": "History",
+            "question": "Who was the first President of the United States?",
+            "answers": [
+                { "text": "Thomas Jefferson", "correct": false },
+                { "text": "John Adams", "correct": false },
+                { "text": "George Washington", "correct": true },
+                { "text": "Benjamin Franklin", "correct": false }
+            ]
+        },
+        {
+            "category": "Science",
+            "question": "What is the largest planet in our solar system?",
+            "answers": [
+                { "text": "Saturn", "correct": false },
+                { "text": "Jupiter", "correct": true },
+                { "text": "Neptune", "correct": false },
+                { "text": "Uranus", "correct": false }
+            ]
+        },
+        {
+            "category": "Science",
+            "question": "What is the chemical formula for water?",
+            "answers": [
+                { "text": "CO2", "correct": false },
+                { "text": "H2O", "correct": true },
+                { "text": "O2", "correct": false },
+                { "text": "H2O2", "correct": false }
+            ]
+        },
+        {
+            "category": "Geography",
+            "question": "Which is the longest river in the world?",
+            "answers": [
+                { "text": "Amazon", "correct": false },
+                { "text": "Nile", "correct": true },
+                { "text": "Mississippi", "correct": false },
+                { "text": "Yangtze", "correct": false }
+            ]
+        },
+        {
+            "category": "Geography",
+            "question": "What is the capital of Japan?",
+            "answers": [
+                { "text": "Seoul", "correct": false },
+                { "text": "Beijing", "correct": false },
+                { "text": "Tokyo", "correct": true },
+                { "text": "Bangkok", "correct": false }
+            ]
+        },
+        {
+            "category": "History",
+            "question": "Who painted the Mona Lisa?",
+            "answers": [
+                { "text": "Vincent van Gogh", "correct": false },
+                { "text": "Pablo Picasso", "correct": false },
+                { "text": "Leonardo da Vinci", "correct": true },
+                { "text": "Michelangelo", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "What is a closure in JavaScript?",
+            "answers": [
+                { "text": "A function that has access to variables in its outer scope", "correct": true },
+                { "text": "A way to close a browser window", "correct": false },
+                { "text": "A method to end a loop", "correct": false },
+                { "text": "A type of database", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "Which of these is NOT a JavaScript data type?",
+            "answers": [
+                { "text": "String", "correct": false },
+                { "text": "Boolean", "correct": false },
+                { "text": "Integer", "correct": true },
+                { "text": "Undefined", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What is blockchain technology primarily known for?",
+            "answers": [
+                { "text": "Social media", "correct": false },
+                { "text": "Cryptocurrency", "correct": true },
+                { "text": "Video streaming", "correct": false },
+                { "text": "Word processing", "correct": false }
+            ]
+        },
+        {
+            "category": "Science",
+            "question": "What is the process by which plants convert sunlight into energy?",
+            "answers": [
+                { "text": "Photosynthesis", "correct": true },
+                { "text": "Respiration", "correct": false },
+                { "text": "Fermentation", "correct": false },
+                { "text": "Digestion", "correct": false }
+            ]
+        },
+        {
+            "category": "History",
+            "question": "When was the Declaration of Independence signed?",
+            "answers": [
+                { "text": "1775", "correct": false },
+                { "text": "1776", "correct": true },
+                { "text": "1777", "correct": false },
+                { "text": "1778", "correct": false }
+            ]
+        },
+        {
+            "category": "Geography",
+            "question": "Which continent is the largest by land area?",
+            "answers": [
+                { "text": "North America", "correct": false },
+                { "text": "Africa", "correct": false },
+                { "text": "Asia", "correct": true },
+                { "text": "Antarctica", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What is the purpose of a firewall in computer security?",
+            "answers": [
+                { "text": "To cool down the computer", "correct": false },
+                { "text": "To monitor and control network traffic", "correct": true },
+                { "text": "To increase internet speed", "correct": false },
+                { "text": "To store backup files", "correct": false }
+            ]
+        },
+        {
+            "category": "Science",
+            "question": "What is the smallest unit of matter?",
+            "answers": [
+                { "text": "Atom", "correct": false },
+                { "text": "Molecule", "correct": false },
+                { "text": "Quark", "correct": true },
+                { "text": "Cell", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "What does API stand for?",
+            "answers": [
+                { "text": "Application Programming Interface", "correct": true },
+                { "text": "Advanced Programming Integration", "correct": false },
+                { "text": "Automated Program Installation", "correct": false },
+                { "text": "Application Process Integration", "correct": false }
+            ]
+        },
+        {
+            "category": "History",
+            "question": "Who was the first woman to win a Nobel Prize?",
+            "answers": [
+                { "text": "Mother Teresa", "correct": false },
+                { "text": "Marie Curie", "correct": true },
+                { "text": "Jane Addams", "correct": false },
+                { "text": "Pearl Buck", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "What is the purpose of the 'async' keyword in JavaScript?",
+            "answers": [
+                { "text": "To define asynchronous functions", "correct": true },
+                { "text": "To make code run faster", "correct": false },
+                { "text": "To create loops", "correct": false },
+                { "text": "To declare variables", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "Which data structure follows the LIFO principle?",
+            "answers": [
+                { "text": "Queue", "correct": false },
+                { "text": "Stack", "correct": true },
+                { "text": "Array", "correct": false },
+                { "text": "Tree", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What is the function of DNS in networking?",
+            "answers": [
+                { "text": "To secure websites", "correct": false },
+                { "text": "To convert domain names to IP addresses", "correct": true },
+                { "text": "To compress data", "correct": false },
+                { "text": "To encrypt messages", "correct": false }
+            ]
+        },
+        {
+            "category": "Science",
+            "question": "What is the speed of sound in air at sea level?",
+            "answers": [
+                { "text": "343 meters per second", "correct": true },
+                { "text": "299,792 kilometers per second", "correct": false },
+                { "text": "100 meters per second", "correct": false },
+                { "text": "500 meters per second", "correct": false }
+            ]
+        },
+        {
+            "category": "Geography",
+            "question": "Which ocean is the deepest?",
+            "answers": [
+                { "text": "Atlantic Ocean", "correct": false },
+                { "text": "Indian Ocean", "correct": false },
+                { "text": "Pacific Ocean", "correct": true },
+                { "text": "Arctic Ocean", "correct": false }
+            ]
+        },
+        {
+            "category": "History",
+            "question": "Who invented the telephone?",
+            "answers": [
+                { "text": "Thomas Edison", "correct": false },
+                { "text": "Alexander Graham Bell", "correct": true },
+                { "text": "Nikola Tesla", "correct": false },
+                { "text": "Benjamin Franklin", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "What does CSS Grid primarily help with?",
+            "answers": [
+                { "text": "Database management", "correct": false },
+                { "text": "Two-dimensional layout systems", "correct": true },
+                { "text": "Server-side scripting", "correct": false },
+                { "text": "Form validation", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What is the purpose of HTTPS?",
+            "answers": [
+                { "text": "To make websites load faster", "correct": false },
+                { "text": "To secure data transmission", "correct": true },
+                { "text": "To store cookies", "correct": false },
+                { "text": "To compress images", "correct": false }
+            ]
+        },
+        {
+            "category": "Science",
+            "question": "What is the hardest natural substance on Earth?",
+            "answers": [
+                { "text": "Gold", "correct": false },
+                { "text": "Iron", "correct": false },
+                { "text": "Diamond", "correct": true },
+                { "text": "Platinum", "correct": false }
+            ]
+        },
+        {
+            "category": "Geography",
+            "question": "Which country has the most islands in the world?",
+            "answers": [
+                { "text": "Indonesia", "correct": false },
+                { "text": "Sweden", "correct": true },
+                { "text": "Japan", "correct": false },
+                { "text": "Philippines", "correct": false }
+            ]
+        },
+        {
+            "category": "History",
+            "question": "In which year did World War I begin?",
+            "answers": [
+                { "text": "1914", "correct": true },
+                { "text": "1915", "correct": false },
+                { "text": "1916", "correct": false },
+                { "text": "1917", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "What is the purpose of Git?",
+            "answers": [
+                { "text": "To write code", "correct": false },
+                { "text": "Version control system", "correct": true },
+                { "text": "To debug code", "correct": false },
+                { "text": "To compile code", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What is the function of RAM in a computer?",
+            "answers": [
+                { "text": "Long-term storage", "correct": false },
+                { "text": "Temporary working memory", "correct": true },
+                { "text": "Process graphics", "correct": false },
+                { "text": "Cool the system", "correct": false }
+            ]
+        },
+        {
+            "category": "Science",
+            "question": "What is the most abundant gas in Earth's atmosphere?",
+            "answers": [
+                { "text": "Oxygen", "correct": false },
+                { "text": "Carbon Dioxide", "correct": false },
+                { "text": "Nitrogen", "correct": true },
+                { "text": "Hydrogen", "correct": false }
+            ]
+        },
+        {
+            "category": "Geography",
+            "question": "Which desert is the largest in the world?",
+            "answers": [
+                { "text": "Gobi Desert", "correct": false },
+                { "text": "Sahara Desert", "correct": false },
+                { "text": "Antarctic Desert", "correct": true },
+                { "text": "Arabian Desert", "correct": false }
+            ]
+        },
+        {
+            "category": "History",
+            "question": "Who was the first person to walk on the Moon?",
+            "answers": [
+                { "text": "Buzz Aldrin", "correct": false },
+                { "text": "Neil Armstrong", "correct": true },
+                { "text": "Yuri Gagarin", "correct": false },
+                { "text": "John Glenn", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "What is the purpose of the 'typeof' operator in JavaScript?",
+            "answers": [
+                { "text": "To check data type", "correct": true },
+                { "text": "To convert data types", "correct": false },
+                { "text": "To create new types", "correct": false },
+                { "text": "To compare values", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What is cloud computing?",
+            "answers": [
+                { "text": "Weather forecasting", "correct": false },
+                { "text": "Internet-based computing services", "correct": true },
+                { "text": "High-altitude data centers", "correct": false },
+                { "text": "Wireless networking", "correct": false }
+            ]
+        },
+        {
+            "category": "Science",
+            "question": "What is the atomic number of Carbon?",
+            "answers": [
+                { "text": "4", "correct": false },
+                { "text": "6", "correct": true },
+                { "text": "8", "correct": false },
+                { "text": "12", "correct": false }
+            ]
+        },
+        {
+            "category": "Geography",
+            "question": "Which is the longest river in Europe?",
+            "answers": [
+                { "text": "Thames", "correct": false },
+                { "text": "Seine", "correct": false },
+                { "text": "Volga", "correct": true },
+                { "text": "Danube", "correct": false }
+            ]
+        },
+        {
+            "category": "History",
+            "question": "When was the Great Wall of China completed?",
+            "answers": [
+                { "text": "200 BC", "correct": false },
+                { "text": "1644 AD", "correct": true },
+                { "text": "800 AD", "correct": false },
+                { "text": "500 BC", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "What is a RESTful API?",
+            "answers": [
+                { "text": "A programming language", "correct": false },
+                { "text": "An architectural style for APIs", "correct": true },
+                { "text": "A database system", "correct": false },
+                { "text": "A web browser", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What is the purpose of an SSD?",
+            "answers": [
+                { "text": "Process graphics", "correct": false },
+                { "text": "Store data without moving parts", "correct": true },
+                { "text": "Cool the computer", "correct": false },
+                { "text": "Connect to the internet", "correct": false }
+            ]
+        },
+        {
+            "category": "Science",
+            "question": "What is the process of nuclear fusion?",
+            "answers": [
+                { "text": "Splitting atoms", "correct": false },
+                { "text": "Combining atomic nuclei", "correct": true },
+                { "text": "Electron transfer", "correct": false },
+                { "text": "Radioactive decay", "correct": false }
+            ]
+        },
+        {
+            "category": "Geography",
+            "question": "What is the capital of Australia?",
+            "answers": [
+                { "text": "Sydney", "correct": false },
+                { "text": "Melbourne", "correct": false },
+                { "text": "Canberra", "correct": true },
+                { "text": "Perth", "correct": false }
+            ]
+        },
+        {
+            "category": "History",
+            "question": "Who wrote 'Romeo and Juliet'?",
+            "answers": [
+                { "text": "Charles Dickens", "correct": false },
+                { "text": "William Shakespeare", "correct": true },
+                { "text": "Jane Austen", "correct": false },
+                { "text": "Mark Twain", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "What is the purpose of Docker?",
+            "answers": [
+                { "text": "To write code", "correct": false },
+                { "text": "To containerize applications", "correct": true },
+                { "text": "To design websites", "correct": false },
+                { "text": "To test code", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What is machine learning?",
+            "answers": [
+                { "text": "Computer repair", "correct": false },
+                { "text": "Automated learning from data", "correct": true },
+                { "text": "Robot manufacturing", "correct": false },
+                { "text": "Computer programming", "correct": false }
+            ]
+        },
+        {
+            "category": "Science",
+            "question": "What is the function of white blood cells?",
+            "answers": [
+                { "text": "Carry oxygen", "correct": false },
+                { "text": "Fight infections", "correct": true },
+                { "text": "Clot blood", "correct": false },
+                { "text": "Produce energy", "correct": false }
+            ]
+        },
+        {
+            "category": "Geography",
+            "question": "Which country is known as the Land of the Rising Sun?",
+            "answers": [
+                { "text": "China", "correct": false },
+                { "text": "Korea", "correct": false },
+                { "text": "Japan", "correct": true },
+                { "text": "Thailand", "correct": false }
+            ]
+        },
+        {
+            "category": "History",
+            "question": "Who painted the Sistine Chapel ceiling?",
+            "answers": [
+                { "text": "Leonardo da Vinci", "correct": false },
+                { "text": "Michelangelo", "correct": true },
+                { "text": "Raphael", "correct": false },
+                { "text": "Donatello", "correct": false }
+            ]
+        },
+        {
+            "category": "Programming",
+            "question": "What is the purpose of npm?",
+            "answers": [
+                { "text": "Network Protocol Manager", "correct": false },
+                { "text": "Node Package Manager", "correct": true },
+                { "text": "New Programming Method", "correct": false },
+                { "text": "Native Program Module", "correct": false }
+            ]
+        },
+        {
+            "category": "Technology",
+            "question": "What is the purpose of a VPN?",
+            "answers": [
+                { "text": "To speed up internet", "correct": false },
+                { "text": "To provide secure, private internet access", "correct": true },
+                { "text": "To store files", "correct": false },
+                { "text": "To create websites", "correct": false }
+            ]
+        },
+        {
+            "category": "Science",
+            "question": "What is the largest organ in the human body?",
+            "answers": [
+                { "text": "Heart", "correct": false },
+                { "text": "Brain", "correct": false },
+                { "text": "Skin", "correct": true },
+                { "text": "Liver", "correct": false }
+            ]
+        },
+        {
+            "category": "Geography",
+            "question": "Which mountain range is the longest in the world?",
+            "answers": [
+                { "text": "Rocky Mountains", "correct": false },
+                { "text": "Himalayas", "correct": false },
+                { "text": "Andes", "correct": true },
+                { "text": "Alps", "correct": false }
+            ]
+        },
+        {
+            "category": "History",
+            "question": "When did the Renaissance period begin?",
+            "answers": [
+                { "text": "14th century", "correct": true },
+                { "text": "15th century", "correct": false },
+                { "text": "16th century", "correct": false },
+                { "text": "13th century", "correct": false }
+            ]
+        }
+    ]
+}

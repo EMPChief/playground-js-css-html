@@ -1,126 +1,375 @@
-/* Global styles */
+/* Variables */
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --success-color: #22c55e;
+    --error-color: #ef4444;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --bg-primary: #f3f4f6;
+    --bg-secondary: #ffffff;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Global Styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif; /* Setting a classic font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Background style for the body */
 body {
-  background: linear-gradient(to right, limegreen, darkgreen); /* Smooth gradient background */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
 }
 
-/* Main app container */
+/* Navigation */
+.navigation {
+    padding: 1rem 2rem;
+    background-color: var(--bg-secondary);
+    box-shadow: var(--shadow);
+}
+
+.back-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--primary-color);
+}
+
+/* Main Container */
 .app {
-  background-color: #fff; /* White background for the app */
-  width: 90%; /* Responsive width */
-  max-width: 600px; /* Maximum width */
-  margin: 100px auto 0; /* Centering the app with margin */
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Inner spacing */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-/* Style for the back link */
-.back {
-  position: absolute; /* Positioning the back link */
-  top: 20px; /* Distance from the top */
-  left: 20px; /* Distance from the left */
-  text-decoration: none; /* No underline */
-  font-size: 18px; /* Text size */
-  color: white; /* Text color */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  padding: 10px 15px; /* Inner margin */
-  border-radius: 5px; /* Rounded corners */
+/* Quiz Configuration */
+.quiz-config {
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    text-align: center;
 }
 
-/* Hover effect for the back link */
-.back:hover {
-  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+.quiz-config h1 {
+    margin-bottom: 2rem;
+    color: var(--text-primary);
 }
 
-/* Header style */
-.header {
-  font-size: 28px; /* Font size for the header */
-  color: aquamarine; /* Header color */
-  font-weight: bold; /* Bold font */
-  border-bottom: 2px solid #ccc; /* Bottom border */
-  padding-bottom: 20px; /* Padding below */
-  text-align: center; /* Center text */
+.config-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
 }
 
-/* Style for the quiz section */
-.quiz {
-  padding: 20px; /* Inner spacing for quiz section */
+.question-count {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-/* Style for quiz questions */
-.question {
-  font-size: 24px; /* Font size for questions */
-  font-weight: bold; /* Bold for questions */
-  margin-bottom: 15px; /* Margin below the question */
-  color: blueviolet; /* Question text color */
+.question-count-select {
+    padding: 0.5rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
 }
 
-/* Style for answer buttons */
+.question-count-select:hover {
+    border-color: var(--primary-color);
+}
+
+/* Quiz Container */
+.quiz-container {
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--bg-primary);
+}
+
+/* Question Styles */
+.question-container {
+    margin-bottom: 2rem;
+}
+
+.question-text {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.answer-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
 .answer-button {
-  display: flex; /* Flexbox for layout */
-  flex-direction: column; /* Stack buttons vertically */
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-/* General button styles */
-.buttonforquiz {
-  background: #fff; /* White background for buttons */
-  color: #000; /* Black text color */
-  border: 1px solid #000; /* Border for buttons */
-  border-radius: 5px; /* Rounded corners */
-  width: 100%; /* Full width */
-  padding: 10px; /* Inner padding */
-  cursor: pointer; /* Pointer cursor on hover */
-  font-size: 15px; /* Font size for buttons */
-  margin-bottom: 10px; /* Space between buttons */
+.answer-button:hover {
+    border-color: var(--primary-color);
+    background-color: var(--bg-primary);
 }
 
-/* Hover effect for quiz buttons */
-.buttonforquiz:hover:not([disabled]) {
-  background-color: #000; /* Background changes to black on hover */
-  color: #fff; /* Text changes to white on hover */
-  transition: all 300ms ease; /* Smooth transition */
+.answer-button.correct {
+    background-color: var(--success-color);
+    color: white;
+    border-color: var(--success-color);
 }
 
-/* Style for disabled buttons */
-.btn:disabled {
-  cursor: no-drop; /* Change cursor to indicate disabled state */
+.answer-button.incorrect {
+    background-color: var(--error-color);
+    color: white;
+    border-color: var(--error-color);
 }
 
-/* Style for the next button */
-.nextbutton {
-  background-color: greenyellow; /* Background color for the next button */
-  color: #fff; /* White text color */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  width: 100%; /* Full width */
-  padding: 10px; /* Inner padding */
-  cursor: pointer; /* Pointer cursor on hover */
-  font-size: 15px; /* Font size */
-  font-weight: bold; /* Bold font */
-  margin: 20px auto 0; /* Spacing for the button */
-  display: none; /* Hidden initially */
+/* Navigation Buttons */
+.nav-button, .start-button, .retry-button, .review-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-/* Hover effect for the next button */
-.nextbutton:hover {
-  background-color: orangered; /* Background color on hover */
-  color: #000; /* Black text color on hover */
-  transition: all 300ms ease; /* Smooth transition */
+.nav-button:hover, .start-button:hover, .retry-button:hover, .review-button:hover {
+    background-color: var(--primary-hover);
 }
 
-/* Styles for correct and incorrect answers */
-.correct {
-  background: green; /* Green background for correct answers */
+.nav-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
 }
 
-.incorrect {
-  background: red; /* Red background for incorrect answers */
+/* Results Container */
+.results-container {
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.results-content {
+    margin: 2rem 0;
+}
+
+.score-display {
+    margin-bottom: 1.5rem;
+}
+
+.final-score {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.percentage {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quiz-config,
+.quiz-container,
+.results-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .app {
+        margin: 1rem auto;
+    }
+
+    .quiz-container,
+    .results-container {
+        padding: 1.5rem;
+    }
+
+    .answer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Review Answers Styles */
+.review-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    background-color: var(--bg-secondary);
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-header {
+    padding: 1.5rem;
+    border-bottom: 2px solid var(--bg-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-secondary);
+}
+
+.review-header h2 {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: var(--error-color);
+}
+
+.answers-list {
+    padding: 1.5rem;
+    overflow-y: auto;
+    max-height: calc(90vh - 80px);
+}
+
+.answer-review-item {
+    background-color: var(--bg-primary);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid transparent;
+}
+
+.answer-review-item.correct {
+    border-left-color: var(--success-color);
+}
+
+.answer-review-item.incorrect {
+    border-left-color: var(--error-color);
+}
+
+.question-number {
+    font-weight: bold;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.question-text {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.answer-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.user-answer, .correct-answer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.user-answer i {
+    font-size: 1rem;
+}
+
+.user-answer i.fa-check {
+    color: var(--success-color);
+}
+
+.user-answer i.fa-times {
+    color: var(--error-color);
+}
+
+/* Responsive styles for review feature */
+@media (max-width: 640px) {
+    .review-container {
+        width: 95%;
+        max-height: 95vh;
+    }
+    
+    .answers-list {
+        padding: 1rem;
+    }
+    
+    .answer-review-item {
+        padding: 1rem;
+    }
 }

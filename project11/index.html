@@ -3,46 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Quiz</title>
+    <meta name="description" content="An interactive quiz application with customizable question count">
+    <title>Interactive Quiz App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Back link to return to the main page -->
-    <a class="back" href="../index.html"><p>Back</p></a>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Projects
+        </a>
+    </nav>
     
     <!-- Main application container -->
-    <div class="app" id="app">
-        <!-- Header for the quiz -->
-        <h1 class="header" id="header">
-            Simple Quiz
-        </h1>
-        <!-- Quiz section -->
-        <div class="quiz" id="quiz">
-            <!-- Question display -->
-            <h2 class="question" id="question">
-                Question will appear here
-            </h2>
-            <!-- Buttons for possible answers -->
-            <div class="answer-button" id="answerbutton">
-                <button class="buttonforquiz" id="btn0">
-                    Answer 1
-                </button>
-                <button class="buttonforquiz" id="btn1">
-                    Answer 2
-                </button>
-                <button class="buttonforquiz" id="btn2">
-                    Answer 3
-                </button>
-                <button class="buttonforquiz" id="btn3">
-                    Answer 4
+    <div class="app" id="quizApp">
+        <!-- Quiz configuration section -->
+        <div class="quiz-config" id="quizConfig">
+            <h1>Interactive Quiz</h1>
+            <div class="config-options">
+                <div class="question-count">
+                    <label for="questionCount">Number of Questions:</label>
+                    <select id="questionCount" class="question-count-select">
+                        <option value="5">5 Questions</option>
+                        <option value="10" selected>10 Questions</option>
+                        <option value="15">15 Questions</option>
+                        <option value="20">20 Questions</option>
+                    </select>
+                </div>
+                <button id="startQuiz" class="start-button">
+                    Start Quiz <i class="fas fa-play"></i>
                 </button>
             </div>
-            <!-- Button to go to the next question -->
-            <button class="nextbutton" id="nextbutton">Next</button>
+        </div>
+
+        <!-- Quiz content section -->
+        <div class="quiz-container hidden" id="quizContainer">
+            <!-- Progress information -->
+            <div class="quiz-header">
+                <div class="progress-info">
+                    <span id="currentQuestion">Question 1</span>
+                    <span id="questionProgress">of 10</span>
+                </div>
+                <div class="score-info">
+                    Score: <span id="currentScore">0</span>
+                </div>
+            </div>
+
+            <!-- Question display -->
+            <div class="question-container">
+                <h2 id="questionText" class="question-text"></h2>
+                <div id="answerButtons" class="answer-grid"></div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="quiz-footer">
+                <button id="nextButton" class="nav-button" disabled>
+                    Next Question <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Results section -->
+        <div class="results-container hidden" id="resultsContainer">
+            <h2>Quiz Complete!</h2>
+            <div class="results-content">
+                <div class="score-display">
+                    <div class="final-score">
+                        <span id="finalScore">0</span>/<span id="totalQuestions">10</span>
+                    </div>
+                    <div class="percentage">
+                        <span id="scorePercentage">0</span>%
+                    </div>
+                </div>
+                <div class="result-message" id="resultMessage"></div>
+            </div>
+            <div class="action-buttons">
+                <button id="retryQuiz" class="retry-button">
+                    <i class="fas fa-redo"></i> Try Again
+                </button>
+                <button id="viewAnswers" class="review-button">
+                    <i class="fas fa-eye"></i> Review Answers
+                </button>
+            </div>
         </div>
     </div>
 
-    <!-- Link to the JavaScript file -->
     <script src="index.js"></script>
 </body>
 </html>
