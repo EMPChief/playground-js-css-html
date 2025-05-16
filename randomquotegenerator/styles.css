@@ -1,24 +1,48 @@
+/* Variables */
+:root {
+    /* Primary Colors */
+    --primary-color: #4ade80;  /* Light green */
+    --primary-hover: #22c55e;  /* Darker green */
+    --primary-light: #86efac;  /* Lighter green */
+    
+    /* Text Colors */
+    --text-primary: #15803d;   /* Dark green for primary text */
+    --text-secondary: #166534; /* Darker green for secondary text */
+    
+    /* Background Colors */
+    --bg-primary: #f0fdf4;     /* Very light green background */
+    --bg-secondary: #ffffff;   /* White */
+    --bg-accent: #dcfce7;      /* Light green accent */
+    
+    /* Border Colors */
+    --border-light: #bbf7d0;   /* Light green border */
+    --border-medium: #4ade80;  /* Medium green border */
+    
+    /* Shadow */
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
 /* Global styles for body */
 body {
   margin: 0;
-  display: flex;
+  padding: 20px;
   min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, var(--primary-light), var(--bg-primary));
+  display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Courier New", Courier, monospace;
-  background: linear-gradient(to bottom left, lightgreen, lightblue);
 }
 
 /* Main container styles */
 .quote-container {
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-  padding: 40px;
-  border-radius: 15px;
-  width: 90%;
-  max-width: 600px;
-  margin: 20px;
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
   text-align: center;
+  max-width: 600px;
+  width: 90%;
 }
 
 /* Title of the quote generator */
@@ -31,10 +55,10 @@ body {
 
 /* Style for the quote text */
 .quote-text {
-  font-size: 28px;
-  font-weight: 500;
-  color: #333;
-  margin-bottom: 15px;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
 /* Style for the quote marks */
@@ -46,47 +70,69 @@ body {
 
 /* Style for the author of the quote */
 .quote-author {
-  font-size: 22px;
-  margin: 10px 0;
+  color: var(--text-secondary);
   font-style: italic;
-  color: #666;
+  margin-bottom: 2rem;
 }
 
 /* Button for fetching a new quote */
-.quote-btn {
-  font-size: 18px;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 12px;
-  margin-top: 20px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  text-transform: uppercase;
-  width: 320px;
-  transition: all 0.3s ease-in-out;
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-/* Button hover effect */
-.quote-btn:hover {
-  background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  color: green;
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
 }
 
 /* Style for the back link */
 .back-link {
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 20px;
   text-decoration: none;
-  font-size: 18px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 15px;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  padding: 10px 20px;
   border-radius: 5px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
 }
 
-/* Hover effect for back link */
 .back-link:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateX(-5px);
+}
+
+@media (max-width: 480px) {
+  .quote-container {
+    padding: 1.5rem;
+  }
+  
+  .quote-text {
+    font-size: 1.2rem;
+  }
+  
+  .button-container {
+    flex-direction: column;
+  }
+  
+  button {
+    width: 100%;
+  }
 }

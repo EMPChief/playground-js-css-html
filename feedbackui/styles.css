@@ -1,91 +1,166 @@
+:root {
+  /* Primary Colors */
+  --primary-color: #4ade80;  /* Light green */
+  --primary-hover: #22c55e;  /* Darker green */
+  --primary-light: #86efac;  /* Lighter green */
+  
+  /* Text Colors */
+  --text-primary: #15803d;   /* Dark green for primary text */
+  --text-secondary: #166534; /* Darker green for secondary text */
+  
+  /* Background Colors */
+  --bg-primary: #f0fdf4;     /* Very light green background */
+  --bg-secondary: #ffffff;   /* White */
+  --bg-accent: #dcfce7;      /* Light green accent */
+  
+  /* Border Colors */
+  --border-light: #bbf7d0;   /* Light green border */
+  --border-medium: #4ade80;  /* Medium green border */
+  
+  /* Shadow */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  
+  /* Rating Colors */
+  --rating-unhappy: #ef4444;    /* Red for unhappy */
+  --rating-neutral: #f59e0b;    /* Yellow for neutral */
+  --rating-satisfied: #4ade80;  /* Green for satisfied */
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #f0f8ff; /* Lys bakgrunn for moderne utseende */
-  color: #333; /* Mørkere tekst for bedre lesbarhet */
+  background: linear-gradient(135deg, var(--primary-light), var(--bg-primary));
+  color: var(--text-primary);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: "Arial", sans-serif; /* Font for teksten */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .rating-item .icon {
-  font-size: 50px; /* Størrelse på ikonene */
-  color: #ffcc00; /* Farge på ikoner */
+  font-size: 50px;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.rating-item:hover .icon {
+  color: var(--primary-color);
+}
+
+.rating-item.active .icon {
+  color: var(--primary-color);
 }
 
 .feedback-container {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Hvit bakgrunn med litt gjennomsiktighet */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Skygge for dybdeeffekt */
-  border-radius: 12px; /* Runde hjørner */
-  padding: 30px; /* Innvendig marg */
-  width: 90%; /* Bredde */
-  max-width: 500px; /* Maksimal bredde */
-  text-align: center; /* Sentralisert tekst */
-  font-size: 22px; /* Størrelse på tekst */
+  background-color: var(--bg-secondary);
+  box-shadow: var(--shadow);
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  font-size: 22px;
 }
 
 .submit-review {
-  background-color: #4caf50; /* Grønn for moderne utseende */
-  border: none; /* Ingen kant */
-  color: white; /* Hvit tekstfarge */
-  padding: 15px 30px; /* Innvendig marg for knappen */
-  border-radius: 8px; /* Runde hjørner på knappen */
-  font-size: 18px; /* Størrelse på tekst på knappen */
-  cursor: pointer; /* Vis pekeren ved hover */
-  transition: background-color 0.3s; /* Overgangseffekt ved hover */
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .submit-review:hover {
-  background-color: #45a049; /* Mørkere grønn ved hover */
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
 }
 
 .ratings-wrapper {
-  display: flex; /* Flexbox for vurderingsalternativer */
-  justify-content: space-around; /* Plassering av vurderinger */
-  padding: 20px 0; /* Innvendig marg for vurderingscontainer */
-  margin: 20px 0; /* Marg for vurderingscontainer */
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  margin: 20px 0;
 }
 
 .rating-item {
-  cursor: pointer; /* Vis pekeren ved hover */
-  padding: 15px 25px; /* Innvendig marg */
-  border-radius: 5px; /* Runde hjørner */
-  margin: 10px; /* Marg mellom vurderinger */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Overgangseffekter ved hover */
+  cursor: pointer;
+  padding: 15px 25px;
+  border-radius: 8px;
+  margin: 10px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
-.rating-item:hover,
+.rating-item:hover {
+  background-color: var(--bg-accent);
+  border-color: var(--border-light);
+}
+
 .rating-item.active {
-  background-color: #6200ea; /* Farge ved hover og aktiv vurdering */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skygge ved hover */
-  color: white; /* Hvit tekst ved hover */
+  background-color: var(--bg-accent);
+  border-color: var(--primary-color);
+  color: var(--text-primary);
+}
+
+.rating-item.unhappy.active {
+  border-color: var(--rating-unhappy);
+}
+
+.rating-item.neutral.active {
+  border-color: var(--rating-neutral);
+}
+
+.rating-item.satisfied.active {
+  border-color: var(--rating-satisfied);
 }
 
 .title {
-  margin: 10px; /* Marg for tittelen */
-  font-size: 32px; /* Størrelse på tittelen */
+  margin: 10px;
+  font-size: 32px;
+  color: var(--text-primary);
 }
 
-/* Stil for "tilbake"-lenke */
 .back {
-  position: absolute; /* Plassering av elementet */
-  top: 20px; /* Avstand fra toppen */
-  left: 20px; /* Avstand fra venstre side */
-  text-decoration: none; /* Fjerner understreking på lenken */
-  font-size: 18px; /* Størrelse på teksten */
-  color: white; /* Farge på teksten */
-  background-color: rgba(0, 0, 0, 0.6); /* Halvgjennomsiktig bakgrunnsfarge */
-  padding: 10px 15px; /* Innvendig marg */
-  border-radius: 5px; /* Runde hjørner */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
 }
 
 .back:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Endrer bakgrunnsfargen ved hover */
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateX(-5px);
+}
+
+/* Message styles for different ratings */
+.rating-message {
+  margin-top: 20px;
+  font-size: 18px;
+  min-height: 27px;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.rating-message.unhappy {
+  color: var(--rating-unhappy);
+}
+
+.rating-message.neutral {
+  color: var(--rating-neutral);
+}
+
+.rating-message.satisfied {
+  color: var(--rating-satisfied);
 }

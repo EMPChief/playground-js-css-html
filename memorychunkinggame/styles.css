@@ -1,10 +1,30 @@
 :root {
-  --primary-color: #4a90e2;
-  --secondary-color: #2c3e50;
-  --success-color: #2ecc71;
-  --error-color: #e74c3c;
-  --background-color: #f5f6fa;
-  --text-color: #2c3e50;
+  /* Primary Colors */
+  --primary-color: #4ade80;  /* Light green */
+  --primary-hover: #22c55e;  /* Darker green */
+  --primary-light: #86efac;  /* Lighter green */
+  
+  /* Text Colors */
+  --text-primary: #15803d;   /* Dark green for primary text */
+  --text-secondary: #166534; /* Darker green for secondary text */
+  
+  /* Background Colors */
+  --bg-primary: #f0fdf4;     /* Very light green background */
+  --bg-secondary: #ffffff;   /* White */
+  --bg-accent: #dcfce7;      /* Light green accent */
+  
+  /* Status Colors */
+  --success-color: #22c55e;  /* Success green */
+  --error-color: #ef4444;    /* Error red */
+  
+  /* Border Colors */
+  --border-light: #bbf7d0;   /* Light green border */
+  --border-medium: #4ade80;  /* Medium green border */
+  
+  /* Shadow */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  
+  /* Border Radius */
   --border-radius: 8px;
 }
 
@@ -17,8 +37,8 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -28,10 +48,10 @@ body {
 .container {
   width: 90%;
   max-width: 800px;
-  background: white;
+  background: var(--bg-secondary);
   padding: 2rem;
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
 .game-header {
@@ -40,14 +60,14 @@ body {
 }
 
 h1 {
-  color: var(--primary-color);
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 .level-display {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--secondary-color);
+  color: var(--text-secondary);
 }
 
 .game-stats {
@@ -56,7 +76,7 @@ h1 {
   gap: 2rem;
   margin-bottom: 2rem;
   padding: 1rem;
-  background-color: var(--background-color);
+  background-color: var(--bg-accent);
   border-radius: var(--border-radius);
 }
 
@@ -72,7 +92,7 @@ h1 {
 .instructions {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  color: var(--secondary-color);
+  color: var(--text-secondary);
 }
 
 .chunks-container {
@@ -86,9 +106,9 @@ h1 {
 .chunk {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--primary-color);
+  color: var(--text-primary);
   padding: 1rem;
-  background-color: var(--background-color);
+  background-color: var(--bg-accent);
   border-radius: var(--border-radius);
   transition: opacity 0.3s ease;
 }
@@ -108,9 +128,18 @@ h1 {
   max-width: 300px;
   padding: 0.8rem;
   font-size: 1.2rem;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--border-light);
   border-radius: var(--border-radius);
   margin-bottom: 1rem;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  transition: border-color 0.3s ease;
+}
+
+#user-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: var(--bg-accent);
 }
 
 .button-group {
@@ -132,12 +161,13 @@ h1 {
 }
 
 .btn:disabled {
-  background-color: #ccc;
+  background-color: var(--border-light);
+  color: var(--text-secondary);
   cursor: not-allowed;
 }
 
 .btn:hover:not(:disabled) {
-  background-color: #357abd;
+  background-color: var(--primary-hover);
 }
 
 .result-message {
@@ -163,51 +193,58 @@ h1 {
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: var(--border-radius);
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--border-light);
   cursor: pointer;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  transition: all 0.3s ease;
 }
 
-/* Theme-specific styles */
+#theme-select:hover {
+  border-color: var(--primary-color);
+  background-color: var(--bg-accent);
+}
+
+/* Theme-specific styles - Updated with green variations */
 .theme-mafia {
-  --primary-color: #2c3e50;
-  --secondary-color: #c0392b;
+  --primary-color: #22c55e;
+  --text-primary: #15803d;
 }
 
 .theme-dark-humor {
-  --primary-color: #34495e;
-  --secondary-color: #8e44ad;
+  --primary-color: #4ade80;
+  --text-primary: #166534;
 }
 
 .theme-olympic-god {
-  --primary-color: #f1c40f;
-  --secondary-color: #e67e22;
+  --primary-color: #86efac;
+  --text-primary: #15803d;
 }
 
 .theme-space-odyssey {
-  --primary-color: #3498db;
-  --secondary-color: #9b59b6;
+  --primary-color: #34d399;
+  --text-primary: #065f46;
 }
 
 .theme-pirate {
-  --primary-color: #d35400;
-  --secondary-color: #c0392b;
-} 
+  --primary-color: #059669;
+  --text-primary: #064e3b;
+}
 
-
-/* Stil for "back"-lenken */
+/* Back link styles */
 .back {
   position: absolute;
   top: 20px;
   left: 20px;
   text-decoration: none;
-  font-size: 18px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 15px;
-  border-radius: 5px;
+  color: var(--text-primary);
+  background-color: var(--bg-accent);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
 }
 
-/* Hover-effekt for "back"-lenken */
 .back:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--primary-color);
+  color: white;
 }

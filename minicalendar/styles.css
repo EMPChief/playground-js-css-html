@@ -1,3 +1,26 @@
+:root {
+  /* Primary Colors */
+  --primary-color: #4ade80;  /* Light green */
+  --primary-hover: #22c55e;  /* Darker green */
+  --primary-light: #86efac;  /* Lighter green */
+  
+  /* Text Colors */
+  --text-primary: #15803d;   /* Dark green for primary text */
+  --text-secondary: #166534; /* Darker green for secondary text */
+  
+  /* Background Colors */
+  --bg-primary: #f0fdf4;     /* Very light green background */
+  --bg-secondary: #ffffff;   /* White */
+  --bg-accent: #dcfce7;      /* Light green accent */
+  
+  /* Border Colors */
+  --border-light: #bbf7d0;   /* Light green border */
+  --border-medium: #4ade80;  /* Medium green border */
+  
+  /* Shadow */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
 /* Setter margen til 0 og sikrer at hele skjermen dekkes */
 body {
   margin: 0;
@@ -5,8 +28,8 @@ body {
   justify-content: center; /* Sentrerer innholdet horisontalt */
   height: 100vh; /* Setter høyden til hele visningshøyden */
   align-items: center; /* Sentrerer innholdet vertikalt */
-  font-family: cursive; /* Bruker cursive skriftfamilie */
-  background-color: gold; /* Bakgrunnsfarge satt til gull */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
 }
 
 /* Stil for "back"-lenken */
@@ -16,24 +39,25 @@ body {
   left: 20px; /* Avstand fra venstre side av siden */
   text-decoration: none; /* Fjerner understreking på lenken */
   font-size: 18px; /* Størrelse på teksten */
-  color: white; /* Farge på teksten */
-  background-color: rgba(0, 0, 0, 0.5); /* Halvgjennomsiktig bakgrunnsfarge */
+  color: var(--bg-secondary); /* Farge på teksten */
+  background-color: rgba(0, 0, 0, 0.3); /* Halvgjennomsiktig bakgrunnsfarge */
   padding: 10px 15px; /* Innvendig marg */
   border-radius: 5px; /* Runde hjørner */
+  transition: all 0.3s ease;
 }
 
 /* Hover-effekt for "back"-lenken */
 .back:hover {
-  background-color: rgba(0, 0, 0, 0.7); /* Endrer bakgrunnsfargen ved hover */
+  background-color: var(--primary-hover); /* Endrer bakgrunnsfargen ved hover */
 }
 
 /* Stil for kalenderbeholderen */
 .calender-container {
-  background-color: gainsboro; /* Bakgrunnsfarge satt til gainsboro */
+  background-color: var(--bg-secondary); /* Bakgrunnsfarge satt til gainsboro */
   width: 300px; /* Fikset bredde for beholderen */
   text-align: center; /* Sentrerer tekst */
   border-radius: 10px; /* Avrundede kanter */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Legger til skygge */
+  box-shadow: var(--shadow); /* Legger til skygge */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Jevn overgang for transformasjon og skygge */
   overflow: hidden; /* Hindrer overløp av innhold */
 }
@@ -41,15 +65,15 @@ body {
 /* Når kalenderen hovres, skaleres den og får en sterkere skygge */
 .calender-container:hover {
   transform: scale(1.05); /* Øker størrelsen litt */
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Øker skyggeeffekten */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Øker skyggeeffekten */
 }
 
 /* Stil for månedsnavnet */
 .month-name {
   margin: 0; /* Fjerner standard margen */
-  background-color: orangered; /* Bakgrunnsfarge for månedsnavnet */
-  color: white; /* Tekstfarge satt til hvit */
-  padding: 10px; /* Polstring rundt teksten */
+  background-color: var(--primary-color); /* Bakgrunnsfarge for månedsnavnet */
+  color: var(--bg-secondary); /* Tekstfarge satt til hvit */
+  padding: 15px; /* Polstring rundt teksten */
   font-size: 30px; /* Størrelsen på månedsnavnet */
   font-weight: bold; /* Fet skrift */
 }
@@ -57,20 +81,23 @@ body {
 /* Stil for ukedagens navn */
 .day-name {
   font-size: 20px; /* Størrelsen på ukedagens navn */
-  color: blueviolet; /* Fargen på ukedagens navn */
+  color: var(--text-primary); /* Fargen på ukedagens navn */
+  padding: 10px 0;
 }
 
 /* Stil for dagens nummer */
 .day-number {
   font-size: 80px; /* Størrelse på dagens nummer */
-  margin: 0; /* Fjerner margin */
+  margin: 10px 0; /* Fjerner margin */
   font-weight: bold; /* Fet skrift */
+  color: var(--text-primary);
 }
 
 /* Stil for årstallet */
 .year {
   margin: 20px 0; /* Legger til vertikal margin */
   font-size: 20px; /* Størrelse på årstallet */
-  color: darkblue; /* Farge på årstallet */
+  color: var(--text-secondary); /* Farge på årstallet */
   font-weight: 500; /* Middels fet skrift */
+  padding-bottom: 10px;
 }

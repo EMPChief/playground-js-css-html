@@ -27,19 +27,19 @@
       <!-- Container for vurderingsalternativer -->
       <div class="ratings-wrapper" id="ratings-wrapper">
         <!-- Hver vurdering representeres av en rating-item -->
-        <div class="rating-item">
+        <div class="rating-item unhappy" data-rating="unhappy">
           <i class="icon fas fa-frown"></i>
           <!-- Ikon for "Unhappy" -->
           <small>Unhappy</small>
           <!-- Tekst for vurdering -->
         </div>
-        <div class="rating-item">
+        <div class="rating-item neutral" data-rating="neutral">
           <i class="icon fas fa-meh"></i>
           <!-- Ikon for "Neutral" -->
           <small>Neutral</small>
           <!-- Tekst for vurdering -->
         </div>
-        <div class="rating-item">
+        <div class="rating-item satisfied" data-rating="satisfied">
           <i class="icon fas fa-smile"></i>
           <!-- Ikon for "Satisfied" -->
           <small>Satisfied</small>
@@ -47,8 +47,10 @@
         </div>
       </div>
 
+      <div class="rating-message" id="rating-message"></div>
+
       <!-- Knapp for å sende tilbakemelding -->
-      <button class="submit-review" id="submit-review">Send Review</button>
+      <button class="submit-review" id="submit-review" disabled>Send Review</button>
     </div>
 
     <!-- Kobler til JavaScript-filen for interaktivitet -->

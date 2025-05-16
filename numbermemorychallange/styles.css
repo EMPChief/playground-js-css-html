@@ -1,13 +1,29 @@
 /* Variables */
 :root {
-    --primary-color: #4f46e5;
-    --primary-hover: #4338ca;
-    --success-color: #22c55e;
-    --error-color: #ef4444;
-    --text-primary: #1f2937;
-    --text-secondary: #4b5563;
-    --bg-primary: #f3f4f6;
-    --bg-secondary: #ffffff;
+    /* Primary Colors */
+    --primary-color: #4ade80;  /* Light green */
+    --primary-hover: #22c55e;  /* Darker green */
+    --primary-light: #86efac;  /* Lighter green */
+    
+    /* Text Colors */
+    --text-primary: #15803d;   /* Dark green for primary text */
+    --text-secondary: #166534; /* Darker green for secondary text */
+    
+    /* Background Colors */
+    --bg-primary: #f0fdf4;     /* Very light green background */
+    --bg-secondary: #ffffff;   /* White */
+    --bg-accent: #dcfce7;      /* Light green accent */
+    
+    /* Status Colors */
+    --success-color: #22c55e;  /* Success green */
+    --error-color: #ef4444;    /* Error red */
+    --warning-color: #f59e0b;  /* Warning yellow */
+    
+    /* Border Colors */
+    --border-light: #bbf7d0;   /* Light green border */
+    --border-medium: #4ade80;  /* Medium green border */
+    
+    /* Shadow */
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
