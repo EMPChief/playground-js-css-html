@@ -41,7 +41,7 @@ A collection of interactive JavaScript projects showcasing various web developme
 13. English Dictionary - Word lookup functionality
 14. Random Quote Generator - Inspirational quotes
 15. Anime Picture Generator - Anime image API integration
-16. Quotes Generator - Multiple quote generation
+16. Memory Chunking Game - Number sequence memorization game
 17. Stopwatch - Time tracking functionality
 18. Calculator - Basic mathematical operations
 19. Music Player - Audio playback features
@@ -70,6 +70,7 @@ A collection of interactive JavaScript projects showcasing various web developme
 - JavaScript (ES6+)
 - Font Awesome Icons
 - Various APIs for different projects
+- LocalStorage for data persistence
 
 ## 🤝 Contributing
 

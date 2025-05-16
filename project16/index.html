@@ -8,7 +8,44 @@
 </head>
 <body>
     <a class="back" href="../index.html"><p>back</p></a>
-    
+    <div class="container">
+        <div class="game-header">
+            <h1>Memory Chunking Game</h1>
+            <div class="level-display">Level <span id="level">1</span></div>
+        </div>
+
+        <div class="game-stats">
+            <div class="stat">Chunks: <span id="chunk-count">1</span></div>
+            <div class="stat">Total Digits: <span id="total-digits">3</span></div>
+        </div>
+
+        <div class="game-area">
+            <div class="instructions">Memorize the numbers</div>
+            <div id="chunks-container" class="chunks-container"></div>
+            
+            <div class="input-area">
+                <label for="user-input">Enter the complete sequence:</label>
+                <input type="text" id="user-input" disabled>
+                <div class="button-group">
+                    <button id="ready-btn" class="btn">Ready</button>
+                    <button id="submit-btn" class="btn" disabled>Submit</button>
+                </div>
+            </div>
+
+            <div id="result-message" class="result-message"></div>
+        </div>
+
+        <div class="theme-selector">
+            <label for="theme-select">Select Theme:</label>
+            <select id="theme-select">
+                <option value="mafia">Mafia</option>
+                <option value="dark-humor">Dark Humor</option>
+                <option value="olympic-god">Olympic God</option>
+                <option value="space-odyssey">Space Odyssey</option>
+                <option value="pirate">Pirate</option>
+            </select>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

@@ -155,13 +155,13 @@
     },
     {
       "id": "16",
-      "name": "Quotes Generator",
-      "description": "Generate multiple types of quotes with category filtering.",
-      "icon": "fas fa-comment",
+      "name": "Memory Chunking Game",
+      "description": "A game where you have to memorize a sequence of numbers and then input them in the correct order.",
+      "icon": "fas fa-brain",
       "link": "project16/index.html",
-      "tags": ["api", "quotes", "filter"],
+      "tags": ["game", "memory", "cognitive"],
       "difficulty": "intermediate",
-      "technologies": ["HTML", "CSS", "JavaScript", "Quotes API"]
+      "technologies": ["HTML", "CSS", "JavaScript", "LocalStorage"]
     },
     {
       "id": "17",
