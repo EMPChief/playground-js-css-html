@@ -95,7 +95,7 @@ function renderProjects() {
     const difficultySpan = projectCard.querySelector('.difficulty');
     difficultySpan.textContent = project.difficulty.charAt(0).toUpperCase() + project.difficulty.slice(1);
     difficultySpan.classList.add(project.difficulty);
-    
+
     // Set technologies
     const techSpan = projectCard.querySelector('.technologies');
     techSpan.textContent = project.technologies.join(', ');
@@ -105,7 +105,7 @@ function renderProjects() {
     link.href = project.link;
     
     projectList.appendChild(projectCard);
-  });
+    });
 }
 
 // Event listeners for filters

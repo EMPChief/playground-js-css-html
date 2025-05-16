@@ -4,7 +4,6 @@ A collection of interactive JavaScript projects showcasing various web developme
 
 ## 🎯 Features
 
-
 - Responsive design
 - Modern UI/UX practices
 - Clean and well-structured code
@@ -18,7 +17,7 @@ A collection of interactive JavaScript projects showcasing various web developme
 ├── index.js               # Main JavaScript file
 ├── styles.css            # Main stylesheet
 ├── projects.json         # Project configuration
-└── project[01-20]/       # Individual project folders
+└── [project name]/       # Individual project folders
     ├── index.html
     ├── script.js
     └── style.css
@@ -42,7 +41,7 @@ A collection of interactive JavaScript projects showcasing various web developme
 14. Random Quote Generator - Inspirational quotes
 15. Anime Picture Generator - Anime image API integration
 16. Memory Chunking Game - Number sequence memorization game
-17. Stopwatch - Time tracking functionality
+17. Number Memory Game - Fun number game with timer
 18. Calculator - Basic mathematical operations
 19. Music Player - Audio playback features
 20. Recipe Finder - Food recipe search application
@@ -50,11 +49,13 @@ A collection of interactive JavaScript projects showcasing various web developme
 ## 🚀 Getting Started
 
 1. Clone the repository:
+
    ```bash
    git clone [your-repository-url]
    ```
 
 2. Navigate to the project directory:
+
    ```bash
    cd [repository-name]
    ```
@@ -92,4 +93,5 @@ Your Name - [your-email@example.com]
 Project Link: [https://github.com/yourusername/repository-name]
 
 ---
-⭐️ If you found this project helpful, please give it a star! 
+
+⭐️ If you found this project helpful, please give it a star!

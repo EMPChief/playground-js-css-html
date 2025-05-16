@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A time-based number memory game">
+    <title>Number Memory Challenge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Projects
+        </a>
+    </nav>
+    
+    <!-- Main application container -->
+    <div class="app" id="memoryApp">
+        <!-- Game configuration section -->
+        <div class="game-config" id="gameConfig">
+            <h1>Number Memory Challenge</h1>
+            <div class="config-options">
+                <div class="difficulty-select">
+                    <label for="difficulty">Difficulty Level:</label>
+                    <select id="difficulty" class="difficulty-select">
+                        <option value="3">Easy (3 digits)</option>
+                        <option value="4">Medium (4 digits)</option>
+                        <option value="5">Hard (5 digits)</option>
+                        <option value="6">Expert (6 digits)</option>
+                        <option value="7">Master (7 digits)</option>
+                        <option value="8">Legend (8 digits)</option>
+                    </select>
+                </div>
+                <button id="startGame" class="start-button">
+                    Start Game <i class="fas fa-play"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Game content section -->
+        <div class="game-container hidden" id="gameContainer">
+            <!-- Progress information -->
+            <div class="game-header">
+                <div class="level-info">
+                    Level: <span id="currentLevel">1</span>
+                </div>
+                <div class="score-info">
+                    Score: <span id="currentScore">0</span>
+                </div>
+            </div>
+
+            <!-- Number display -->
+            <div class="number-display" id="numberDisplay"></div>
+
+            <!-- Input section -->
+            <div class="input-section hidden" id="inputSection">
+                <input type="number" id="numberInput" placeholder="Enter the number" autocomplete="off">
+                <button id="submitNumber" class="submit-button">
+                    Submit <i class="fas fa-check"></i>
+                </button>
+            </div>
+
+            <!-- Timer display -->
+            <div class="timer-display" id="timerDisplay"></div>
+        </div>
+
+        <!-- Results section -->
+        <div class="results-container hidden" id="resultsContainer">
+            <h2>Game Over!</h2>
+            <div class="results-content">
+                <div class="score-display">
+                    <div class="final-score">
+                        Score: <span id="finalScore">0</span>
+                    </div>
+                    <div class="level-reached">
+                        Level Reached: <span id="finalLevel">1</span>
+                    </div>
+                </div>
+                <div class="result-message" id="resultMessage"></div>
+            </div>
+            <div class="action-buttons">
+                <button id="retryGame" class="retry-button">
+                    <i class="fas fa-redo"></i> Try Again
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html> 

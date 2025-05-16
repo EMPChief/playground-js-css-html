@@ -91,7 +91,13 @@
       "link": "weather/index.html",
       "tags": ["api", "weather", "geolocation"],
       "difficulty": "advanced",
-      "technologies": ["HTML", "CSS", "JavaScript", "Weather API", "Geolocation API"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Weather API",
+        "Geolocation API"
+      ]
     },
     {
       "id": "10",
@@ -165,13 +171,21 @@
     },
     {
       "id": "17",
-      "name": "Stopwatch",
-      "description": "Precise stopwatch with lap timing and split functionality.",
-      "icon": "fas fa-stopwatch",
-      "link": "project17/index.html",
-      "tags": ["timer", "utility", "interactive"],
-      "difficulty": "intermediate",
-      "technologies": ["HTML", "CSS", "JavaScript"]
+      "name": "Number Memory Challenge",
+      "description": "A game where you have to memorize a sequence of numbers and then input them in the correct order with a timer and a score.",
+      "icon": "fas fa-hourglass",
+      "link": "numbermemorychallange/index.html",
+      "tags": ["game", "memory", "cognitive"],
+      "difficulty": "advanced",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "LocalStorage",
+        "Timer",
+        "Score",
+        "Game Logic"
+      ]
     },
     {
       "id": "18",
