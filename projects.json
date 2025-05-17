@@ -189,11 +189,11 @@
     },
     {
       "id": "18",
-      "name": "Calculator",
-      "description": "Full-featured calculator with keyboard support.",
-      "icon": "fas fa-calculator",
-      "link": "project18/index.html",
-      "tags": ["calculator", "math", "keyboard-events"],
+      "name": "Color Palette Generator",
+      "description": "Generate color palettes.",
+      "icon": "fas fa-palette",
+      "link": "colorpalettegenerator/index.html",
+      "tags": ["color", "palette", "generator"],
       "difficulty": "intermediate",
       "technologies": ["HTML", "CSS", "JavaScript"]
     },
