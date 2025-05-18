@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function randomizeProfilePictures() {
         // Array of profile picture paths
         const profilePictures = [
-            "logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.S8meniKQA2F4t4JFULFdq5sz_fms-ov4xfDQHAqpvpvjK0S6YFJx9xjWZ-dNSDw-0bWH8BJz0Y4dxElQxYZ7TGrfTDcgjjSt6HlZ2vAQqRnWj4_xLiG9KDxrOfTMOzzm.XAy464KuT99MPGm9FoiU2A.jpg",
-            "logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.0CCU7cFFqK2TvKB2a7f8uUasMuhlYDPgYIdUZAyDxMQayVVAQ9Wqe5myhTENgvnhLRoOwNBjk7G9stuHSpDExSzI6fgRHnHkcmH0LDBaZrlg5D0iz227omdXXGxfivl4.Iixx1UBiB7nU8tjixjXI2w.jpg",
-            "logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.aixw6NNViq2aue8O5eQrn4_EefayE5gkO96CnhTML9jL8lnk2uuMl_0j6bM529VSaS1jvrBPiMOAlMd8CSmyrYZX05Vg_CldLfcTuWamEU_etEe-oi0Z6mA7gW_YUkm7.g3HN63S89t_FdH4GbSbIDg.jpg"
+            "logo/profile1.jpg",
+            "logo/profile2.jpg",
+            "logo/profile3.jpg"
         ];
         
         // Helper function to get a random profile picture
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
                         <img src="logo/favicon-32x32.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top me-2">
-                        CS50 Portfolio
+                        Professional Portfolio
                     </a>
                     <button
                         class="navbar-toggler"
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <a class="nav-link ${currentPage === 'about.html' ? 'active' : ''}" href="about.html">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link ${currentPage === 'javaplay.html' ? 'active' : ''}" href="javaplay.html">JavaPlay</a>
+                                <a class="nav-link ${currentPage === 'javaplay.html' ? 'active' : ''}" href="javaplay.html">Projects</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link ${currentPage === 'resume.html' ? 'active' : ''}" href="resume.html">Resume</a>
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <a class="nav-link ${currentPage === 'contact.html' ? 'active' : ''}" href="contact.html">Contact</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../index.html"><i class="bi bi-arrow-left"></i> Back to Projects</a>
+                                <a class="nav-link" href="../index.html"><i class="bi bi-arrow-left"></i> Back to Main</a>
                             </li>
                             <li class="nav-item">
                                 <button class="btn btn-sm btn-outline-light ms-2" id="darkModeToggle">
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-4 text-center text-md-start">
-                            <span class="copyright">© ${new Date().getFullYear()} CS50 Portfolio</span>
+                            <span class="copyright">© ${new Date().getFullYear()} Bjørn-Magne Kristensen</span>
                         </div>
                         <div class="col-md-4 text-center">
                             <ul class="social-buttons list-inline mb-0">
@@ -179,12 +179,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             </ul>
                         </div>
                         <div class="col-md-4 text-center text-md-end">
-                            <a href="https://cs50.harvard.edu" class="text-white text-decoration-none">
-                                Made with <i class="bi bi-heart-fill text-danger"></i> and CS50
-                            </a>
-                            <br />
+                            <p>
+                                <small>Industrial Professional & Developer</small>
+                            </p>
                             <a href="../index.html" class="text-white text-decoration-none">
-                                <small><i class="bi bi-arrow-left"></i> Return to Projects Gallery</small>
+                                <small><i class="bi bi-arrow-left"></i> Return to Main Portfolio</small>
                             </a>
                         </div>
                     </div>
