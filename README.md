@@ -1,5 +1,5 @@
 # JavaScript Mini Projects Collection 🚀
-
+test
 A collection of interactive JavaScript projects showcasing various web development concepts and features. Each project is designed to demonstrate different aspects of JavaScript, HTML, and CSS while providing practical, real-world applications.
 
 ## 🎯 Features
