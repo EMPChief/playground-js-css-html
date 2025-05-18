@@ -10,10 +10,24 @@
     <meta name="keywords" content="contact, social media, CS50, portfolio" />
     <meta name="author" content="Bjørn-Magne" />
     <title>Contact | CS50 Portfolio</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="logo/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="logo/favicon-16x16.png">
-    <link rel="manifest" href="logo/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="logo/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="logo/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="logo/favicon-16x16.png"
+    />
+    <link rel="manifest" href="logo/site.webmanifest" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -47,7 +61,68 @@
             <div class="col-md-8">
               <div class="card contact-card">
                 <div class="card-body p-5">
-                  <h2 class="text-center mb-4">Send Me a Message</h2>
+                  <div class="text-center mb-4">
+                    <img
+                      src="logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.0CCU7cFFqK2TvKB2a7f8uUasMuhlYDPgYIdUZAyDxMQayVVAQ9Wqe5myhTENgvnhLRoOwNBjk7G9stuHSpDExSzI6fgRHnHkcmH0LDBaZrlg5D0iz227omdXXGxfivl4.Iixx1UBiB7nU8tjixjXI2w.jpg"
+                      alt="Profile Picture"
+                      class="rounded-circle img-thumbnail profile-image mb-4"
+                      style="width: 150px; height: 150px; object-fit: cover"
+                    />
+                  </div>
+                  <h2 class="text-center mb-4">Contact Information</h2>
+                  <div class="row g-4 mb-4">
+                    <div class="col-md-6">
+                      <div
+                        class="contact-detail p-3 border rounded text-center"
+                      >
+                        <i
+                          class="bi bi-envelope-fill display-4 text-primary mb-3"
+                        ></i>
+                        <h4>Email</h4>
+                        <p class="mb-0">
+                          bjornmagnekristensen1999jobb@gmail.com
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div
+                        class="contact-detail p-3 border rounded text-center"
+                      >
+                        <i
+                          class="bi bi-telephone-fill display-4 text-primary mb-3"
+                        ></i>
+                        <h4>Phone</h4>
+                        <p class="mb-0">Secret</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-4 mb-5">
+                    <div class="col-md-6">
+                      <div
+                        class="contact-detail p-3 border rounded text-center"
+                      >
+                        <i
+                          class="bi bi-geo-alt-fill display-4 text-primary mb-3"
+                        ></i>
+                        <h4>Location</h4>
+                        <p class="mb-0">
+                          8764 Lovund<br />Norway
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div
+                        class="contact-detail p-3 border rounded text-center"
+                      >
+                        <i
+                          class="bi bi-person-vcard-fill display-4 text-primary mb-3"
+                        ></i>
+                        <h4>About</h4>
+                        <p class="mb-0">Born: October 16, 1999</p>
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="text-center mb-4">Send Me a Message</h3>
                   <form id="contactForm" class="needs-validation" novalidate>
                     <div class="mb-4">
                       <label for="name" class="form-label">Name</label>
@@ -119,7 +194,7 @@
 
         <!-- Social Links Section -->
         <section class="mb-5">
-          <h2 class="text-center mb-4">Connect With Me</h2>
+          <h2 class="text-center mb-4">Professional Networks</h2>
           <div class="row g-4">
             <div class="col-md-4">
               <div class="card social-card linkedin">
@@ -127,7 +202,8 @@
                   <i class="bi bi-linkedin display-1 mb-4"></i>
                   <h3 class="card-title">LinkedIn</h3>
                   <p class="card-text mb-4">
-                    Let's connect professionally and grow our network
+                    Connect professionally to learn about my work experience and
+                    skills
                   </p>
                   <a
                     href="https://www.linkedin.com/in/bjørn-magne-kristensen-884b2a225/"
@@ -144,7 +220,7 @@
                   <i class="bi bi-github display-1 mb-4"></i>
                   <h3 class="card-title">GitHub</h3>
                   <p class="card-text mb-4">
-                    Check out my projects and contributions
+                    View my coding projects and programming journey
                   </p>
                   <a
                     href="https://github.com/EMPChief"
@@ -158,16 +234,13 @@
             <div class="col-md-4">
               <div class="card social-card twitter">
                 <div class="card-body text-center p-5">
-                  <i class="bi bi-twitter-x display-1 mb-4"></i>
-                  <h3 class="card-title">X (Twitter)</h3>
+                  <i class="bi bi-file-earmark-text display-1 mb-4"></i>
+                  <h3 class="card-title">Resume</h3>
                   <p class="card-text mb-4">
-                    Follow me for updates and tech discussions
+                    Download my full CV for detailed work history
                   </p>
-                  <a
-                    href="https://x.com/ItsMeArtur"
-                    class="btn btn-outline-primary btn-lg"
-                  >
-                    <i class="bi bi-person-plus me-2"></i>Follow
+                  <a href="resume.html" class="btn btn-outline-primary btn-lg">
+                    <i class="bi bi-download me-2"></i>View Resume
                   </a>
                 </div>
               </div>
@@ -181,32 +254,23 @@
             <div class="col-md-8">
               <div class="card">
                 <div class="card-body p-5 text-center">
-                  <img 
-                    src="logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.aixw6NNViq2aue8O5eQrn4_EefayE5gkO96CnhTML9jL8lnk2uuMl_0j6bM529VSaS1jvrBPiMOAlMd8CSmyrYZX05Vg_CldLfcTuWamEU_etEe-oi0Z6mA7gW_YUkm7.g3HN63S89t_FdH4GbSbIDg.jpg" 
-                    alt="Profile Picture" 
-                    class="rounded-circle img-thumbnail profile-image mb-4"
-                    style="width: 150px; height: 150px; object-fit: cover;"
-                  />
-                  <h2 class="mb-4">Direct Contact</h2>
-                  <div class="row g-4">
-                    <div class="col-md-6">
-                      <div class="contact-info">
-                        <i
-                          class="bi bi-envelope-fill display-4 text-primary mb-3"
-                        ></i>
-                        <h4>Email</h4>
-                        <p class="mb-0">bjornmagnekristensen1999@gmail.com</p>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="contact-info">
-                        <i
-                          class="bi bi-geo-alt-fill display-4 text-primary mb-3"
-                        ></i>
-                        <h4>Location</h4>
-                        <p class="mb-0">Norway</p>
-                      </div>
-                    </div>
+                  <h2 class="mb-4">My Background</h2>
+                  <p class="mb-4">
+                    I am a dedicated industrial worker with experience in
+                    seafood processing and safety roles, currently exploring the
+                    world of computer science through Harvard's CS50 course.
+                  </p>
+                  <p class="mb-4">
+                    With a background in culinary arts from Fitjar Vidaregåande
+                    Skule and work experience at Nova Sea, Bremnes Seashore, and
+                    Subshore AS, I bring a unique perspective to both industrial
+                    work and programming.
+                  </p>
+                  <div class="d-flex justify-content-center mt-4">
+                    <a href="resume.html" class="btn btn-primary btn-lg">
+                      <i class="bi bi-file-earmark-text me-2"></i>View Full
+                      Resume
+                    </a>
                   </div>
                 </div>
               </div>
