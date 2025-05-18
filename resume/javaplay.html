@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive JavaScript tools and games from my CS50 journey"
+    />
+    <meta
+      name="keywords"
+      content="JavaScript, calculator, temperature converter, interactive tools, CS50"
+    />
+    <meta name="author" content="Bjørn-Magne" />
+    <title>JavaPlay | CS50 Portfolio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo/favicon-16x16.png">
+    <link rel="manifest" href="logo/site.webmanifest">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4 animate-up">JavaPlay</h1>
+        <p class="lead mb-5 animate-up-delay">
+          Interactive JavaScript tools from my CS50 journey
+        </p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Calculator Section -->
+          <div class="col-md-8">
+            <div class="card interactive-card calculator-card mb-4">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-4">
+                  <i
+                    class="bi bi-calculator-fill text-primary me-3 display-4"
+                  ></i>
+                  <h2 class="card-title mb-0">Calculator</h2>
+                </div>
+                <div class="calculator-inputs mb-4">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"
+                      ><i class="bi bi-1-circle"></i
+                    ></span>
+                    <input
+                      type="number"
+                      id="num1"
+                      class="form-control"
+                      placeholder="First number"
+                    />
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"
+                      ><i class="bi bi-2-circle"></i
+                    ></span>
+                    <input
+                      type="number"
+                      id="num2"
+                      class="form-control"
+                      placeholder="Second number"
+                    />
+                  </div>
+                </div>
+                <div class="calculator-buttons mb-4">
+                  <button class="btn btn-primary btn-lg me-2 mb-2" id="add">
+                    <i class="bi bi-plus-lg me-2"></i>Add
+                  </button>
+                  <button
+                    class="btn btn-secondary btn-lg me-2 mb-2"
+                    id="subtract"
+                  >
+                    <i class="bi bi-dash-lg me-2"></i>Subtract
+                  </button>
+                  <button
+                    class="btn btn-success btn-lg me-2 mb-2"
+                    id="multiply"
+                  >
+                    <i class="bi bi-x-lg me-2"></i>Multiply
+                  </button>
+                  <button class="btn btn-danger btn-lg mb-2" id="divide">
+                    <i class="bi bi-slash-lg me-2"></i>Divide
+                  </button>
+                </div>
+                <div class="result-display p-3 rounded">
+                  <h4 class="mb-0">
+                    Result: <span id="result" class="text-primary">0.00</span>
+                  </h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Counter Section -->
+            <div class="card interactive-card counter-card">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-4">
+                  <i
+                    class="bi bi-plus-slash-minus text-primary me-3 display-4"
+                  ></i>
+                  <h2 class="card-title mb-0">Counter</h2>
+                </div>
+                <div class="counter-controls text-center">
+                  <button
+                    class="btn btn-lg btn-outline-danger me-4"
+                    id="decrement"
+                  >
+                    <i class="bi bi-dash-circle-fill"></i>
+                  </button>
+                  <span id="count" class="display-4 mx-4">0</span>
+                  <button
+                    class="btn btn-lg btn-outline-success ms-4"
+                    id="increment"
+                  >
+                    <i class="bi bi-plus-circle-fill"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Temperature Converter Section -->
+          <div class="col-md-4">
+            <div class="card interactive-card temperature-card">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-4">
+                  <i
+                    class="bi bi-thermometer-half text-primary me-3 display-4"
+                  ></i>
+                  <h2 class="card-title mb-0">Temperature Converter</h2>
+                </div>
+                <div class="temperature-controls">
+                  <div class="mb-4">
+                    <label class="form-label">From:</label>
+                    <select class="form-select mb-2" id="tempFrom">
+                      <option value="celsius">Celsius (°C)</option>
+                      <option value="fahrenheit">Fahrenheit (°F)</option>
+                    </select>
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><i class="bi bi-thermometer"></i
+                      ></span>
+                      <input
+                        type="number"
+                        id="tempFromValue"
+                        class="form-control"
+                        placeholder="Enter temperature"
+                      />
+                    </div>
+                  </div>
+                  <div class="text-center mb-4">
+                    <i class="bi bi-arrow-down-up display-6 text-primary"></i>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">To:</label>
+                    <select class="form-select mb-2" id="tempTo">
+                      <option value="fahrenheit">Fahrenheit (°F)</option>
+                      <option value="celsius">Celsius (°C)</option>
+                    </select>
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><i class="bi bi-thermometer-high"></i
+                      ></span>
+                      <input
+                        type="number"
+                        id="tempToValue"
+                        class="form-control"
+                        placeholder="Converted temperature"
+                        readonly
+                      />
+                    </div>
+                  </div>
+                  <button class="btn btn-primary btn-lg w-100" id="convertTemp">
+                    <i class="bi bi-arrow-repeat me-2"></i>Convert
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Interactive Tools Section -->
+        <h2 class="text-center my-5">More Fun Mini Tools</h2>
+        <div class="row g-4">
+          <!-- Random Color Generator -->
+          <div class="col-md-4">
+            <div class="card interactive-card h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-palette-fill text-primary me-3 h3 mb-0"></i>
+                  <h3 class="card-title mb-0">Random Color</h3>
+                </div>
+                <div class="text-center mb-3">
+                  <div
+                    id="colorDisplay"
+                    class="rounded p-5 mb-3"
+                    style="background-color: #3498db; color: white"
+                  >
+                    <h4 id="colorValue">#3498db</h4>
+                  </div>
+                  <button class="btn btn-primary" id="generateColor">
+                    <i class="bi bi-shuffle me-2"></i>Generate Color
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tip Calculator -->
+          <div class="col-md-4">
+            <div class="card interactive-card h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-cash-stack text-primary me-3 h3 mb-0"></i>
+                  <h3 class="card-title mb-0">Tip Calculator</h3>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Bill Amount</label>
+                  <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input
+                      type="number"
+                      id="billAmount"
+                      class="form-control"
+                      placeholder="0.00"
+                      min="0"
+                      step="0.01"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Tip Percentage</label>
+                  <div class="input-group">
+                    <input
+                      type="range"
+                      id="tipPercentage"
+                      class="form-range"
+                      min="0"
+                      max="30"
+                      value="15"
+                    />
+                    <span id="tipValue" class="ms-2">15%</span>
+                  </div>
+                </div>
+                <div class="result-display p-3 rounded mb-3">
+                  <p class="mb-1">
+                    Tip Amount:
+                    <span id="tipAmount" class="text-primary">$0.00</span>
+                  </p>
+                  <p class="mb-0">
+                    Total:
+                    <span id="totalAmount" class="text-primary">$0.00</span>
+                  </p>
+                </div>
+                <button class="btn btn-primary w-100" id="calculateTip">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Word Counter -->
+          <div class="col-md-4">
+            <div class="card interactive-card h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-textarea-t text-primary me-3 h3 mb-0"></i>
+                  <h3 class="card-title mb-0">Word Counter</h3>
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    id="wordCountText"
+                    class="form-control"
+                    rows="5"
+                    placeholder="Type or paste your text here..."
+                  ></textarea>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="counter-box text-center p-2 rounded bg-light">
+                    <h5 class="mb-0" id="charCount">0</h5>
+                    <small>Characters</small>
+                  </div>
+                  <div class="counter-box text-center p-2 rounded bg-light">
+                    <h5 class="mb-0" id="wordCount">0</h5>
+                    <small>Words</small>
+                  </div>
+                  <div class="counter-box text-center p-2 rounded bg-light">
+                    <h5 class="mb-0" id="lineCount">0</h5>
+                    <small>Lines</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Digital Clock -->
+          <div class="col-md-4">
+            <div class="card interactive-card h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-clock-fill text-primary me-3 h3 mb-0"></i>
+                  <h3 class="card-title mb-0">Digital Clock</h3>
+                </div>
+                <div class="text-center py-4">
+                  <div id="digitalClock" class="display-4 mb-2">00:00:00</div>
+                  <p id="dateDisplay" class="mb-0">Monday, January 1, 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Password Strength Checker -->
+          <div class="col-md-4">
+            <div class="card interactive-card h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                  <i
+                    class="bi bi-shield-lock-fill text-primary me-3 h3 mb-0"
+                  ></i>
+                  <h3 class="card-title mb-0">Password Checker</h3>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Enter Password</label>
+                  <input
+                    type="password"
+                    id="passwordInput"
+                    class="form-control"
+                    placeholder="Type a password"
+                  />
+                </div>
+                <div class="mb-3">
+                  <div class="progress">
+                    <div
+                      id="passwordStrength"
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 0%"
+                      aria-valuenow="0"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <p id="strengthText" class="mb-0">
+                  Password strength: <span class="text-secondary">None</span>
+                </p>
+                <div id="passwordTips" class="mt-3 small">
+                  <p class="mb-1">Tips for strong password:</p>
+                  <ul class="mb-0 ps-3">
+                    <li>At least 8 characters</li>
+                    <li>Mix of uppercase & lowercase</li>
+                    <li>Include numbers</li>
+                    <li>Add special characters</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BMI Calculator -->
+          <div class="col-md-4">
+            <div class="card interactive-card h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-activity text-primary me-3 h3 mb-0"></i>
+                  <h3 class="card-title mb-0">BMI Calculator</h3>
+                </div>
+                <div class="row g-3 mb-3">
+                  <div class="col-6">
+                    <label class="form-label">Height (cm)</label>
+                    <input
+                      type="number"
+                      id="heightInput"
+                      class="form-control"
+                      placeholder="175"
+                      min="1"
+                    />
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label">Weight (kg)</label>
+                    <input
+                      type="number"
+                      id="weightInput"
+                      class="form-control"
+                      placeholder="70"
+                      min="1"
+                    />
+                  </div>
+                </div>
+                <button id="calculateBMI" class="btn btn-primary w-100 mb-3">
+                  Calculate BMI
+                </button>
+                <div class="result-display p-3 rounded">
+                  <h5 class="mb-1">
+                    Your BMI:
+                    <span id="bmiResult" class="text-primary">0.0</span>
+                  </h5>
+                  <p id="bmiCategory" class="mb-0 small">
+                    Category: <span>-</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Analytics Dashboard -->
+    <div class="container mb-5">
+      <div class="card">
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">JavaPlay Analytics Dashboard</h3>
+          <button class="btn btn-sm btn-outline-light" id="refreshAnalytics">
+            <i class="bi bi-arrow-repeat"></i> Refresh
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card text-white bg-primary">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Total Interactions</h5>
+                  <p id="totalInteractions" class="display-4">0</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-white bg-success">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Most Used Tool</h5>
+                  <p id="mostUsedTool" class="display-6">None</p>
+                  <p id="mostUsedToolCount" class="small">0 uses</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-white bg-info">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Session Data</h5>
+                  <p id="sessionCount" class="h4">0 sessions</p>
+                  <p id="avgInteractions" class="small">0 interactions/session</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-3">
+            <button class="btn btn-sm btn-danger" id="clearAnalytics">
+              <i class="bi bi-trash"></i> Clear Analytics Data
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="common.js"></script>
+    <script src="tools.js"></script>
+    <script src="analytics.js"></script>
+    <script src="javaplay.js"></script>
+  </body>
+</html>

@@ -190,7 +190,7 @@
     {
       "id": "18",
       "name": "Color Palette Generator",
-      "description": "Generate color palettes.",
+      "description": "Generate random color palettes for design inspiration and project use.",
       "icon": "fas fa-palette",
       "link": "colorpalettegenerator/index.html",
       "tags": ["color", "palette", "generator"],
@@ -199,23 +199,23 @@
     },
     {
       "id": "19",
-      "name": "Music Player",
-      "description": "Custom audio player with playlist management.",
-      "icon": "fas fa-music",
-      "link": "project19/index.html",
-      "tags": ["audio", "player", "media"],
+      "name": "Resume",
+      "description": "Professional resume and portfolio website with multiple pages including about, contact, and interactive elements.",
+      "icon": "fas fa-user-tie",
+      "link": "resume/index.html",
+      "tags": ["portfolio", "resume", "professional"],
       "difficulty": "advanced",
-      "technologies": ["HTML", "CSS", "JavaScript", "Web Audio API"]
+      "technologies": ["HTML", "CSS", "JavaScript", "Responsive Design"]
     },
     {
       "id": "20",
-      "name": "Recipe Finder",
-      "description": "Search and display recipes with detailed instructions.",
-      "icon": "fas fa-utensils",
-      "link": "project20/index.html",
-      "tags": ["api", "food", "search"],
-      "difficulty": "advanced",
-      "technologies": ["HTML", "CSS", "JavaScript", "Recipe API"]
+      "name": "FreeCodeCamp Projects",
+      "description": "Collection of projects built while completing FreeCodeCamp certification tracks.",
+      "icon": "fas fa-code",
+      "link": "freecodecamp/index.html",
+      "tags": ["learning", "certification", "collection"],
+      "difficulty": "varies",
+      "technologies": ["HTML", "CSS", "JavaScript", "Responsive Design"]
     }
   ]
 }
