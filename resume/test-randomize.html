@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Random Profile Pictures</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .profile-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .profile-item {
+      margin: 10px;
+    }
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #0d6efd;
+    }
+    button {
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #0b5ed7;
+    }
+  </style>
+</head>
+<body>
+  <h1>Profile Picture Randomization Test</h1>
+  <p>This page shows multiple instances of profile pictures. The common.js script should randomize them on page load.</p>
+  <p><strong>New Feature:</strong> Click on any profile picture to change it to another random picture!</p>
+  
+  <div class="profile-container">
+    <div class="profile-item">
+      <img class="profile-image" src="logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.S8meniKQA2F4t4JFULFdq5sz_fms-ov4xfDQHAqpvpvjK0S6YFJx9xjWZ-dNSDw-0bWH8BJz0Y4dxElQxYZ7TGrfTDcgjjSt6HlZ2vAQqRnWj4_xLiG9KDxrOfTMOzzm.XAy464KuT99MPGm9FoiU2A.jpg" alt="Profile 1">
+      <p>Profile 1</p>
+    </div>
+    <div class="profile-item">
+      <img class="profile-image" src="logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.S8meniKQA2F4t4JFULFdq5sz_fms-ov4xfDQHAqpvpvjK0S6YFJx9xjWZ-dNSDw-0bWH8BJz0Y4dxElQxYZ7TGrfTDcgjjSt6HlZ2vAQqRnWj4_xLiG9KDxrOfTMOzzm.XAy464KuT99MPGm9FoiU2A.jpg" alt="Profile 2">
+      <p>Profile 2</p>
+    </div>
+    <div class="profile-item">
+      <img class="profile-image" src="logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.S8meniKQA2F4t4JFULFdq5sz_fms-ov4xfDQHAqpvpvjK0S6YFJx9xjWZ-dNSDw-0bWH8BJz0Y4dxElQxYZ7TGrfTDcgjjSt6HlZ2vAQqRnWj4_xLiG9KDxrOfTMOzzm.XAy464KuT99MPGm9FoiU2A.jpg" alt="Profile 3">
+      <p>Profile 3</p>
+    </div>
+  </div>
+
+  <button onclick="location.reload()">Reload Page to Randomize Again</button>
+
+  <div style="margin-top: 40px;">
+    <a href="index.html">Back to Home</a>
+  </div>
+
+  <!-- Load the common.js script to test randomization -->
+  <script src="common.js"></script>
+</body>
+</html> 

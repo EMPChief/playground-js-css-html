@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     injectNavbar();
     injectFooter();
     
+    // Randomize profile pictures
+    randomizeProfilePictures();
+    
     // Dark mode toggle functionality
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
@@ -32,6 +35,49 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             icon.classList.replace('bi-sun', 'bi-moon-stars');
         }
+    }
+    
+    // Function to randomize profile pictures across the site
+    function randomizeProfilePictures() {
+        // Array of profile picture paths
+        const profilePictures = [
+            "logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.S8meniKQA2F4t4JFULFdq5sz_fms-ov4xfDQHAqpvpvjK0S6YFJx9xjWZ-dNSDw-0bWH8BJz0Y4dxElQxYZ7TGrfTDcgjjSt6HlZ2vAQqRnWj4_xLiG9KDxrOfTMOzzm.XAy464KuT99MPGm9FoiU2A.jpg",
+            "logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.0CCU7cFFqK2TvKB2a7f8uUasMuhlYDPgYIdUZAyDxMQayVVAQ9Wqe5myhTENgvnhLRoOwNBjk7G9stuHSpDExSzI6fgRHnHkcmH0LDBaZrlg5D0iz227omdXXGxfivl4.Iixx1UBiB7nU8tjixjXI2w.jpg",
+            "logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.aixw6NNViq2aue8O5eQrn4_EefayE5gkO96CnhTML9jL8lnk2uuMl_0j6bM529VSaS1jvrBPiMOAlMd8CSmyrYZX05Vg_CldLfcTuWamEU_etEe-oi0Z6mA7gW_YUkm7.g3HN63S89t_FdH4GbSbIDg.jpg"
+        ];
+        
+        // Helper function to get a random profile picture
+        function getRandomProfilePic() {
+            const randomIndex = Math.floor(Math.random() * profilePictures.length);
+            return profilePictures[randomIndex];
+        }
+        
+        // Get all profile image elements
+        const profileImages = document.querySelectorAll('.profile-image');
+        
+        // For each profile image, set a random image from the array
+        profileImages.forEach(img => {
+            img.src = getRandomProfilePic();
+            
+            // Add click event to change the image when clicked
+            img.style.cursor = 'pointer';
+            
+            // Add title attribute for better UX
+            img.title = 'Click to change profile picture';
+            
+            // Add click event listener
+            img.addEventListener('click', function() {
+                // Add a small animation effect
+                this.style.transition = 'transform 0.3s ease';
+                this.style.transform = 'scale(0.8)';
+                
+                // Set new random image
+                setTimeout(() => {
+                    this.src = getRandomProfilePic();
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
     }
     
     // Navbar scroll behavior
@@ -87,6 +133,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link ${currentPage === 'contact.html' ? 'active' : ''}" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ${currentPage === 'test-randomize.html' ? 'active' : ''}" href="test-randomize.html">Test Pics</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../index.html"><i class="bi bi-arrow-left"></i> Back to Projects</a>
