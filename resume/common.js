@@ -135,9 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <a class="nav-link ${currentPage === 'contact.html' ? 'active' : ''}" href="contact.html">Contact</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link ${currentPage === 'test-randomize.html' ? 'active' : ''}" href="test-randomize.html">Test Pics</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="../index.html"><i class="bi bi-arrow-left"></i> Back to Projects</a>
                             </li>
                             <li class="nav-item">
