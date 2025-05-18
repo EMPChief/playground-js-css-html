@@ -3,222 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Professional portfolio and CV of Bjørn-Magne Kristensen, showcasing experience, skills and development projects." />
-    <meta name="keywords" content="Bjørn-Magne Kristensen, CV, Resume, Portfolio, Industrial Experience, Development Projects" />
+    <meta name="description" content="A collection of 20 interactive JavaScript projects showcasing various web development concepts and features." />
+    <meta name="keywords" content="JavaScript, Web Development, Projects, HTML, CSS, Interactive" />
     <meta name="author" content="Bjørn-Magne" />
-    <title>Professional Portfolio | Bjørn-Magne Kristensen</title>
+    <title>JavaScript Projects Collection | Bjørn-Magne</title>
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/favicon-16x16.png">
-    <link rel="manifest" href="assets/logo/site.webmanifest">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
     
     <!-- TailwindCSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-gray-100 min-h-screen d-flex flex-column">
+  <body class="bg-gray-100 min-h-screen">
     <!-- Header -->
-    <header class="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-6 mb-8">
+    <header class="bg-white shadow-md py-6 mb-8">
       <div class="container mx-auto px-4">
-        <div class="row align-items-center">
-          <div class="col-md-8">
-            <h1 class="text-4xl font-bold text-center text-white mb-3">
-              Bjørn-Magne Kristensen
-            </h1>
-            <p class="text-center text-gray-200 lead">
-              Industrial Professional & Aspiring Developer
-            </p>
-          </div>
-          <div class="col-md-4 text-center">
-            <img 
-              src="resume/logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.S8meniKQA2F4t4JFULFdq5sz_fms-ov4xfDQHAqpvpvjK0S6YFJx9xjWZ-dNSDw-0bWH8BJz0Y4dxElQxYZ7TGrfTDcgjjSt6HlZ2vAQqRnWj4_xLiG9KDxrOfTMOzzm.XAy464KuT99MPGm9FoiU2A.jpg" 
-              alt="Profile Picture" 
-              class="rounded-circle img-thumbnail profile-image shadow-lg"
-              style="width: 150px; height: 150px; object-fit: cover; cursor: pointer;"
-              title="Click to change profile picture"
-            />
-          </div>
-        </div>
+        <h1 class="text-4xl font-bold text-center text-gray-800">
+          JavaScript Projects Collection
+        </h1>
+        <p class="text-center text-gray-600 mt-2">
+          A showcase of 20 interactive web development projects
+        </p>
       </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 pb-12 flex-grow">
-      <!-- Professional Overview -->
+    <main class="container mx-auto px-4 pb-12">
+      <!-- Filters Section -->
       <section class="mb-8">
-        <div class="card shadow-sm">
-          <div class="card-body p-4">
-            <div class="d-flex align-items-center mb-3">
-              <i class="bi bi-person-circle text-primary me-2 h3"></i>
-              <h2 class="card-title mb-0">Professional Overview</h2>
-            </div>
-            <p>Experienced industrial worker with a background in seafood processing and safety operations. I've worked at Nova Sea, Bremnes Seashore, and as a cleaner and fire watch at Subshore AS on the Njord project. My culinary arts foundation from Fitjar Vidaregåande Skule has shaped my detail-oriented approach and ability to perform in high-pressure environments.</p>
-            <p>Currently expanding my skills through programming and development projects, bringing a unique perspective to technical problem-solving.</p>
-            <div class="text-end mt-3">
-              <a href="resume/about.html" class="btn btn-outline-primary">
-                <i class="bi bi-person me-1"></i> About Me
-              </a>
-              <a href="resume/resume.html" class="btn btn-outline-primary ms-2">
-                <i class="bi bi-file-earmark-text me-1"></i> Full Resume
-              </a>
-              <a href="resume/contact.html" class="btn btn-outline-primary ms-2">
-                <i class="bi bi-envelope me-1"></i> Contact Me
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Work Experience -->
-      <section class="mb-8">
-        <div class="card shadow-sm">
-          <div class="card-body p-4">
-            <div class="d-flex align-items-center mb-4">
-              <i class="bi bi-briefcase text-primary me-2 h3"></i>
-              <h2 class="card-title mb-0">Work Experience</h2>
-            </div>
-            
-            <div class="row mb-3">
-              <div class="col-md-3 mb-2 mb-md-0">
-                <h5>2022-Present</h5>
-                <span class="badge bg-primary">Nova Sea</span>
-              </div>
-              <div class="col-md-9">
-                <h5>Seafood Processing</h5>
-                <p>Quality control and processing operations in seafood production.</p>
-              </div>
-            </div>
-            
-            <div class="row mb-3">
-              <div class="col-md-3 mb-2 mb-md-0">
-                <h5>2021</h5>
-                <span class="badge bg-primary">Industrial Experience</span>
-              </div>
-              <div class="col-md-9">
-                <h5>Bremnes Seashore & Subshore AS</h5>
-                <p>Safety roles including fire watch and cleaning operations on the Njord project.</p>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-md-3 mb-2 mb-md-0">
-                <h5>2018-2020</h5>
-                <span class="badge bg-primary">Beredt Catering</span>
-              </div>
-              <div class="col-md-9">
-                <h5>Institutional Cook & Safety Representative</h5>
-                <p>Food preparation and service while maintaining safety standards.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills & Certifications -->
-      <section class="mb-8">
-        <div class="card shadow-sm">
-          <div class="card-body p-4">
-            <div class="d-flex align-items-center mb-4">
-              <i class="bi bi-award text-primary me-2 h3"></i>
-              <h2 class="card-title mb-0">Skills & Certifications</h2>
-            </div>
-            
-            <div class="row g-4">
-              <div class="col-md-6">
-                <h5><i class="bi bi-truck-flatbed text-primary me-2"></i>Equipment Operation</h5>
-                <p>Truck driver certification T1 and T4 from PETOL (June 2021)</p>
-                
-                <h5><i class="bi bi-fire text-primary me-2"></i>Safety Training</h5>
-                <p>Hot work certification from Subshore (May 2021)</p>
-              </div>
-              
-              <div class="col-md-6">
-                <h5><i class="bi bi-shield-check text-primary me-2"></i>Safety Roles</h5>
-                <p>Safety representative experience at Beredt Catering (2018-2020)</p>
-                
-                <h5><i class="bi bi-code-square text-primary me-2"></i>Technical Skills</h5>
-                <p>Programming fundamentals in C, Python, JavaScript, HTML/CSS</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section>
-        <div class="d-flex align-items-center mb-4 justify-content-between">
-          <div>
-            <h2 class="text-2xl font-bold text-center">
-              <i class="bi bi-code-slash text-primary me-2"></i>Development Portfolio
-            </h2>
-            <p class="text-muted">Showcasing my technical skills through interactive projects</p>
-          </div>
-          
-          <!-- Filters Section -->
-          <div class="d-flex gap-2">
-            <select id="difficultyFilter" class="form-select form-select-sm" style="max-width: 150px;">
+        <div class="flex flex-wrap gap-4 justify-center">
+          <div class="relative">
+            <select id="difficultyFilter" class="bg-white border rounded-lg px-4 py-2 pr-8 appearance-none cursor-pointer">
               <option value="">All Difficulties</option>
               <option value="beginner">Beginner</option>
               <option value="intermediate">Intermediate</option>
               <option value="advanced">Advanced</option>
             </select>
-            
-            <select id="technologyFilter" class="form-select form-select-sm" style="max-width: 150px;">
+          </div>
+          <div class="relative">
+            <select id="technologyFilter" class="bg-white border rounded-lg px-4 py-2 pr-8 appearance-none cursor-pointer">
               <option value="">All Technologies</option>
             </select>
-            
-            <input 
-              type="text" 
-              id="searchInput" 
-              placeholder="Search..."
-              class="form-control form-control-sm"
-              style="max-width: 150px;"
-            />
           </div>
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search projects..."
+            class="bg-white border rounded-lg px-4 py-2 min-w-[200px]"
+          />
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectList">
-          <!-- Projects will be dynamically loaded here -->
-        </div>
+      </section>
+
+      <!-- Projects Grid -->
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectList">
+        <!-- Projects will be dynamically loaded here -->
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white shadow-md py-4 mt-auto">
-      <div class="container mx-auto px-4 text-center">
-        <div class="row">
-          <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-            <p class="text-gray-600">© 2023 Bjørn-Magne Kristensen</p>
-          </div>
-          <div class="col-md-4 text-center mb-3 mb-md-0">
-            <div class="social-links">
-              <a href="https://github.com/EMPChief" class="text-gray-600 hover:text-indigo-600 mx-2">
-                <i class="bi bi-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/bjørn-magne-kristensen-884b2a225/" class="text-gray-600 hover:text-indigo-600 mx-2">
-                <i class="bi bi-linkedin"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4 text-center text-md-end">
-            <a href="resume/index.html" class="text-gray-600 hover:text-indigo-800 text-decoration-none">
-              <i class="bi bi-file-person"></i> Portfolio Details
-            </a>
-          </div>
-        </div>
+    <footer class="bg-white shadow-md py-6 mt-auto">
+      <div class="container mx-auto px-4 text-center text-gray-600">
+        <p>Created by Bjørn-Magne | <a href="https://github.com/EMPChief" class="text-indigo-600 hover:text-indigo-800">GitHub</a></p>
       </div>
     </footer>
 
@@ -241,52 +92,17 @@
           <a href="#" class="block text-center bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">
             View Project
           </a>
-        </div>
+    </div>
       </article>
     </template>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
     <!-- Scripts -->
-    <script src="index.js"></script>
-    
-    <!-- Profile Image Randomization -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Array of profile pictures
-        const profilePictures = [
-          "resume/logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.S8meniKQA2F4t4JFULFdq5sz_fms-ov4xfDQHAqpvpvjK0S6YFJx9xjWZ-dNSDw-0bWH8BJz0Y4dxElQxYZ7TGrfTDcgjjSt6HlZ2vAQqRnWj4_xLiG9KDxrOfTMOzzm.XAy464KuT99MPGm9FoiU2A.jpg",
-          "resume/logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.0CCU7cFFqK2TvKB2a7f8uUasMuhlYDPgYIdUZAyDxMQayVVAQ9Wqe5myhTENgvnhLRoOwNBjk7G9stuHSpDExSzI6fgRHnHkcmH0LDBaZrlg5D0iz227omdXXGxfivl4.Iixx1UBiB7nU8tjixjXI2w.jpg",
-          "resume/logo/eyJ0IjoiMSIsImsiOiJBMWQifQ.aixw6NNViq2aue8O5eQrn4_EefayE5gkO96CnhTML9jL8lnk2uuMl_0j6bM529VSaS1jvrBPiMOAlMd8CSmyrYZX05Vg_CldLfcTuWamEU_etEe-oi0Z6mA7gW_YUkm7.g3HN63S89t_FdH4GbSbIDg.jpg"
-        ];
-        
-        // Helper function to get a random profile picture
-        function getRandomProfilePic() {
-          const randomIndex = Math.floor(Math.random() * profilePictures.length);
-          return profilePictures[randomIndex];
-        }
-        
-        // Get profile image element
-        const profileImage = document.querySelector('.profile-image');
-        if (profileImage) {
-          // Set initial random image
-          profileImage.src = getRandomProfilePic();
-          
-          // Add click event to change the image when clicked
-          profileImage.addEventListener('click', function() {
-            // Add a small animation effect
-            this.style.transition = 'transform 0.3s ease';
-            this.style.transform = 'scale(0.8)';
-            
-            // Set new random image
-            setTimeout(() => {
-              this.src = getRandomProfilePic();
-              this.style.transform = 'scale(1)';
-            }, 150);
-          });
-        }
+      console.log('Page loaded');
+      window.addEventListener('error', function(e) {
+        console.log('Global error caught:', e.message, e.filename, e.lineno);
       });
     </script>
+    <script src="index.js"></script>
   </body>
 </html>

@@ -5,6 +5,14 @@ const difficultyFilter = document.getElementById('difficultyFilter');
 const technologyFilter = document.getElementById('technologyFilter');
 const searchInput = document.getElementById('searchInput');
 
+console.log('DOM elements:', {
+  projectList, 
+  projectTemplate, 
+  difficultyFilter, 
+  technologyFilter, 
+  searchInput
+});
+
 // Store all projects and filters
 let allProjects = [];
 let activeFilters = {
@@ -15,9 +23,13 @@ let activeFilters = {
 
 // Fetch and initialize projects
 async function initializeProjects() {
+  console.log('initializeProjects called');
   try {
+    console.log('Fetching projects.json');
     const response = await fetch('projects.json');
+    console.log('Fetch response:', response);
     const data = await response.json();
+    console.log('Projects data:', data);
     allProjects = data.projects;
     
     // Initialize technology filter options
@@ -26,6 +38,8 @@ async function initializeProjects() {
       project.technologies.forEach(tech => technologies.add(tech));
     });
     
+    console.log('Technologies found:', [...technologies]);
+    
     technologies.forEach(tech => {
       const option = document.createElement('option');
       option.value = tech;
@@ -33,6 +47,7 @@ async function initializeProjects() {
       technologyFilter.appendChild(option);
     });
     
+    console.log('About to render projects');
     renderProjects();
   } catch (error) {
     console.error('Error loading projects:', error);
