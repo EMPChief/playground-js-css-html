@@ -126,7 +126,10 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <a class="nav-link ${currentPage === 'about.html' ? 'active' : ''}" href="about.html">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link ${currentPage === 'javaplay.html' ? 'active' : ''}" href="javaplay.html">Projects</a>
+                                <a class="nav-link ${currentPage === 'javaplay.html' ? 'active' : ''}" href="javaplay.html">Local Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ${currentPage === 'projects.html' ? 'active' : ''}" href="projects.html">Projects</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link ${currentPage === 'resume.html' ? 'active' : ''}" href="resume.html">Resume</a>
