@@ -54,12 +54,21 @@ const projects = [
     id: 3,
     title: "Text Space Adventure",
     description:
-      "A terminal based text adventure game i made to try out python and terminal, it is a complicated text adventure game that uses the terminal to display the game and the player can interact with the game using the terminal.",
+      "A terminal based text adventure game i made to play with python and terminal, it is a complicated text adventure game that uses the terminal to display the game and the player can interact with the game using the terminal (also tried using cursor ai).",
     category: "terminal",
-    images: ["./logo/projects/taskmanager1.png"],
+    images: [
+      "./logo/projects/adventure1.png",
+      "./logo/projects/adventure2.png",
+      "./logo/projects/adventure3.png",
+      "./logo/projects/adventure4.png",
+      "./logo/projects/adventure5.png",
+      "./logo/projects/adventure6.png",
+      "./logo/projects/adventure7.png",
+    ],
     technologies: ["Python", "Terminal", "TinyDB", "JSON"],
     liveDemo: "none",
-    githubRepo: "https://github.com/EMPChief/Text-Space-Adventure",
+    githubRepo:
+      "https://github.com/EMPChief/twelveapps/tree/main/adventuregame",
   },
   {
     id: 4,
