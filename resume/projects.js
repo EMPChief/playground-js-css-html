@@ -52,6 +52,17 @@ const projects = [
   },
   {
     id: 3,
+    title: "Text Space Adventure",
+    description:
+      "A terminal based text adventure game i made to try out python and terminal, it is a complicated text adventure game that uses the terminal to display the game and the player can interact with the game using the terminal.",
+    category: "terminal",
+    images: ["./logo/projects/taskmanager1.png"],
+    technologies: ["Python", "Terminal", "TinyDB", "JSON"],
+    liveDemo: "none",
+    githubRepo: "https://github.com/EMPChief/Text-Space-Adventure",
+  },
+  {
+    id: 4,
     title: "Playing with LLM",
     description:
       "A simple python that is a chatbot gui i made when i got a bit intrested in llm and wanted to try to play with tkinter and openai api, it is a simple chatbot that uses the openai api to generate responses and show it in a gui.",
@@ -236,8 +247,21 @@ function setupFilters() {
 
 // Function to add a new project
 function addProject(project) {
-  projects.push(project);
+  // Ensure the project has the correct structure
+  const newProject = {
+    id: projects.length + 1, // Auto-generate ID
+    title: project.title,
+    description: project.description,
+    category: project.category,
+    images: project.images || [project.image], // Handle both single image and image array
+    technologies: project.technologies,
+    liveDemo: project.liveDemo || "none",
+    githubRepo: project.githubRepo || "none",
+  };
+
+  projects.push(newProject);
   renderProjects();
+  setTimeout(checkTextOverflow, 100); // Recheck text overflow after adding new project
 }
 
 // Initialize the page
