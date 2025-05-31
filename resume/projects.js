@@ -1,10 +1,9 @@
-// Project data structure
 const projects = [
   {
     id: 1,
     title: "Upload Picture",
     description:
-      "This is a simple web application that allows users to upload pictures to a database and display them on a page, it's a simple project that i made to try laravel and vue for the first time.",
+      "This is a simple web application that allows users to upload pictures to a database and display them on a page, it's a simple project that I made to try Laravel and Vue for the first time.",
     category: "web",
     images: [
       "./logo/projects/vuefront1.png",
@@ -31,7 +30,7 @@ const projects = [
     id: 2,
     title: "Task Manager",
     description:
-      "This is a terminal based task manager that uses json for storage, it has a login system and multilanguage support that i made to try out designing and coding an application from scratch so it's a bit over engineered.",
+      "This is a terminal based task manager that uses JSON for storage, it has a login system and multilanguage support. I made it to try designing and coding an application from scratch, so it's a bit overengineered.",
     category: "terminal",
     images: [
       "./logo/projects/taskmanager1.png",
@@ -54,7 +53,7 @@ const projects = [
     id: 3,
     title: "Text Space Adventure",
     description:
-      "A terminal based text adventure game i made to play with python and terminal, it is a complicated text adventure game that uses the terminal to display the game and the player can interact with the game using the terminal (also tried using cursor ai).",
+      "A terminal-based text adventure game I made to play with Python and the terminal. It is a complicated text adventure game that uses the terminal to display the game, and the player can interact using the terminal (also tried using cursor AI).",
     category: "terminal",
     images: [
       "./logo/projects/adventure1.png",
@@ -74,12 +73,30 @@ const projects = [
     id: 4,
     title: "Playing with LLM",
     description:
-      "A simple python that is a chatbot gui i made when i got a bit intrested in llm and wanted to try to play with tkinter and openai api, it is a simple chatbot that uses the openai api to generate responses and show it in a gui.",
+      "A simple Python chatbot GUI I made when I got interested in LLMs. I used Tkinter and the OpenAI API. It is a simple chatbot that uses the OpenAI API to generate responses and show them in a GUI.",
     category: "terminal",
     images: ["./logo/projects/playing-with-llm.png"],
     technologies: ["Python", "Tkinter", "OpenAI"],
     liveDemo: "none",
     githubRepo: "https://github.com/EMPChief/Python-Playing-With-LLM",
+  },
+  {
+    id: 5,
+    title: "Mern Products Website",
+    description:
+      "This is a simple e-commerce website that uses the MERN stack to create a full-stack application. It allows users to view products and create products on the site.",
+    category: "web",
+    images: [
+      "./logo/projects/mernproductstore1.png",
+      "./logo/projects/mernproductstore2.png",
+      "./logo/projects/mernproductstore3.png",
+      "./logo/projects/mernproductstore4.png",
+      "./logo/projects/mernproductstore5.png",
+      "./logo/projects/mernproductstore6.png",
+    ],
+    technologies: ["HTML", "CSS", "JavaScript", "Chakra UI", "React", "Node.js", "MongoDB"],
+    liveDemo: "https://empchief.github.io/portfolio/",
+    githubRepo: "https://github.com/EMPChief/MERN-Product-Store",
   },
 ];
 
