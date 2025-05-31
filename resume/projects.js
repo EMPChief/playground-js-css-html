@@ -95,7 +95,7 @@ const projects = [
       "./logo/projects/mernproductstore6.png",
     ],
     technologies: ["HTML", "CSS", "JavaScript", "Chakra UI", "React", "Node.js", "MongoDB"],
-    liveDemo: "https://empchief.github.io/portfolio/",
+    liveDemo: "https://mern-product-store-7vha.onrender.com/",
     githubRepo: "https://github.com/EMPChief/MERN-Product-Store",
   },
 ];
