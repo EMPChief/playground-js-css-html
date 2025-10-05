@@ -9,9 +9,17 @@
       "description": "Create beautiful heart-shaped trails that follow your mouse movement with smooth animations.",
       "icon": "fas fa-heart",
       "link": "hearttrailing/index.html",
-      "tags": ["animation", "mouse-events", "interactive"],
+      "tags": [
+        "animation",
+        "mouse-events",
+        "interactive"
+      ],
       "difficulty": "beginner",
-      "technologies": ["HTML", "CSS", "JavaScript"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
     },
     {
       "id": "02",
@@ -19,9 +27,17 @@
       "description": "Text animation effects with customizable speed and styling options.",
       "icon": "fas fa-pen",
       "link": "autotexteffect/index.html",
-      "tags": ["animation", "text-effects", "typography"],
+      "tags": [
+        "animation",
+        "text-effects",
+        "typography"
+      ],
       "difficulty": "beginner",
-      "technologies": ["HTML", "CSS", "JavaScript"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
     },
     {
       "id": "03",
@@ -29,9 +45,18 @@
       "description": "A compact and stylish calendar widget showing current date information.",
       "icon": "fas fa-calendar",
       "link": "minicalendar/index.html",
-      "tags": ["date", "widget", "utility"],
+      "tags": [
+        "date",
+        "widget",
+        "utility"
+      ],
       "difficulty": "intermediate",
-      "technologies": ["HTML", "CSS", "JavaScript", "Date API"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Date API"
+      ]
     },
     {
       "id": "04",
@@ -39,9 +64,17 @@
       "description": "Create engaging ripple animations for button interactions.",
       "icon": "fas fa-bolt",
       "link": "ripplebutton/index.html",
-      "tags": ["animation", "interaction", "effects"],
+      "tags": [
+        "animation",
+        "interaction",
+        "effects"
+      ],
       "difficulty": "beginner",
-      "technologies": ["HTML", "CSS", "JavaScript"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
     },
     {
       "id": "05",
@@ -49,9 +82,18 @@
       "description": "Generate random images with customizable parameters and filters.",
       "icon": "fas fa-image",
       "link": "randomimagegenerator/index.html",
-      "tags": ["api", "images", "random"],
+      "tags": [
+        "api",
+        "images",
+        "random"
+      ],
       "difficulty": "intermediate",
-      "technologies": ["HTML", "CSS", "JavaScript", "External API"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "External API"
+      ]
     },
     {
       "id": "06",
@@ -59,9 +101,18 @@
       "description": "Implement a smooth dark mode toggle with persistent user preferences.",
       "icon": "fas fa-moon",
       "link": "darkmode/index.html",
-      "tags": ["theme", "accessibility", "user-preference"],
+      "tags": [
+        "theme",
+        "accessibility",
+        "user-preference"
+      ],
       "difficulty": "intermediate",
-      "technologies": ["HTML", "CSS", "JavaScript", "LocalStorage"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "LocalStorage"
+      ]
     },
     {
       "id": "07",
@@ -69,9 +120,18 @@
       "description": "Fetch and display random dad jokes using an external API.",
       "icon": "fas fa-quote-right",
       "link": "dadjoke/index.html",
-      "tags": ["api", "humor", "fetch"],
+      "tags": [
+        "api",
+        "humor",
+        "fetch"
+      ],
       "difficulty": "beginner",
-      "technologies": ["HTML", "CSS", "JavaScript", "External API"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "External API"
+      ]
     },
     {
       "id": "08",
@@ -79,9 +139,17 @@
       "description": "Interactive feedback form with emoji reactions and animations.",
       "icon": "fas fa-comments",
       "link": "feedbackui/index.html",
-      "tags": ["ui", "interaction", "form"],
+      "tags": [
+        "ui",
+        "interaction",
+        "form"
+      ],
       "difficulty": "intermediate",
-      "technologies": ["HTML", "CSS", "JavaScript"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
     },
     {
       "id": "09",
@@ -89,7 +157,11 @@
       "description": "Real-time weather information with location-based updates.",
       "icon": "fas fa-sun",
       "link": "weather/index.html",
-      "tags": ["api", "weather", "geolocation"],
+      "tags": [
+        "api",
+        "weather",
+        "geolocation"
+      ],
       "difficulty": "advanced",
       "technologies": [
         "HTML",
@@ -105,9 +177,18 @@
       "description": "Feature-rich todo list with local storage and filtering options.",
       "icon": "fas fa-list",
       "link": "todolist/index.html",
-      "tags": ["crud", "localStorage", "utility"],
+      "tags": [
+        "crud",
+        "localStorage",
+        "utility"
+      ],
       "difficulty": "intermediate",
-      "technologies": ["HTML", "CSS", "JavaScript", "LocalStorage"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "LocalStorage"
+      ]
     },
     {
       "id": "11",
@@ -115,9 +196,17 @@
       "description": "Interactive quiz application with score tracking and results.",
       "icon": "fas fa-question",
       "link": "simplequiz/index.html",
-      "tags": ["quiz", "interactive", "education"],
+      "tags": [
+        "quiz",
+        "interactive",
+        "education"
+      ],
       "difficulty": "intermediate",
-      "technologies": ["HTML", "CSS", "JavaScript"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
     },
     {
       "id": "12",
@@ -125,9 +214,17 @@
       "description": "Generate secure passwords with customizable options.",
       "icon": "fas fa-key",
       "link": "passwordgenerator/index.html",
-      "tags": ["security", "utility", "random"],
+      "tags": [
+        "security",
+        "utility",
+        "random"
+      ],
       "difficulty": "intermediate",
-      "technologies": ["HTML", "CSS", "JavaScript"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
     },
     {
       "id": "13",
@@ -135,9 +232,18 @@
       "description": "Look up word definitions with pronunciation and examples.",
       "icon": "fas fa-book",
       "link": "englishdictionary/index.html",
-      "tags": ["api", "dictionary", "education"],
+      "tags": [
+        "api",
+        "dictionary",
+        "education"
+      ],
       "difficulty": "advanced",
-      "technologies": ["HTML", "CSS", "JavaScript", "Dictionary API"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Dictionary API"
+      ]
     },
     {
       "id": "14",
@@ -145,9 +251,18 @@
       "description": "Display inspiring quotes with author attribution.",
       "icon": "fas fa-quote-right",
       "link": "randomquotegenerator/index.html",
-      "tags": ["api", "quotes", "inspiration"],
+      "tags": [
+        "api",
+        "quotes",
+        "inspiration"
+      ],
       "difficulty": "beginner",
-      "technologies": ["HTML", "CSS", "JavaScript", "Quotes API"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Quotes API"
+      ]
     },
     {
       "id": "15",
@@ -155,9 +270,18 @@
       "description": "Generate random anime pictures using an external API (API Does not work anymore).",
       "icon": "fas fa-dragon",
       "link": "animepicturegenerator/index.html",
-      "tags": ["api", "anime", "images"],
+      "tags": [
+        "api",
+        "anime",
+        "images"
+      ],
       "difficulty": "intermediate",
-      "technologies": ["HTML", "CSS", "JavaScript", "Anime API"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Anime API"
+      ]
     },
     {
       "id": "16",
@@ -165,9 +289,18 @@
       "description": "A game where you have to memorize a sequence of numbers and then input them in the correct order.",
       "icon": "fas fa-brain",
       "link": "memorychunkinggame/index.html",
-      "tags": ["game", "memory", "cognitive"],
+      "tags": [
+        "game",
+        "memory",
+        "cognitive"
+      ],
       "difficulty": "intermediate",
-      "technologies": ["HTML", "CSS", "JavaScript", "LocalStorage"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "LocalStorage"
+      ]
     },
     {
       "id": "17",
@@ -175,7 +308,11 @@
       "description": "A game where you have to memorize a sequence of numbers and then input them in the correct order with a timer and a score.",
       "icon": "fas fa-hourglass",
       "link": "numbermemorychallange/index.html",
-      "tags": ["game", "memory", "cognitive"],
+      "tags": [
+        "game",
+        "memory",
+        "cognitive"
+      ],
       "difficulty": "advanced",
       "technologies": [
         "HTML",
@@ -193,19 +330,36 @@
       "description": "Generate random color palettes for design inspiration and project use.",
       "icon": "fas fa-palette",
       "link": "colorpalettegenerator/index.html",
-      "tags": ["color", "palette", "generator"],
+      "tags": [
+        "color",
+        "palette",
+        "generator"
+      ],
       "difficulty": "intermediate",
-      "technologies": ["HTML", "CSS", "JavaScript"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
     },
     {
       "id": "19",
-      "name": "Resume",
-      "description": "Professional resume and portfolio website with multiple pages including about, contact, and interactive elements.",
-      "icon": "fas fa-user-tie",
-      "link": "resume/index.html",
-      "tags": ["portfolio", "resume", "professional"],
-      "difficulty": "advanced",
-      "technologies": ["HTML", "CSS", "JavaScript", "Responsive Design"]
+      "name": "Pomodoro Timer",
+      "description": "A productivity timer based on the Pomodoro Technique, with work and break intervals.",
+      "icon": "fas fa-clock",
+      "link": "pomodoro/index.html",
+      "tags": [
+        "productivity",
+        "timer",
+        "focus"
+      ],
+      "difficulty": "intermediate",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Responsive Design"
+      ]
     },
     {
       "id": "20",
@@ -213,9 +367,18 @@
       "description": "Collection of projects built while completing FreeCodeCamp certification tracks.",
       "icon": "fas fa-code",
       "link": "freecodecamp/index.html",
-      "tags": ["learning", "certification", "collection"],
+      "tags": [
+        "learning",
+        "certification",
+        "collection"
+      ],
       "difficulty": "varies",
-      "technologies": ["HTML", "CSS", "JavaScript", "Responsive Design"]
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Responsive Design"
+      ]
     }
   ]
 }
