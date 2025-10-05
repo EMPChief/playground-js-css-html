@@ -1,97 +1,419 @@
-/* Stil for "back"-lenken */
-.back {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  text-decoration: none;
-  font-size: 18px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 15px;
-  border-radius: 5px;
-}
-
-/* Hover-effekt for "back"-lenken */
-.back:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.background-fun {
+/**
+ * Main body container with gradient background
+ * Includes fallback gradient if background image fails to load
+ */
+.pomodoro-body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
   background-image: url("../assets/coolbackgrounds-fractalize-cool_backgrounds.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
+  background-color: #1a1a2e;
+  background-image:
+    url("../assets/coolbackgrounds-fractalize-cool_backgrounds.png"),
+    linear-gradient(
+      135deg,
+      #667eea 0%,
+      #764ba2 25%,
+      #f093fb 50%,
+      #4facfe 75%,
+      #00f2fe 100%
+    );
   display: flex;
-  justify-content: center; /* horizontal centering */
-  align-items: center; /* vertical centering */
-  height: 100vh;
-}
-
-.container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   position: relative;
-  margin: 0 auto;
-  max-width: 400px;
   padding: 20px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  font-family: "Rooboto", sans-serif;
-}
-.title {
-  font-size: 40px;
-  margin-bottom: 15;
-  color: peachpuff;
 }
 
-.timer {
-  font-size: 80px;
-  margin: 20px 0;
-  color: darkslateblue;
+/**
+ * Animated gradient overlay
+ */
+.pomodoro-body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(118, 75, 162, 0.1) 25%,
+    rgba(240, 147, 251, 0.1) 50%,
+    rgba(79, 172, 254, 0.1) 75%,
+    rgba(0, 242, 254, 0.1) 100%
+  );
+  animation: pomodoro-gradient-shift 15s ease infinite;
 }
 
-button {
-  font-size: 20px;
-  padding: 10px 20px;
-  margin: 5px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: darkslateblue;
+/**
+ * Gradient animation for background overlay
+ */
+@keyframes pomodoro-gradient-shift {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.pomodoro-back-link {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
   color: white;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 12px 24px;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-button:hover {
-  transition: opacity 0.3s ease-in-out;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  background-color: slateblue;
+.pomodoro-back-link:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: translateX(-5px);
 }
 
-#start-button {
-  background-color: seagreen;
-}
-#start-button:hover {
-  background-color: mediumseagreen;
+.pomodoro-container {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  width: 90%;
+  padding: 50px 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: pomodoro-float 6s ease-in-out infinite;
 }
 
-#pause-button {
-  background-color: darkorange;
+/**
+ * Floating animation for main container
+ */
+@keyframes pomodoro-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
-#pause-button:hover {
-  background-color: orange;
+
+.pomodoro-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  letter-spacing: 1px;
 }
-#reset-button {
-  background-color: crimson;
+
+/**
+ * Container for phase badge
+ */
+.pomodoro-phase-indicator {
+  margin-bottom: 20px;
 }
-#reset-button:hover {
-  background-color: red;
+
+/**
+ * Phase badge (Working/Break/Long Break)
+ * Default style - green gradient for work phase
+ */
+.pomodoro-phase-badge {
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  box-shadow: 0 4px 15px rgba(17, 153, 142, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
-#stop-button {
-  background-color: firebrick;
+
+/**
+ * Work phase - green gradient
+ */
+.pomodoro-phase-badge.phase-work {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  box-shadow: 0 4px 15px rgba(17, 153, 142, 0.4);
 }
-#stop-button:hover {
-  background-color: darkred;
+
+/**
+ * Short break phase - pink gradient
+ */
+.pomodoro-phase-badge.phase-break {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+}
+
+/**
+ * Long break phase - purple gradient (after 4 pomodoros)
+ */
+.pomodoro-phase-badge.phase-longbreak {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/**
+ * Timer display container with glassmorphism effect
+ */
+.pomodoro-timer-display {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 30px 0;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.pomodoro-timer-text {
+  font-size: 90px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  letter-spacing: 4px;
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+}
+
+/**
+ * Button container - flexbox layout
+ */
+.pomodoro-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.pomodoro-btn {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+/**
+ * Ripple effect on button hover
+ */
+.pomodoro-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s,
+    height 0.6s;
+}
+
+.pomodoro-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.pomodoro-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pomodoro-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pomodoro-btn i {
+  position: relative;
+  z-index: 1;
+}
+
+/**
+ * Start button - green gradient
+ * Toggles to pause button when timer is running
+ */
+.pomodoro-btn-start {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.pomodoro-btn-start:hover {
+  background: linear-gradient(135deg, #0d7a6f 0%, #2dd869 100%);
+}
+
+/**
+ * Pause button - pink gradient
+ * Applied dynamically via JavaScript when timer is running
+ */
+.pomodoro-btn-pause {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.pomodoro-btn-pause:hover {
+  background: linear-gradient(135deg, #d87ae0 0%, #da4458 100%);
+}
+
+/**
+ * Stop button (legacy - no longer used)
+ */
+.pomodoro-btn-stop {
+  background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+}
+
+.pomodoro-btn-stop:hover {
+  background: linear-gradient(135deg, #c92537 0%, #d94a37 100%);
+}
+
+/**
+ * Reset button - purple gradient
+ */
+.pomodoro-btn-reset {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.pomodoro-btn-reset:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #63408a 100%);
+}
+
+.pomodoro-quote-container {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  width: 90%;
+  margin-top: 30px;
+  padding: 25px 35px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pomodoro-quote-text {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 12px;
+  line-height: 1.7;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pomodoro-quote-author {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/**
+ * Mobile styles for screens 600px and below
+ */
+@media (max-width: 600px) {
+  /**
+ * Main container with glassmorphism effect
+ * Includes floating animation
+ */
+  .pomodoro-container {
+    padding: 40px 30px;
+  }
+
+  /**
+ * Main title with gradient text effect
+ */
+  .pomodoro-title {
+    font-size: 36px;
+  }
+
+  /**
+ * Timer text (MM:SS format)
+ */
+  .pomodoro-timer-text {
+    font-size: 70px;
+  }
+
+  /**
+ * Base button styles with ripple effect
+ */
+  .pomodoro-btn {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  /**
+ * Back link to return to main page
+ */
+  .pomodoro-back-link {
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /**
+ * Quote container below timer
+ * Displays random motivational quotes from quotes.json
+ */
+  .pomodoro-quote-container {
+    padding: 20px 25px;
+  }
+
+  /**
+ * Quote text - italic style
+ */
+  .pomodoro-quote-text {
+    font-size: 16px;
+  }
+
+  /**
+ * Quote author and year
+ */
+  .pomodoro-quote-author {
+    font-size: 13px;
+  }
 }
