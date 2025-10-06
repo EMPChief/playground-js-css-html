@@ -70,6 +70,41 @@
       </div>
     </div>
 
+    <!-- Contaienr for list to input task and how many pomodoro you want to use on it-->
+    <div class="task-container">
+      <h2 class="task-title">Task list</h2>
+      <ul>
+        <li class="tasks">
+          Task 1 | 1 pomodoro
+          <i class="fas fa-trash delete-icon"></i>
+        </li>
+        <li class="tasks">
+          Task 2 | 2 pomodoros
+          <i class="fas fa-trash delete-icon"></i>
+        </li>
+      </ul>
+      <h2 class="task-title">Add Task</h2>
+      <form id="task-form">
+        <div class="task-form-inputs">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Enter your task"
+            required
+          />
+          <input
+            type="number"
+            id="pomodoro-count"
+            placeholder="Number of Pomodoros"
+            min="1"
+            required
+          />
+        </div>
+        <button type="submit" class="add-task-button">Add Task</button>
+      </form>
+      <ul id="task-list" class="task-list"></ul>
+    </div>
+
     <!-- Motivational Quote Container -->
     <div class="pomodoro-quote-container">
       <p class="pomodoro-quote-text" id="quote-text">
