@@ -92,7 +92,8 @@
             type="number"
             id="pomodoro-count"
             placeholder="Number of Pomodoros"
-            min="1"
+            min="0.1"
+            step="0.1"
             required
           />
         </div>
@@ -111,11 +112,16 @@
         — Cal Newport (2016)
       </p>
     </div>
-
+    <!--- Audio Element for Notification Sound -->
+    <audio id="pomodoro-notification" controls>
+      <source src="assets/sound/mixkit-alert-alarm-1005.wav" type="audio/ogg" />
+      Your browser does not support the audio element.
+    </audio>
     <!-- JavaScript -->
+    <script src="js/sounds.js"></script>
+    <script src="js/storage.js"></script>
     <script src="js/timer.js"></script>
     <script src="js/quotes.js"></script>
-    <script src="js/storage.js"></script>
     <script src="js/tasks.js"></script>
   </body>
 </html>

@@ -13,6 +13,11 @@ let timeLeft = 25 * 60;
 let isRunning = false;
 let currentPhase = "Work";
 let pomodoroCount = 0;
+let workSecondsElapsed = 0;
+
+if (typeof loadTimerState === "function") {
+  loadTimerState();
+}
 
 if (startElement) {
   startElement.addEventListener("click", toggleTimer);
@@ -47,6 +52,18 @@ function startTimer() {
   interval = setInterval(() => {
     if (timeLeft > 0) {
       timeLeft--;
+      
+      if (currentPhase === "Work") {
+        workSecondsElapsed++;
+        
+        if (workSecondsElapsed >= 150) {
+          if (typeof decrementFirstTask === "function") {
+            decrementFirstTask();
+          }
+          workSecondsElapsed = 0;
+        }
+      }
+      
       updateTimerDisplay();
       saveTimerState();
     } else {
@@ -75,6 +92,7 @@ function resetTimer() {
   currentPhase = "Work";
   timeLeft = 25 * 60;
   pomodoroCount = 0;
+  workSecondsElapsed = 0;
   phaseElement.textContent = "Working";
   phaseElement.className = "pomodoro-phase-badge phase-work";
   updateTimerDisplay();
@@ -108,10 +126,7 @@ function switchPhase() {
 
   if (currentPhase === "Work") {
     pomodoroCount++;
-
-    if (typeof decrementFirstTask === "function") {
-      decrementFirstTask();
-    }
+    workSecondsElapsed = 0;
 
     if (pomodoroCount % 4 === 0) {
       currentPhase = "LongBreak";
