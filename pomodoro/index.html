@@ -10,13 +10,13 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../assets/logo/favicon-32x32.png"
+      href="./assets/logo/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../assets/logo/favicon-16x16.png"
+      href="./assets/logo/favicon-16x16.png"
     />
 
     <!-- Google Fonts - Poppins -->
@@ -72,6 +72,9 @@
         <button class="pomodoro-btn pomodoro-btn-reset" id="reset-button">
           <i class="fas fa-redo"></i> Reset
         </button>
+        <button class="pomodoro-btn pomodoro-btn-sound" id="sound-toggle">
+          <i class="fas fa-volume-up"></i>
+        </button>
       </div>
     </div>
 
@@ -92,7 +95,8 @@
             type="number"
             id="pomodoro-count"
             placeholder="Number of Pomodoros"
-            min="1"
+            min="0.1"
+            step="0.1"
             required
           />
         </div>
@@ -113,9 +117,10 @@
     </div>
 
     <!-- JavaScript -->
+    <script src="js/sounds.js"></script>
+    <script src="js/storage.js"></script>
     <script src="js/timer.js"></script>
     <script src="js/quotes.js"></script>
-    <script src="js/storage.js"></script>
     <script src="js/tasks.js"></script>
   </body>
 </html>

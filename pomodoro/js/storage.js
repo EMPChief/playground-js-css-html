@@ -15,6 +15,7 @@ function saveTimerState() {
       isRunning: isRunning,
       currentPhase: currentPhase,
       pomodoroCount: pomodoroCount,
+      workSecondsElapsed: workSecondsElapsed || 0,
     };
     localStorage.setItem("pomodoroState", JSON.stringify(state));
   } catch (error) {
@@ -35,6 +36,7 @@ function loadTimerState() {
       timeLeft = state.timeLeft;
       currentPhase = state.currentPhase;
       pomodoroCount = state.pomodoroCount;
+      workSecondsElapsed = state.workSecondsElapsed || 0;
       updateTimerDisplay();
 
       if (currentPhase === "Work") {
@@ -91,9 +93,15 @@ function loadTasks() {
           const li = document.createElement("li");
           li.className = "tasks";
           const taskText = task.text || task;
-          const taskCount = task.count || "1";
+          let taskCount = parseFloat(task.count);
+          
+          if (isNaN(taskCount) || taskCount < 0.1) {
+            taskCount = 0.1;
+          }
+          
           li.setAttribute("data-pomodoros", taskCount);
-          li.innerHTML = `<span class="task-text">${taskText}</span> | <span class="task-count">${taskCount}</span> pomodoro${taskCount > 1 ? "s" : ""}<i class="fas fa-trash delete-icon"></i>`;
+          const escapedText = typeof escapeHtml === 'function' ? escapeHtml(taskText) : taskText;
+          li.innerHTML = `<span class="task-info"><span class="task-text">${escapedText}</span> | <span class="task-count">${taskCount}</span> pomodoro${taskCount !== 1 ? "s" : ""}</span><i class="fas fa-trash delete-icon"></i>`;
           taskContainer.appendChild(li);
         });
       }
@@ -103,5 +111,12 @@ function loadTasks() {
   }
 }
 
-loadTimerState();
-loadTasks();
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    loadTimerState();
+    loadTasks();
+  });
+} else {
+  loadTimerState();
+  loadTasks();
+}

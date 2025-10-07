@@ -5,8 +5,16 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  background: url("../../assets/coolbackgrounds-fractalize-cool_backgrounds.png"),
-    linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+  background:
+    url("./assets/coolbackgrounds-fractalize-cool_backgrounds.png"),
+    linear-gradient(
+      135deg,
+      #667eea 0%,
+      #764ba2 25%,
+      #f093fb 50%,
+      #4facfe 75%,
+      #00f2fe 100%
+    );
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -24,18 +32,35 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 25%, rgba(240, 147, 251, 0.1) 50%, rgba(79, 172, 254, 0.1) 75%, rgba(0, 242, 254, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(118, 75, 162, 0.1) 25%,
+    rgba(240, 147, 251, 0.1) 50%,
+    rgba(79, 172, 254, 0.1) 75%,
+    rgba(0, 242, 254, 0.1) 100%
+  );
   animation: pomodoro-gradient-shift 15s ease infinite;
 }
 
 @keyframes pomodoro-gradient-shift {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
 }
 
 @keyframes pomodoro-float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* Back Link */
