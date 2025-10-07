@@ -98,3 +98,19 @@
 .pomodoro-btn-sound:hover {
   background: linear-gradient(135deg, #e68f3d 0%, #e6ca45 100%);
 }
+
+.pomodoro-btn-auto {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.pomodoro-btn-auto:hover {
+  background: linear-gradient(135deg, #0d7a6f 0%, #2dd869 100%);
+}
+
+.pomodoro-btn-auto-off {
+  background: linear-gradient(135deg, #868f96 0%, #596164 100%);
+}
+
+.pomodoro-btn-auto-off:hover {
+  background: linear-gradient(135deg, #6e7579 0%, #474d50 100%);
+}

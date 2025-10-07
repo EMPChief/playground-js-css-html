@@ -1,0 +1,26 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .skill-item {
+    padding: 1.5rem;
+  }
+
+  #projectFilters {
+    flex-wrap: wrap;
+  }
+
+  #projectFilters .btn {
+    margin-bottom: 0.5rem;
+  }
+}
