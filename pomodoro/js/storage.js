@@ -93,7 +93,7 @@ function loadTasks() {
           const taskText = task.text || task;
           const taskCount = task.count || "1";
           li.setAttribute("data-pomodoros", taskCount);
-          li.innerHTML = `<span class="task-text">${taskText}</span> | <span class="task-count">${taskCount}</span> pomodoro${taskCount > 1 ? "s" : ""}<i class="fas fa-trash delete-icon"></i>`;
+          li.innerHTML = `<span class="task-info"><span class="task-text">${taskText}</span> | <span class="task-count">${taskCount}</span> pomodoro${taskCount > 1 ? "s" : ""}</span><i class="fas fa-trash delete-icon"></i>`;
           taskContainer.appendChild(li);
         });
       }
