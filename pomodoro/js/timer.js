@@ -123,6 +123,11 @@ function updateTimerDisplay() {
  */
 function switchPhase() {
   clearInterval(interval);
+  isRunning = false;
+
+  if (typeof playRandomAudio === "function") {
+    playRandomAudio();
+  }
 
   if (currentPhase === "Work") {
     pomodoroCount++;

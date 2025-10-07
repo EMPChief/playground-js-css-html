@@ -89,3 +89,12 @@
 .pomodoro-btn-reset:hover {
   background: linear-gradient(135deg, #5568d3 0%, #63408a 100%);
 }
+
+.pomodoro-btn-sound {
+  background: linear-gradient(135deg, #ffa751 0%, #ffe259 100%);
+  padding: 14px 20px;
+}
+
+.pomodoro-btn-sound:hover {
+  background: linear-gradient(135deg, #e68f3d 0%, #e6ca45 100%);
+}
