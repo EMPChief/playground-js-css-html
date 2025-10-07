@@ -9,8 +9,12 @@ let isRunning = false;
 let currentPhase = "Work";
 let pomodoroCount = 0;
 
-startElement.addEventListener("click", toggleTimer);
-resetElement.addEventListener("click", resetTimer);
+if (startElement) {
+  startElement.addEventListener("click", toggleTimer);
+}
+if (resetElement) {
+  resetElement.addEventListener("click", resetTimer);
+}
 
 function toggleTimer() {
   if (isRunning) {
@@ -59,9 +63,15 @@ function resetTimer() {
 }
 
 function updateTimerDisplay() {
-  const minutes = Math.floor(timeLeft / 60);
-  const seconds = timeLeft % 60;
-  timerElement.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+  try {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    if (timerElement) {
+      timerElement.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+    }
+  } catch (error) {
+    console.error("Failed to update timer display:", error);
+  }
 }
 
 function switchPhase() {
@@ -69,6 +79,10 @@ function switchPhase() {
 
   if (currentPhase === "Work") {
     pomodoroCount++;
+
+    if (typeof decrementFirstTask === "function") {
+      decrementFirstTask();
+    }
 
     if (pomodoroCount % 4 === 0) {
       currentPhase = "LongBreak";

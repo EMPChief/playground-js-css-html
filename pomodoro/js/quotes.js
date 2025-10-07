@@ -7,6 +7,12 @@ function loadRandomQuote() {
       document.getElementById("quote-text").textContent = `"${quote.text}"`;
       document.getElementById("quote-author").textContent =
         `— ${quote.author}${yearText}`;
+    })
+    .catch((error) => {
+      console.error("Failed to load quote:", error);
+      document.getElementById("quote-text").textContent =
+        '"Focus is the gateway to thinking clearly, feeling deeply, and living fully."';
+      document.getElementById("quote-author").textContent = "— Cal Newport (2016)";
     });
 }
 

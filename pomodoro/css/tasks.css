@@ -126,6 +126,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
+}
+
+.task-info {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.task-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .tasks:hover,
