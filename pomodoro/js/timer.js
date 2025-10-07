@@ -17,10 +17,6 @@ let pomodoroCount = 0;
 let workSecondsElapsed = 0;
 let autoStartEnabled = true;
 
-if (typeof loadTimerState === "function") {
-  loadTimerState();
-}
-
 if (startElement) {
   startElement.addEventListener("click", toggleTimer);
 }
@@ -29,6 +25,11 @@ if (resetElement) {
 }
 if (autoStartToggle) {
   autoStartToggle.addEventListener("click", toggleAutoStart);
+  updateAutoStartButton();
+}
+
+if (typeof loadTimerState === "function") {
+  loadTimerState();
 }
 
 /**
@@ -169,8 +170,8 @@ function switchPhase() {
   saveTimerState();
 }
 
-function toggleAutoStart() {
-  autoStartEnabled = !autoStartEnabled;
+function updateAutoStartButton() {
+  if (!autoStartToggle) return;
   
   if (autoStartEnabled) {
     autoStartToggle.classList.remove("pomodoro-btn-auto-off");
@@ -181,6 +182,10 @@ function toggleAutoStart() {
     autoStartToggle.classList.add("pomodoro-btn-auto-off");
     autoStartToggle.innerHTML = '<i class="fas fa-forward"></i> Manual';
   }
-  
+}
+
+function toggleAutoStart() {
+  autoStartEnabled = !autoStartEnabled;
+  updateAutoStartButton();
   saveTimerState();
 }
