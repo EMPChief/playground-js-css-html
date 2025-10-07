@@ -18,7 +18,15 @@ let soundarray = [
   `${soundPath}mixkit-street-public-alarm-997.wav`,
 ];
 
-let isSoundEnabled = localStorage.getItem("pomodoroSoundEnabled") !== "false";
+let isSoundEnabled = true;
+
+try {
+  if (typeof localStorage !== "undefined") {
+    isSoundEnabled = localStorage.getItem("pomodoroSoundEnabled") !== "false";
+  }
+} catch (error) {
+  console.warn("LocalStorage not available for sound settings:", error);
+}
 
 /**
  * Updates the sound toggle button icon
@@ -37,7 +45,13 @@ function updateSoundIcon() {
  */
 function toggleSound() {
   isSoundEnabled = !isSoundEnabled;
-  localStorage.setItem("pomodoroSoundEnabled", isSoundEnabled);
+  try {
+    if (typeof localStorage !== "undefined") {
+      localStorage.setItem("pomodoroSoundEnabled", isSoundEnabled);
+    }
+  } catch (error) {
+    console.warn("LocalStorage not available, sound preference not saved:", error);
+  }
   updateSoundIcon();
 }
 
