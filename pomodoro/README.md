@@ -10,12 +10,21 @@ A beautiful, functional Pomodoro timer web application with task management and 
   - 15-minute long breaks (every 4th pomodoro)
   - Start/Pause and Reset controls
   - Visual phase indicators
+  - Auto-start next phase when timer completes
 
 - **Task Management**
-  - Add tasks with custom pomodoro counts
-  - Automatic pomodoro decrement on completion
-  - Delete tasks manually
+  - Add tasks with custom pomodoro counts (supports decimals: 0.1, 0.5, 1.5, etc.)
+  - Fractional pomodoro tracking (0.1 pomodoro = 2.5 minutes)
+  - Automatic decrement every 2.5 minutes during work sessions
+  - Delete tasks manually with trash icon
   - Persistent storage across sessions
+  - XSS protection with input sanitization
+
+- **Sound Notifications**
+  - Random alarm sounds when phases switch
+  - Mute/unmute toggle button
+  - Sound preference saved to localStorage
+  - 8 different alarm sounds to choose from
 
 - **Motivational Quotes**
   - Random motivational quotes
@@ -25,7 +34,9 @@ A beautiful, functional Pomodoro timer web application with task management and 
 - **Data Persistence**
   - Timer state saved to localStorage
   - Tasks saved automatically
+  - Sound preferences saved
   - Resume where you left off
+  - Graceful fallback when localStorage is disabled
 
 ## Technologies Used
 
@@ -42,6 +53,8 @@ pomodoro/
 ├── index.html          # Main HTML structure
 ├── quotes.json         # Motivational quotes database
 ├── serve.py           # Simple Python HTTP server
+├── assets/
+│   └── sound/         # Alarm sound files (WAV format)
 ├── css/
 │   ├── base.css       # Base styles and layout
 │   ├── timer.css      # Timer-specific styles
@@ -50,10 +63,11 @@ pomodoro/
 │   ├── quote.css      # Quote display styles
 │   └── responsive.css # Responsive design
 └── js/
+    ├── sounds.js      # Sound notification system
+    ├── storage.js     # localStorage persistence
     ├── timer.js       # Timer logic
     ├── tasks.js       # Task management
-    ├── quotes.js      # Quote loading and rotation
-    └── storage.js     # localStorage persistence
+    └── quotes.js      # Quote loading and rotation
 ```
 
 ## Usage
@@ -68,12 +82,14 @@ pomodoro/
    - Click "Start" to begin a 25-minute work session
    - Click "Pause" to pause the timer
    - Click "Reset" to restart from the beginning
+   - Click the speaker icon to mute/unmute alarm sounds
 
 3. **Managing Tasks**
-   - Enter a task name and number of pomodoros needed
+   - Enter a task name and number of pomodoros needed (decimals supported)
    - Click "Add Task" to add it to your list
-   - Tasks automatically decrement when a work session completes
+   - Tasks automatically decrement by 0.1 every 2.5 minutes during work
    - Click the trash icon to delete a task
+   - Tasks are removed automatically when count reaches 0
 
 ## How It Works
 
@@ -84,9 +100,12 @@ pomodoro/
 4. Repeat
 
 ### Task Integration
-- When you complete a work session, the first task in your list automatically loses one pomodoro
+- Tasks support fractional pomodoros (0.1 increments)
+- 0.1 pomodoro = 2.5 minutes of work time
+- The first task decrements by 0.1 every 2.5 minutes during work sessions
 - Tasks are removed when their pomodoro count reaches zero
 - Plan your work by assigning the appropriate number of pomodoros to each task
+- Example: 0.5 pomodoro = 12.5 minutes, 1 pomodoro = 25 minutes
 
 ## Customization
 
@@ -112,6 +131,15 @@ Edit `quotes.json`:
 }
 ```
 
+### Add Custom Alarm Sounds
+Add WAV files to `assets/sound/` directory and update `js/sounds.js`:
+```javascript
+let soundarray = [
+  `${soundPath}your-custom-sound.wav`,
+  // ... more sounds
+];
+```
+
 ### Style Customization
 - Colors and gradients: `css/base.css`
 - Glassmorphism effects: `css/tasks.css` and `css/timer.css`
@@ -124,7 +152,10 @@ Edit `quotes.json`:
 - Safari
 - Edge
 
-Requires localStorage support for data persistence.
+### Requirements
+- localStorage support for data persistence (optional - graceful fallback)
+- HTML5 Audio support for sound notifications
+- Modern browser with ES6 support
 
 ## License
 
