@@ -28,7 +28,12 @@
     />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/timer.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/tasks.css" />
+    <link rel="stylesheet" href="css/quote.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 
     <title>Pomodoro Timer</title>
 
@@ -73,16 +78,7 @@
     <!-- Contaienr for list to input task and how many pomodoro you want to use on it-->
     <div class="task-container">
       <h2 class="task-title">Task list</h2>
-      <ul>
-        <li class="tasks">
-          Task 1 | 1 pomodoro
-          <i class="fas fa-trash delete-icon"></i>
-        </li>
-        <li class="tasks">
-          Task 2 | 2 pomodoros
-          <i class="fas fa-trash delete-icon"></i>
-        </li>
-      </ul>
+      <ul></ul>
       <h2 class="task-title">Add Task</h2>
       <form id="task-form">
         <div class="task-form-inputs">
@@ -117,6 +113,9 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="index.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/tasks.js"></script>
   </body>
 </html>

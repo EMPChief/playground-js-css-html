@@ -1,0 +1,57 @@
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .pomodoro-container {
+    padding: 40px 30px;
+  }
+
+  .pomodoro-title {
+    font-size: 36px;
+  }
+
+  .pomodoro-timer-text {
+    font-size: 70px;
+  }
+
+  .pomodoro-btn {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .pomodoro-back-link {
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .pomodoro-quote-container {
+    padding: 20px 25px;
+  }
+
+  .pomodoro-quote-text {
+    font-size: 16px;
+  }
+
+  .pomodoro-quote-author {
+    font-size: 13px;
+  }
+
+  .task-container {
+    padding: 30px 25px;
+  }
+
+  .task-title {
+    font-size: 28px;
+  }
+
+  #task-input,
+  #pomodoro-count {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .add-task-button {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}

@@ -1,0 +1,163 @@
+/* Task Container */
+.task-container {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  width: 90%;
+  margin-top: 30px;
+  padding: 40px 35px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.task-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+#task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.task-form-inputs {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.task-form-inputs #task-input {
+  flex: 2;
+  min-width: 200px;
+}
+
+.task-form-inputs #pomodoro-count {
+  flex: 1;
+  min-width: 150px;
+}
+
+#task-input,
+#pomodoro-count {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  padding: 14px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#task-input::placeholder,
+#pomodoro-count::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#task-input:focus,
+#pomodoro-count:focus {
+  outline: none;
+  border-color: rgba(102, 126, 234, 0.8);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+}
+
+.add-task-button {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+}
+
+.add-task-button:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #63408a 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.add-task-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+}
+
+/* Task Lists */
+.task-container > ul,
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tasks,
+.task-list li {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 16px 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.task-info {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.task-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tasks:hover,
+.task-list li:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(5px);
+}
+
+.delete-icon {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  padding: 8px;
+}
+
+.delete-icon:hover {
+  color: #f5576c;
+  transform: scale(1.2);
+}
