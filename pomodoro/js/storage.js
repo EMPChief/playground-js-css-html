@@ -16,6 +16,7 @@ function saveTimerState() {
       currentPhase: currentPhase,
       pomodoroCount: pomodoroCount,
       workSecondsElapsed: workSecondsElapsed || 0,
+      autoStartEnabled: typeof autoStartEnabled !== "undefined" ? autoStartEnabled : true,
     };
     localStorage.setItem("pomodoroState", JSON.stringify(state));
   } catch (error) {
@@ -37,6 +38,23 @@ function loadTimerState() {
       currentPhase = state.currentPhase;
       pomodoroCount = state.pomodoroCount;
       workSecondsElapsed = state.workSecondsElapsed || 0;
+      
+      if (typeof autoStartEnabled !== "undefined") {
+        autoStartEnabled = state.autoStartEnabled !== undefined ? state.autoStartEnabled : true;
+        const autoStartToggle = document.getElementById("auto-start-toggle");
+        if (autoStartToggle) {
+          if (autoStartEnabled) {
+            autoStartToggle.classList.remove("pomodoro-btn-auto-off");
+            autoStartToggle.classList.add("pomodoro-btn-auto");
+            autoStartToggle.innerHTML = '<i class="fas fa-forward"></i> Auto';
+          } else {
+            autoStartToggle.classList.remove("pomodoro-btn-auto");
+            autoStartToggle.classList.add("pomodoro-btn-auto-off");
+            autoStartToggle.innerHTML = '<i class="fas fa-forward"></i> Manual';
+          }
+        }
+      }
+      
       updateTimerDisplay();
 
       if (currentPhase === "Work") {

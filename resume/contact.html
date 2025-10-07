@@ -36,7 +36,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
     />
-    <link href="styles.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Navbar Container -->
@@ -70,36 +70,25 @@
                     />
                   </div>
                   <h2 class="text-center mb-4">Contact Information</h2>
-                  <div class="row g-4 mb-4">
+                  <div class="row g-4">
                     <div class="col-md-6">
                       <div
-                        class="contact-detail p-3 border rounded text-center"
+                        class="contact-detail p-4 border rounded text-center"
                       >
                         <i
                           class="bi bi-envelope-fill display-4 text-primary mb-3"
                         ></i>
                         <h4>Email</h4>
                         <p class="mb-0">
-                          bjornmagnekristensen1999jobb@gmail.com
+                          <a href="mailto:bjornmagnekristensen1999jobb@gmail.com" class="text-decoration-none">
+                            bjornmagnekristensen1999jobb@gmail.com
+                          </a>
                         </p>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div
-                        class="contact-detail p-3 border rounded text-center"
-                      >
-                        <i
-                          class="bi bi-telephone-fill display-4 text-primary mb-3"
-                        ></i>
-                        <h4>Phone</h4>
-                        <p class="mb-0">Secret</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row g-4 mb-5">
-                    <div class="col-md-6">
-                      <div
-                        class="contact-detail p-3 border rounded text-center"
+                        class="contact-detail p-4 border rounded text-center"
                       >
                         <i
                           class="bi bi-geo-alt-fill display-4 text-primary mb-3"
@@ -110,82 +99,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div
-                        class="contact-detail p-3 border rounded text-center"
-                      >
-                        <i
-                          class="bi bi-person-vcard-fill display-4 text-primary mb-3"
-                        ></i>
-                        <h4>About</h4>
-                        <p class="mb-0">Born: October 16, 1999</p>
-                      </div>
-                    </div>
                   </div>
-                  <h3 class="text-center mb-4">Send Me a Message</h3>
-                  <form id="contactForm" class="needs-validation" novalidate>
-                    <div class="mb-4">
-                      <label for="name" class="form-label">Name</label>
-                      <div class="input-group">
-                        <span class="input-group-text"
-                          ><i class="bi bi-person"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="mb-4">
-                      <label for="email" class="form-label">Email</label>
-                      <div class="input-group">
-                        <span class="input-group-text"
-                          ><i class="bi bi-envelope"></i
-                        ></span>
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="email"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="mb-4">
-                      <label for="subject" class="form-label">Subject</label>
-                      <div class="input-group">
-                        <span class="input-group-text"
-                          ><i class="bi bi-chat-dots"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="subject"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="mb-4">
-                      <label for="message" class="form-label">Message</label>
-                      <div class="input-group">
-                        <span class="input-group-text"
-                          ><i class="bi bi-pencil"></i
-                        ></span>
-                        <textarea
-                          class="form-control"
-                          id="message"
-                          rows="5"
-                          required
-                        ></textarea>
-                      </div>
-                    </div>
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary btn-lg px-5">
-                        <i class="bi bi-send me-2"></i>Send Message
-                      </button>
-                    </div>
-                  </form>
                 </div>
               </div>
             </div>
@@ -202,11 +116,10 @@
                   <i class="bi bi-linkedin display-1 mb-4"></i>
                   <h3 class="card-title">LinkedIn</h3>
                   <p class="card-text mb-4">
-                    Connect professionally to learn about my work experience and
-                    skills
+                    Connect with me professionally to learn about my work experience and skills
                   </p>
                   <a
-                    href="https://www.linkedin.com/in/bjørn-magne-kristensen-884b2a225/"
+                    href="https://www.linkedin.com/in/bj%C3%B8rn-magne-kristensen-884b2a225/"
                     class="btn btn-outline-primary btn-lg"
                   >
                     <i class="bi bi-person-plus me-2"></i>Connect
@@ -223,7 +136,7 @@
                     View my coding projects and programming journey
                   </p>
                   <a
-                    href="https://github.com/EMPChief"
+                    href="https://github.com/empchief"
                     class="btn btn-outline-primary btn-lg"
                   >
                     <i class="bi bi-code-square me-2"></i>View Projects
@@ -285,17 +198,11 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="common.js"></script>
-    <script>
-      // Form validation
-      const form = document.getElementById("contactForm");
-      form.addEventListener("submit", function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add("was-validated");
-      });
-    </script>
+    <script src="js/utils.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>

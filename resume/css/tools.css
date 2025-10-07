@@ -1,0 +1,153 @@
+/* Calculator Card */
+.calculator-card .calculator-inputs {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.calculator-card .calculator-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.calculator-card .result-display {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  text-align: center;
+  transition: all var(--transition-speed);
+}
+
+.calculator-card .result-display span {
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  transition: all var(--transition-speed);
+}
+
+/* Counter Card */
+.counter-card .counter-controls {
+  padding: 2rem;
+}
+
+.counter-card #count {
+  font-family: 'Courier New', monospace;
+  min-width: 100px;
+  display: inline-block;
+  transition: all var(--transition-speed);
+}
+
+.counter-card button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-speed);
+}
+
+.counter-card button i {
+  font-size: 1.5rem;
+}
+
+/* Temperature Card */
+.temperature-card .temperature-controls {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.temperature-card .bi-arrow-down-up {
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+.temperature-card .bi-arrow-down-up:hover {
+  transform: scale(1.1);
+  color: var(--primary-color);
+}
+
+.temperature-card input[readonly] {
+  background-color: var(--input-bg);
+  opacity: 0.8;
+}
+
+/* Random Color Generator */
+#colorDisplay {
+  transition: all 0.3s ease;
+  font-weight: bold;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--input-border);
+}
+
+#colorValue {
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+/* Tip Calculator */
+#tipValue {
+  min-width: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Word Counter */
+.counter-box {
+  flex: 1;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.counter-box h5 {
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Digital Clock */
+#digitalClock {
+  font-family: monospace;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+#dateDisplay {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+/* Password Strength Checker */
+.progress {
+  height: 8px;
+  background-color: var(--progress-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  background-color: var(--primary-color);
+  transition: width 1s ease-in-out;
+}
+
+#passwordTips {
+  color: var(--secondary-color);
+  background-color: var(--progress-bg);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* BMI Calculator */
+#bmiResult {
+  transition: all 0.3s ease;
+}
+
+#bmiCategory span {
+  font-weight: 600;
+}

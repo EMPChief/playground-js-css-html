@@ -1,0 +1,26 @@
+/* Variables */
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+  --card-bg: #ffffff;
+  --navbar-bg: rgba(33, 37, 41, 0.98);
+  --transition-speed: 0.3s;
+  --progress-bg: #e9ecef;
+  --input-bg: #ffffff;
+  --input-border: #ced4da;
+}
+
+/* Dark mode variables */
+.dark-mode {
+  --primary-color: #0d6efd;
+  --secondary-color: #adb5bd;
+  --background-color: #212529;
+  --text-color: #f8f9fa;
+  --card-bg: #2b3035;
+  --navbar-bg: rgba(43, 48, 53, 0.98);
+  --progress-bg: #495057;
+  --input-bg: #2b3035;
+  --input-border: #495057;
+}

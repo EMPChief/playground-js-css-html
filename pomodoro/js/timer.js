@@ -7,6 +7,7 @@ const startElement = document.getElementById("start-button");
 const resetElement = document.getElementById("reset-button");
 const timerElement = document.getElementById("timer");
 const phaseElement = document.getElementById("phase-indicator");
+const autoStartToggle = document.getElementById("auto-start-toggle");
 
 let interval;
 let timeLeft = 25 * 60;
@@ -14,6 +15,7 @@ let isRunning = false;
 let currentPhase = "Work";
 let pomodoroCount = 0;
 let workSecondsElapsed = 0;
+let autoStartEnabled = true;
 
 if (typeof loadTimerState === "function") {
   loadTimerState();
@@ -24,6 +26,9 @@ if (startElement) {
 }
 if (resetElement) {
   resetElement.addEventListener("click", resetTimer);
+}
+if (autoStartToggle) {
+  autoStartToggle.addEventListener("click", toggleAutoStart);
 }
 
 /**
@@ -152,6 +157,30 @@ function switchPhase() {
   }
 
   updateTimerDisplay();
-  startTimer();
+  
+  if (autoStartEnabled) {
+    startTimer();
+  } else {
+    startElement.innerHTML = '<i class="fas fa-play"></i> Start';
+    startElement.classList.remove("pomodoro-btn-pause");
+    startElement.classList.add("pomodoro-btn-start");
+  }
+  
+  saveTimerState();
+}
+
+function toggleAutoStart() {
+  autoStartEnabled = !autoStartEnabled;
+  
+  if (autoStartEnabled) {
+    autoStartToggle.classList.remove("pomodoro-btn-auto-off");
+    autoStartToggle.classList.add("pomodoro-btn-auto");
+    autoStartToggle.innerHTML = '<i class="fas fa-forward"></i> Auto';
+  } else {
+    autoStartToggle.classList.remove("pomodoro-btn-auto");
+    autoStartToggle.classList.add("pomodoro-btn-auto-off");
+    autoStartToggle.innerHTML = '<i class="fas fa-forward"></i> Manual';
+  }
+  
   saveTimerState();
 }

@@ -16,6 +16,7 @@ fetch("db/sounds.json")
   })
   .catch(error => {
     console.error("Failed to load sounds.json:", error);
+    soundarray = [`${soundPath}mixkit-alert-alarm-1005.wav`];
   });
 
 let isSoundEnabled = true;
@@ -66,6 +67,11 @@ if (soundToggleBtn) {
  */
 function playRandomAudio() {
   if (!isSoundEnabled) return;
+  
+  if (soundarray.length === 0) {
+    console.warn("Sounds not yet loaded or failed to load");
+    return;
+  }
   
   const randomIndex = Math.floor(Math.random() * soundarray.length);
   const selectedSound = soundarray[randomIndex];
