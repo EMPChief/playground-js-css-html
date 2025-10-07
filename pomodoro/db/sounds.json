@@ -1,0 +1,12 @@
+{
+  "sounds": [
+    "mixkit-alert-alarm-1005.wav",
+    "mixkit-classic-alarm-995.wav",
+    "mixkit-critical-alarm-1004.wav",
+    "mixkit-data-scaner-2847.wav",
+    "mixkit-game-notification-wave-alarm-987.wav",
+    "mixkit-retro-game-emergency-alarm-1000.wav",
+    "mixkit-security-facility-breach-alarm-994.wav",
+    "mixkit-street-public-alarm-997.wav"
+  ]
+}

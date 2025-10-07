@@ -8,7 +8,7 @@
  * Falls back to default quote if fetch fails
  */
 function loadRandomQuote() {
-  fetch("quotes.json")
+  fetch("db/quotes.json")
     .then((response) => response.json())
     .then((data) => {
       const quote = data.quotes[Math.floor(Math.random() * data.quotes.length)];

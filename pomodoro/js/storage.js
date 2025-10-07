@@ -77,6 +77,17 @@ function saveTasks() {
 }
 
 /**
+ * Inline escape function for XSS protection
+ * @param {string} text - The text to escape
+ * @returns {string} - Escaped text safe for HTML insertion
+ */
+function safeEscapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+/**
  * Loads saved tasks from localStorage
  * Recreates task list with saved text and pomodoro counts
  */
@@ -100,7 +111,7 @@ function loadTasks() {
           }
           
           li.setAttribute("data-pomodoros", taskCount);
-          const escapedText = typeof escapeHtml === 'function' ? escapeHtml(taskText) : taskText;
+          const escapedText = typeof escapeHtml === 'function' ? escapeHtml(taskText) : safeEscapeHtml(taskText);
           li.innerHTML = `<span class="task-info"><span class="task-text">${escapedText}</span> | <span class="task-count">${taskCount}</span> pomodoro${taskCount !== 1 ? "s" : ""}</span><i class="fas fa-trash delete-icon"></i>`;
           taskContainer.appendChild(li);
         });

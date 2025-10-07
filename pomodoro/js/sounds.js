@@ -7,16 +7,16 @@ const audioElement = document.createElement("audio");
 const soundToggleBtn = document.getElementById("sound-toggle");
 
 const soundPath = "assets/sound/";
-let soundarray = [
-  `${soundPath}mixkit-alert-alarm-1005.wav`,
-  `${soundPath}mixkit-classic-alarm-995.wav`,
-  `${soundPath}mixkit-critical-alarm-1004.wav`,
-  `${soundPath}mixkit-data-scaner-2847.wav`,
-  `${soundPath}mixkit-game-notification-wave-alarm-987.wav`,
-  `${soundPath}mixkit-retro-game-emergency-alarm-1000.wav`,
-  `${soundPath}mixkit-security-facility-breach-alarm-994.wav`,
-  `${soundPath}mixkit-street-public-alarm-997.wav`,
-];
+let soundarray = [];
+
+fetch("db/sounds.json")
+  .then(response => response.json())
+  .then(data => {
+    soundarray = data.sounds.map(file => `${soundPath}${file}`);
+  })
+  .catch(error => {
+    console.error("Failed to load sounds.json:", error);
+  });
 
 let isSoundEnabled = true;
 
