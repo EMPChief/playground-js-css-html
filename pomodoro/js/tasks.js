@@ -1,8 +1,16 @@
+/**
+ * Task management for Pomodoro timer
+ */
+
 const taskForm = document.getElementById("task-form");
 const taskInput = document.getElementById("task-input");
 const pomodoroCountInput = document.getElementById("pomodoro-count");
 const taskContainer = document.querySelector(".task-container > ul");
 
+/**
+ * Handles task form submission
+ * Creates a new task with specified pomodoro count and adds it to the task list
+ */
 if (taskForm) {
   taskForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -32,6 +40,11 @@ if (taskForm) {
   });
 }
 
+/**
+ * Decrements the pomodoro count of the first task in the list
+ * Removes the task if count reaches zero
+ * Called when a work pomodoro completes
+ */
 function decrementFirstTask() {
   try {
     if (!taskContainer) return;
@@ -62,6 +75,10 @@ function decrementFirstTask() {
   }
 }
 
+/**
+ * Handles task deletion via delete icon click
+ * Removes the task from the list and updates localStorage
+ */
 if (taskContainer) {
   taskContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("delete-icon")) {

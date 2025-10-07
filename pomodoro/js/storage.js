@@ -1,3 +1,12 @@
+/**
+ * LocalStorage persistence for timer state and tasks
+ * Saves and loads data across browser sessions
+ */
+
+/**
+ * Saves current timer state to localStorage
+ * Includes time remaining, phase, running status, and pomodoro count
+ */
 function saveTimerState() {
   try {
     if (typeof localStorage === "undefined") return;
@@ -13,6 +22,10 @@ function saveTimerState() {
   }
 }
 
+/**
+ * Loads saved timer state from localStorage
+ * Restores phase indicator and timer display to saved state
+ */
 function loadTimerState() {
   try {
     if (typeof localStorage === "undefined") return;
@@ -40,6 +53,10 @@ function loadTimerState() {
   }
 }
 
+/**
+ * Saves all tasks to localStorage
+ * Stores task text and remaining pomodoro count
+ */
 function saveTasks() {
   try {
     if (typeof localStorage === "undefined") return;
@@ -57,6 +74,10 @@ function saveTasks() {
   }
 }
 
+/**
+ * Loads saved tasks from localStorage
+ * Recreates task list with saved text and pomodoro counts
+ */
 function loadTasks() {
   try {
     if (typeof localStorage === "undefined") return;

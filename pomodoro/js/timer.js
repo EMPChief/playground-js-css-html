@@ -1,3 +1,8 @@
+/**
+ * Pomodoro timer implementation
+ * Manages work sessions (25 min), breaks (5 min), and long breaks (15 min)
+ */
+
 const startElement = document.getElementById("start-button");
 const resetElement = document.getElementById("reset-button");
 const timerElement = document.getElementById("timer");
@@ -16,6 +21,9 @@ if (resetElement) {
   resetElement.addEventListener("click", resetTimer);
 }
 
+/**
+ * Toggles timer between running and paused states
+ */
 function toggleTimer() {
   if (isRunning) {
     pauseTimer();
@@ -24,6 +32,10 @@ function toggleTimer() {
   }
 }
 
+/**
+ * Starts the timer countdown
+ * Updates display every second and saves state to localStorage
+ */
 function startTimer() {
   if (isRunning) return;
 
@@ -43,6 +55,9 @@ function startTimer() {
   }, 1000);
 }
 
+/**
+ * Pauses the timer and updates button state
+ */
 function pauseTimer() {
   isRunning = false;
   clearInterval(interval);
@@ -51,6 +66,10 @@ function pauseTimer() {
   startElement.classList.add("pomodoro-btn-start");
 }
 
+/**
+ * Resets timer to initial work phase state
+ * Clears pomodoro count and updates display
+ */
 function resetTimer() {
   pauseTimer();
   currentPhase = "Work";
@@ -62,6 +81,10 @@ function resetTimer() {
   saveTimerState();
 }
 
+/**
+ * Updates the timer display with current time
+ * Formats time as MM:SS
+ */
 function updateTimerDisplay() {
   try {
     const minutes = Math.floor(timeLeft / 60);
@@ -74,6 +97,12 @@ function updateTimerDisplay() {
   }
 }
 
+/**
+ * Switches between work, break, and long break phases
+ * After work: decrements first task pomodoro count
+ * Every 4th pomodoro: triggers long break (15 min)
+ * Otherwise: triggers short break (5 min)
+ */
 function switchPhase() {
   clearInterval(interval);
 
