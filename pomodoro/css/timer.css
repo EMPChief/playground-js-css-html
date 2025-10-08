@@ -24,6 +24,12 @@
   background-clip: text;
   text-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
   letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pomodoro-title:hover {
+  transform: scale(1.05);
 }
 
 /* Phase Badge */
