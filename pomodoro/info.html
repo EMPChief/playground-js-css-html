@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Technique Info</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="./assets/logo/site.webmanifest">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        .info-container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            width: 90%;
+            padding: 50px 40px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 20px auto;
+        }
+        
+        .info-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .info-header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            letter-spacing: 1px;
+        }
+        
+        .info-header p {
+            font-size: 18px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .info-section {
+            margin-bottom: 35px;
+        }
+        
+        .info-section h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .info-section h2 i {
+            font-size: 24px;
+        }
+        
+        .info-section p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 15px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .info-section ol,
+        .info-section ul {
+            margin-left: 25px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .info-section li {
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .info-section ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+        
+        .info-section ul li::before {
+            content: "✓";
+            color: #38ef7d;
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature-card i {
+            font-size: 35px;
+            margin-bottom: 12px;
+            color: #38ef7d;
+        }
+        
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .feature-card p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.5;
+        }
+        
+        .info-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .info-container {
+                padding: 30px 20px;
+            }
+            
+            .info-header h1 {
+                font-size: 36px;
+            }
+            
+            .info-section h2 {
+                font-size: 24px;
+            }
+            
+            .info-section p,
+            .info-section ol,
+            .info-section ul {
+                font-size: 15px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="pomodoro-body">
+    <!-- Back Navigation Link -->
+    <a class="pomodoro-back-link" href="index.html">
+        <i class="fas fa-arrow-left"></i> Back
+    </a>
+    
+    <div class="info-container">
+        <header class="info-header">
+            <h1><i class="fas fa-tomato"></i> Pomodoro Technique</h1>
+            <p>Master your time, boost your productivity</p>
+        </header>
+        
+        <main>
+            <section class="info-section">
+                <h2><i class="fas fa-info-circle"></i> What is the Pomodoro Technique?</h2>
+                <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. It uses a timer to break work into intervals, traditionally 25 minutes in length, separated by short breaks. After every 4 work sessions, a longer break is taken to help recharge. Each interval is known as a "pomodoro", from the Italian word for "tomato", after the tomato-shaped kitchen timer that Cirillo used as a university student.</p>
+            </section>
+            
+            <section class="info-section">
+                <h2><i class="fas fa-cogs"></i> How This Timer Works</h2>
+                <ol>
+                    <li>Add your tasks with the number of Pomodoros needed (supports decimals like 0.5)</li>
+                    <li>Click Start to begin a 25-minute work session</li>
+                    <li>The first task automatically decrements by 0.1 every 2.5 minutes</li>
+                    <li>An alarm sounds when the session ends</li>
+                    <li>Take a 5-minute break (or 15 minutes after every 4th Pomodoro)</li>
+                    <li>Choose Auto mode for automatic progression or Manual to control each phase</li>
+                </ol>
+            </section>
+            
+            <section class="info-section">
+                <h2><i class="fas fa-star"></i> Benefits</h2>
+                <ul>
+                    <li>Improves focus and concentration</li>
+                    <li>Reduces mental fatigue</li>
+                    <li>Enhances productivity</li>
+                    <li>Helps manage distractions</li>
+                    <li>Increases motivation</li>
+                    <li>Better work-life balance</li>
+                </ul>
+            </section>
+            
+            <section class="info-section">
+                <h2><i class="fas fa-lightbulb"></i> Using the Timer</h2>
+                <ul>
+                    <li>Use decimal Pomodoros for short tasks (0.1 = 2.5 minutes, 0.5 = 12.5 minutes)</li>
+                    <li>Your timer state and tasks are automatically saved in localStorage</li>
+                    <li>Toggle sound notifications with the speaker button</li>
+                    <li>Switch between Auto and Manual mode based on your workflow</li>
+                    <li>Tasks automatically delete when they reach 0 Pomodoros</li>
+                    <li>Use Reset to clear the timer and start fresh</li>
+                </ul>
+            </section>
+            
+            <section class="info-section">
+                <h2><i class="fas fa-rocket"></i> Timer Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-tasks"></i>
+                        <h3>Fractional Tasks</h3>
+                        <p>Add tasks with decimal Pomodoros (0.1 increments). Auto-decrements every 2.5 minutes</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-forward"></i>
+                        <h3>Auto/Manual Mode</h3>
+                        <p>Auto mode starts next phase automatically. Manual waits for your input</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-volume-up"></i>
+                        <h3>Random Alarms</h3>
+                        <p>8 different alarm sounds play randomly when phases complete</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-save"></i>
+                        <h3>localStorage Saving</h3>
+                        <p>Timer state, tasks, and preferences saved automatically</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-quote-left"></i>
+                        <h3>Rotating Quotes</h3>
+                        <p>Productivity quotes rotate every 1-5 minutes for motivation</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>XSS Protection</h3>
+                        <p>Input sanitization keeps your tasks safe from malicious code</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="info-footer">
+            <p><i class="fas fa-clock"></i> &copy; 2025 Pomodoro Timer | Built for focused productivity</p>
+        </footer>
+    </div>
+</body>
+</html>
