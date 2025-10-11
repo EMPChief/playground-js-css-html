@@ -5,283 +5,513 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Technique Info</title>
-    
+
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/logo/favicon-16x16.png">
     <link rel="manifest" href="./assets/logo/site.webmanifest">
-    
+
     <!-- Google Fonts - Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/base.css">
-    <style>
-        .info-container {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-            width: 90%;
-            padding: 50px 40px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            border-radius: 30px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), inset 0 0 0 1px rgba(255, 255, 255, 0.18);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            margin: 20px auto;
-        }
-        
-        .info-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .info-header h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-            letter-spacing: 1px;
-        }
-        
-        .info-header p {
-            font-size: 18px;
-            color: white;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .info-section {
-            margin-bottom: 35px;
-        }
-        
-        .info-section h2 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: white;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .info-section h2 i {
-            font-size: 24px;
-        }
-        
-        .info-section p {
-            font-size: 16px;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 15px;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-        }
-        
-        .info-section ol,
-        .info-section ul {
-            margin-left: 25px;
-            font-size: 16px;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.95);
-        }
-        
-        .info-section li {
-            margin-bottom: 8px;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-        }
-        
-        .info-section ul {
-            list-style-type: none;
-            margin-left: 0;
-        }
-        
-        .info-section ul li::before {
-            content: "✓";
-            color: #38ef7d;
-            font-weight: bold;
-            font-size: 18px;
-            margin-right: 10px;
-        }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .feature-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        
-        .feature-card i {
-            font-size: 35px;
-            margin-bottom: 12px;
-            color: #38ef7d;
-        }
-        
-        .feature-card h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-        
-        .feature-card p {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.85);
-            line-height: 1.5;
-        }
-        
-        .info-footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 14px;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-        }
-        
-        @media (max-width: 768px) {
-            .info-container {
-                padding: 30px 20px;
-            }
-            
-            .info-header h1 {
-                font-size: 36px;
-            }
-            
-            .info-section h2 {
-                font-size: 24px;
-            }
-            
-            .info-section p,
-            .info-section ol,
-            .info-section ul {
-                font-size: 15px;
-            }
-            
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/info.css">
 </head>
 <body class="pomodoro-body">
     <!-- Back Navigation Link -->
     <a class="pomodoro-back-link" href="index.html">
-        <i class="fas fa-arrow-left"></i> Back
+        <i class="fas fa-arrow-left"></i> Back to Timer
     </a>
-    
+
     <div class="info-container">
         <header class="info-header">
-            <h1><i class="fas fa-tomato"></i> Pomodoro Technique</h1>
-            <p>Master your time, boost your productivity</p>
+            <h1><i class="fas fa-tomato"></i> Pomodoro Timer Guide</h1>
+            <p>Master your time, boost your productivity with our professional timer</p>
         </header>
-        
+
         <main>
+            <!-- What is Pomodoro -->
             <section class="info-section">
                 <h2><i class="fas fa-info-circle"></i> What is the Pomodoro Technique?</h2>
-                <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. It uses a timer to break work into intervals, traditionally 25 minutes in length, separated by short breaks. After every 4 work sessions, a longer break is taken to help recharge. Each interval is known as a "pomodoro", from the Italian word for "tomato", after the tomato-shaped kitchen timer that Cirillo used as a university student.</p>
+                <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. It uses a timer to break work into intervals, traditionally 25 minutes in length, separated by short breaks. After every 4 work sessions, a longer break is taken to help recharge.</p>
+                <p>Each interval is known as a "pomodoro", from the Italian word for "tomato", after the tomato-shaped kitchen timer that Cirillo used as a university student.</p>
+
+                <div class="info-highlight">
+                    <h3><i class="fas fa-clock"></i> The Classic Method</h3>
+                    <ol>
+                        <li><strong>Choose a task</strong> you want to work on</li>
+                        <li><strong>Set timer to 25 minutes</strong> (1 pomodoro)</li>
+                        <li><strong>Work</strong> with full focus until timer rings</li>
+                        <li><strong>Take a 5-minute break</strong> to rest</li>
+                        <li><strong>After 4 pomodoros</strong>, take a longer 15-minute break</li>
+                        <li><strong>Repeat</strong> the process</li>
+                    </ol>
+                </div>
             </section>
-            
-            <section class="info-section">
-                <h2><i class="fas fa-cogs"></i> How This Timer Works</h2>
-                <ol>
-                    <li>Add your tasks with the number of Pomodoros needed (supports decimals like 0.5)</li>
-                    <li>Click Start to begin a 25-minute work session</li>
-                    <li>The first task automatically decrements by 0.1 every 2.5 minutes</li>
-                    <li>An alarm sounds when the session ends</li>
-                    <li>Take a 5-minute break (or 15 minutes after every 4th Pomodoro)</li>
-                    <li>Choose Auto mode for automatic progression or Manual to control each phase</li>
-                </ol>
-            </section>
-            
+
+            <!-- Benefits -->
             <section class="info-section">
                 <h2><i class="fas fa-star"></i> Benefits</h2>
-                <ul>
-                    <li>Improves focus and concentration</li>
-                    <li>Reduces mental fatigue</li>
-                    <li>Enhances productivity</li>
-                    <li>Helps manage distractions</li>
-                    <li>Increases motivation</li>
-                    <li>Better work-life balance</li>
-                </ul>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-brain"></i>
+                        <h3>Improves Focus</h3>
+                        <p>25-minute intervals help maintain deep concentration</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-battery-three-quarters"></i>
+                        <h3>Reduces Fatigue</h3>
+                        <p>Regular breaks prevent mental exhaustion</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Boosts Productivity</h3>
+                        <p>Time boxing creates urgency and efficiency</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Manages Distractions</h3>
+                        <p>Dedicated work periods minimize interruptions</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-fire"></i>
+                        <h3>Increases Motivation</h3>
+                        <p>Visible progress keeps you engaged</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>Better Balance</h3>
+                        <p>Structured breaks improve work-life harmony</p>
+                    </div>
+                </div>
             </section>
-            
-            <section class="info-section">
-                <h2><i class="fas fa-lightbulb"></i> Using the Timer</h2>
-                <ul>
-                    <li>Use decimal Pomodoros for short tasks (0.1 = 2.5 minutes, 0.5 = 12.5 minutes)</li>
-                    <li>Your timer state and tasks are automatically saved in localStorage</li>
-                    <li>Toggle sound notifications with the speaker button</li>
-                    <li>Switch between Auto and Manual mode based on your workflow</li>
-                    <li>Tasks automatically delete when they reach 0 Pomodoros</li>
-                    <li>Use Reset to clear the timer and start fresh</li>
-                </ul>
-            </section>
-            
+
+            <!-- Timer Features -->
             <section class="info-section">
                 <h2><i class="fas fa-rocket"></i> Timer Features</h2>
                 <div class="feature-grid">
                     <div class="feature-card">
-                        <i class="fas fa-tasks"></i>
-                        <h3>Fractional Tasks</h3>
-                        <p>Add tasks with decimal Pomodoros (0.1 increments). Auto-decrements every 2.5 minutes</p>
+                        <i class="fas fa-circle-notch"></i>
+                        <h3>Circular Progress</h3>
+                        <p>Beautiful SVG-based visual progress indicator shows time remaining at a glance</p>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-forward"></i>
-                        <h3>Auto/Manual Mode</h3>
-                        <p>Auto mode starts next phase automatically. Manual waits for your input</p>
+                        <h3>Auto/Manual Modes</h3>
+                        <p>Auto mode starts next phase automatically. Manual mode waits for your input</p>
                     </div>
                     <div class="feature-card">
-                        <i class="fas fa-volume-up"></i>
-                        <h3>Random Alarms</h3>
-                        <p>8 different alarm sounds play randomly when phases complete</p>
+                        <i class="fas fa-sliders-h"></i>
+                        <h3>Custom Durations</h3>
+                        <p>Adjust work, short break, and long break durations in settings panel</p>
                     </div>
                     <div class="feature-card">
-                        <i class="fas fa-save"></i>
-                        <h3>localStorage Saving</h3>
-                        <p>Timer state, tasks, and preferences saved automatically</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-quote-left"></i>
-                        <h3>Rotating Quotes</h3>
-                        <p>Productivity quotes rotate every 1-5 minutes for motivation</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>XSS Protection</h3>
-                        <p>Input sanitization keeps your tasks safe from malicious code</p>
+                        <i class="fas fa-window-maximize"></i>
+                        <h3>Tab Title Updates</h3>
+                        <p>See remaining time in browser tab even when multitasking</p>
                     </div>
                 </div>
             </section>
+
+            <!-- Task Management -->
+            <section class="info-section">
+                <h2><i class="fas fa-tasks"></i> Advanced Task Management</h2>
+                <p>Our timer includes a powerful task management system to help you organize and track your work:</p>
+
+                <div class="info-highlight">
+                    <h3><i class="fas fa-plus-circle"></i> Adding Tasks</h3>
+                    <ul>
+                        <li><strong>Modal Interface:</strong> Click "+ Add Task" or press <kbd>n</kbd> to open the task modal</li>
+                        <li><strong>Task Details:</strong> Enter task name, estimated pomodoros, category, and optional notes</li>
+                        <li><strong>Fractional Support:</strong> Use decimals like 0.5 (12.5 min) or 0.1 (2.5 min) for short tasks</li>
+                        <li><strong>Categories:</strong> Choose from Work, Personal, Study, Health, Creative, or Other</li>
+                    </ul>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-palette"></i>
+                        <h3>Task Categories</h3>
+                        <p>Color-coded categories (Work, Personal, Study, Health, Creative, Other) help organize tasks</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-sticky-note"></i>
+                        <h3>Task Notes</h3>
+                        <p>Add detailed notes to tasks for context and reminders</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-arrows-alt"></i>
+                        <h3>Drag & Drop</h3>
+                        <p>Reorder tasks by dragging them to prioritize your work</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-edit"></i>
+                        <h3>Edit Anytime</h3>
+                        <p>Click edit icon to modify task details whenever needed</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-undo"></i>
+                        <h3>Undo Delete</h3>
+                        <p>5-second window to undo accidental task deletions</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-broom"></i>
+                        <h3>Bulk Actions</h3>
+                        <p>Clear completed tasks or clear all with one click</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-minus-circle"></i>
+                        <h3>Auto-Decrement</h3>
+                        <p>First task decrements by 0.1 every 2.5 minutes during work sessions</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-confetti"></i>
+                        <h3>Celebrations</h3>
+                        <p>Confetti animation when you complete a task!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Statistics -->
+            <section class="info-section">
+                <h2><i class="fas fa-chart-bar"></i> Statistics & Analytics</h2>
+                <p>Track your productivity with comprehensive statistics:</p>
+
+                <ul>
+                    <li><strong>Daily Stats:</strong> See today's pomodoros, work time, and tasks completed</li>
+                    <li><strong>Weekly Stats:</strong> Track your productivity over the past 7 days</li>
+                    <li><strong>All-Time Stats:</strong> View your total accomplishments since you started</li>
+                    <li><strong>Export Data:</strong> Download all your data as JSON for backup</li>
+                    <li><strong>Import Data:</strong> Restore previously exported data</li>
+                </ul>
+
+                <div class="info-highlight">
+                    <p><strong>Access Statistics:</strong> Click the chart icon <i class="fas fa-chart-line"></i> in the toolbar or press <kbd>s</kbd></p>
+                </div>
+            </section>
+
+            <!-- Keyboard Shortcuts -->
+            <section class="info-section">
+                <h2><i class="fas fa-keyboard"></i> Keyboard Shortcuts</h2>
+                <p>Control everything with your keyboard for maximum efficiency:</p>
+
+                <table class="shortcuts-table">
+                    <thead>
+                        <tr>
+                            <th>Key</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><kbd>Space</kbd></td>
+                            <td>Start/Pause Timer</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>r</kbd></td>
+                            <td>Reset Timer</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>a</kbd></td>
+                            <td>Toggle Auto/Manual Mode</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>m</kbd></td>
+                            <td>Toggle Sound Mute</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>n</kbd></td>
+                            <td>Add New Task</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>s</kbd></td>
+                            <td>View Statistics</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>k</kbd> or <kbd>?</kbd></td>
+                            <td>Show Keyboard Shortcuts</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Escape</kbd></td>
+                            <td>Close Modal</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-highlight">
+                    <p><strong>Tip:</strong> Press <kbd>?</kbd> anytime to see the keyboard shortcuts reference</p>
+                </div>
+            </section>
+
+            <!-- Sounds & Notifications -->
+            <section class="info-section">
+                <h2><i class="fas fa-volume-up"></i> Sounds & Notifications</h2>
+
+                <h3><i class="fas fa-bell"></i> Alarm Sounds</h3>
+                <ul>
+                    <li><strong>8 Random Sounds:</strong> Different alarm sounds play randomly when phases complete</li>
+                    <li><strong>Sound Preview:</strong> Click the speaker icon <i class="fas fa-music"></i> in toolbar to test all sounds</li>
+                    <li><strong>Quick Mute:</strong> Toggle mute with the speaker button in timer or press <kbd>m</kbd></li>
+                    <li><strong>Saved Preference:</strong> Your sound settings persist across sessions</li>
+                </ul>
+
+                <h3><i class="fas fa-bell-on"></i> Browser Notifications</h3>
+                <ul>
+                    <li><strong>Work Complete:</strong> Get notified when work session ends</li>
+                    <li><strong>Break Complete:</strong> Get notified when it's time to work again</li>
+                    <li><strong>Background Support:</strong> Receive notifications even when tab is inactive</li>
+                    <li><strong>Permission Based:</strong> Grant notification permission for the best experience</li>
+                </ul>
+            </section>
+
+            <!-- PWA Support -->
+            <section class="info-section">
+                <h2><i class="fas fa-mobile-alt"></i> PWA - Install as App</h2>
+                <p>This timer is a Progressive Web App (PWA), which means you can install it like a native app:</p>
+
+                <div class="info-highlight">
+                    <h3><i class="fas fa-download"></i> Installation</h3>
+                    <ul>
+                        <li><strong>Desktop (Chrome/Edge):</strong> Look for install icon in address bar or browser menu</li>
+                        <li><strong>Mobile (iOS/Android):</strong> Tap share button and select "Add to Home Screen"</li>
+                        <li><strong>Benefits:</strong> Standalone window, offline access, faster loading</li>
+                    </ul>
+                </div>
+
+                <h3><i class="fas fa-wifi-slash"></i> Offline Functionality</h3>
+                <p>Once installed, the timer works completely offline thanks to Service Worker caching. Use it anywhere, anytime!</p>
+            </section>
+
+            <!-- Usage Tips -->
+            <section class="info-section">
+                <h2><i class="fas fa-lightbulb"></i> Tips for Success</h2>
+
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-ban"></i>
+                        <h3>Eliminate Distractions</h3>
+                        <p>Close unnecessary tabs, silence phone, and inform others you're in focus mode before starting</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-pencil-alt"></i>
+                        <h3>Plan Your Tasks</h3>
+                        <p>Add all tasks at start of day with estimated pomodoros. This gives you a clear roadmap</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-coffee"></i>
+                        <h3>Take Breaks Seriously</h3>
+                        <p>Rest is crucial! Use break suggestions: stretch, hydrate, walk around, breathe</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Track Your Stats</h3>
+                        <p>Review statistics weekly to identify patterns and optimize your productivity</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-adjust"></i>
+                        <h3>Adjust Durations</h3>
+                        <p>Experiment with durations in settings to find what works best for your focus span</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-palette"></i>
+                        <h3>Use Categories</h3>
+                        <p>Categorize tasks to ensure balance between work, personal, health, and creative activities</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Add Task Notes</h3>
+                        <p>Use notes field to capture context, requirements, or ideas related to each task</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Use Decimal Pomodoros</h3>
+                        <p>For quick tasks, use 0.1 (2.5 min), 0.5 (12.5 min) to match realistic time needs</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Data & Privacy -->
+            <section class="info-section">
+                <h2><i class="fas fa-shield-alt"></i> Data & Privacy</h2>
+                <ul>
+                    <li><strong>Local Storage Only:</strong> All your data stays on your device in browser localStorage</li>
+                    <li><strong>No Cloud Sync:</strong> Nothing is sent to external servers</li>
+                    <li><strong>No Tracking:</strong> No analytics, no cookies, no tracking scripts</li>
+                    <li><strong>XSS Protection:</strong> All user inputs are sanitized to prevent code injection</li>
+                    <li><strong>Export Control:</strong> You control your data - export and backup anytime</li>
+                </ul>
+            </section>
+
+            <!-- Browser Support -->
+            <section class="info-section">
+                <h2><i class="fas fa-browser"></i> Browser Support</h2>
+                <p>Works best on modern browsers:</p>
+                <ul>
+                    <li><strong>Chrome/Chromium</strong> - Full support (recommended)</li>
+                    <li><strong>Firefox</strong> - Full support</li>
+                    <li><strong>Safari</strong> - Full support</li>
+                    <li><strong>Edge</strong> - Full support</li>
+                </ul>
+
+                <p><strong>Requirements:</strong> ES6 module support, localStorage, HTML5 Audio</p>
+                <p><strong>Optional:</strong> Service Workers (PWA), Notifications API, Drag and Drop API</p>
+            </section>
+
+            <!-- Testing -->
+            <section class="info-section">
+                <h2><i class="fas fa-vial"></i> Automated Testing</h2>
+                <p>This timer includes comprehensive automated tests to ensure quality:</p>
+
+                <h3><i class="fas fa-check-circle"></i> Unit Tests (Vitest)</h3>
+                <ul>
+                    <li>Tests for utility functions (time formatting, XSS protection, etc.)</li>
+                    <li>Tests for storage operations (save/load data)</li>
+                </ul>
+
+                <h3><i class="fas fa-robot"></i> E2E Tests (Playwright)</h3>
+                <ul>
+                    <li>Timer functionality (start, pause, reset)</li>
+                    <li>Task management (add, edit, delete, modal interactions)</li>
+                    <li>UI components (toolbar, modals, keyboard shortcuts)</li>
+                    <li>Responsive design testing</li>
+                    <li>Cross-browser testing (Chrome, Firefox, Safari)</li>
+                </ul>
+
+                <p><strong>Run Tests:</strong> <code>npm test</code> (unit) or <code>npm run test:e2e</code> (E2E)</p>
+            </section>
+
+            <!-- Getting Started -->
+            <section class="info-section">
+                <h2><i class="fas fa-play-circle"></i> Getting Started</h2>
+
+                <ol class="getting-started-list">
+                    <li>
+                        <strong>Add Your Tasks</strong>
+                        <p>Click "+ Add Task" or press <kbd>n</kbd> to add all your tasks for the day with estimated pomodoros</p>
+                    </li>
+                    <li>
+                        <strong>Enable Notifications</strong>
+                        <p>Allow browser notifications when prompted so you don't miss phase transitions</p>
+                    </li>
+                    <li>
+                        <strong>Choose Your Mode</strong>
+                        <p>Select Auto mode for automatic progression or Manual if you prefer control</p>
+                    </li>
+                    <li>
+                        <strong>Start Working</strong>
+                        <p>Click "Start" or press <kbd>Space</kbd> to begin your first 25-minute work session</p>
+                    </li>
+                    <li>
+                        <strong>Focus Deeply</strong>
+                        <p>Work with full concentration on your first task until the timer rings</p>
+                    </li>
+                    <li>
+                        <strong>Take Breaks</strong>
+                        <p>When break starts, step away from your desk. Use the break suggestions for ideas</p>
+                    </li>
+                    <li>
+                        <strong>Track Progress</strong>
+                        <p>Check statistics regularly by pressing <kbd>s</kbd> to see your productivity trends</p>
+                    </li>
+                    <li>
+                        <strong>Install as App</strong>
+                        <p>For the best experience, install as a PWA for offline access and standalone window</p>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Troubleshooting -->
+            <section class="info-section">
+                <h2><i class="fas fa-wrench"></i> Troubleshooting</h2>
+
+                <div class="troubleshooting-grid">
+                    <div class="trouble-item">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Timer not starting?</h3>
+                        <ul>
+                            <li>Check browser console for errors</li>
+                            <li>Ensure JavaScript is enabled</li>
+                            <li>Try hard refresh (Ctrl+Shift+R)</li>
+                        </ul>
+                    </div>
+                    <div class="trouble-item">
+                        <h3><i class="fas fa-save"></i> Tasks not saving?</h3>
+                        <ul>
+                            <li>Check if localStorage is enabled</li>
+                            <li>Check browser privacy settings</li>
+                            <li>Try a different browser</li>
+                        </ul>
+                    </div>
+                    <div class="trouble-item">
+                        <h3><i class="fas fa-volume-mute"></i> Sounds not playing?</h3>
+                        <ul>
+                            <li>Check if sound is muted in timer</li>
+                            <li>Check browser audio permissions</li>
+                            <li>Ensure system volume is up</li>
+                        </ul>
+                    </div>
+                    <div class="trouble-item">
+                        <h3><i class="fas fa-bell-slash"></i> Notifications not showing?</h3>
+                        <ul>
+                            <li>Grant notification permission</li>
+                            <li>Check browser notification settings</li>
+                            <li>Check OS notification settings</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customization -->
+            <section class="info-section">
+                <h2><i class="fas fa-cog"></i> Customization</h2>
+                <p>Customize the timer to fit your workflow:</p>
+
+                <h3><i class="fas fa-sliders-h"></i> Via Settings Panel</h3>
+                <ul>
+                    <li>Click gear icon <i class="fas fa-cog"></i> in toolbar to open settings</li>
+                    <li>Adjust work duration (default: 25 minutes)</li>
+                    <li>Adjust short break duration (default: 5 minutes)</li>
+                    <li>Adjust long break duration (default: 15 minutes)</li>
+                    <li>Changes apply immediately for current session</li>
+                </ul>
+
+                <h3><i class="fas fa-code"></i> Via Code</h3>
+                <p>Developers can modify <code>js/config.js</code> for permanent changes:</p>
+                <ul>
+                    <li>Timer durations and intervals</li>
+                    <li>Task categories and colors</li>
+                    <li>Phase types and configurations</li>
+                    <li>UI constants and settings</li>
+                </ul>
+            </section>
+
+            <!-- About -->
+            <section class="info-section">
+                <h2><i class="fas fa-heart"></i> About This Timer</h2>
+                <p>This is a professional, feature-rich Pomodoro timer built with modern web technologies:</p>
+                <ul>
+                    <li><strong>Vanilla JavaScript:</strong> No frameworks, pure ES6+ modules</li>
+                    <li><strong>Progressive Web App:</strong> Installable and works offline</li>
+                    <li><strong>Fully Tested:</strong> Comprehensive unit and E2E test coverage</li>
+                    <li><strong>Open Source:</strong> Free to use and modify</li>
+                    <li><strong>Privacy Focused:</strong> All data stays on your device</li>
+                    <li><strong>Accessible:</strong> Full keyboard navigation and ARIA labels</li>
+                </ul>
+
+                <div class="info-highlight">
+                    <p><strong>Credits:</strong> Pomodoro Technique by Francesco Cirillo | Icons by Font Awesome | Fonts by Google Fonts</p>
+                </div>
+            </section>
         </main>
-        
+
         <footer class="info-footer">
             <p><i class="fas fa-clock"></i> &copy; 2025 Pomodoro Timer | Built for focused productivity</p>
+            <p><a href="index.html" style="color: var(--text-light); text-decoration: none;"><i class="fas fa-arrow-left"></i> Back to Timer</a></p>
         </footer>
     </div>
 </body>

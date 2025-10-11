@@ -2,10 +2,10 @@
 .task-container {
   position: relative;
   z-index: 1;
-  max-width: 500px;
+  max-width: 600px;
   width: 90%;
   margin-top: 30px;
-  padding: 40px 35px;
+  padding: 30px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);
   border-radius: 30px;
@@ -13,24 +13,63 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .task-title {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin: 0;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
   letter-spacing: 1px;
+}
+
+/* When task title is standalone (not in header) */
+.task-container > .task-title {
   text-align: center;
+  margin-bottom: 25px;
 }
 
 #task-form {
-  display: flex;
+  display: none; /* Hidden by default, shown in modal */
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 25px;
+}
+
+/* Add Task Button (to open modal) */
+.add-task-trigger {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-task-trigger:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #63408a 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.add-task-trigger:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
 }
 
 .task-form-inputs {
@@ -102,14 +141,20 @@
 }
 
 /* Task Lists */
-.task-container > ul,
 .task-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 25px 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Hide the old ul */
+.task-container > ul:first-of-type {
+  display: none;
 }
 
 .tasks,
@@ -124,9 +169,8 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .task-info {
@@ -160,4 +204,456 @@
 .delete-icon:hover {
   color: #f5576c;
   transform: scale(1.2);
+}
+
+/* Enhanced Task Features */
+.task-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.task-action-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.task-action-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.task-count-badge {
+  background: rgba(56, 239, 125, 0.3);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.category-badge {
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.category-badge i {
+  font-size: 12px;
+}
+
+.no-tasks {
+  text-align: center;
+  padding: 30px;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+/* Task Form Enhancements */
+#task-category,
+#task-notes {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  color: white;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+#task-category {
+  cursor: pointer;
+}
+
+#task-category option {
+  background: rgba(102, 126, 234, 0.95);
+  color: white;
+  padding: 10px;
+}
+
+#task-notes {
+  resize: vertical;
+  min-height: 60px;
+}
+
+#task-notes::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#task-category:focus,
+#task-notes:focus {
+  outline: none;
+  border-color: rgba(102, 126, 234, 0.8);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+}
+
+/* Task notes display */
+.task-notes-display {
+  margin-top: 8px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* Bulk actions */
+.task-bulk-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.task-bulk-btn {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.task-bulk-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Drag and drop styling */
+.task-list li.dragging {
+  opacity: 0.5;
+  cursor: move;
+}
+
+.task-list li[draggable="true"] {
+  cursor: move;
+}
+
+.task-list li[draggable="true"]:hover {
+  cursor: grab;
+}
+
+.task-list li[draggable="true"]:active {
+  cursor: grabbing;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .task-container {
+    width: 95%;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .task-title {
+    font-size: 26px;
+  }
+
+  .task-header {
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .add-task-trigger {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  .add-task-trigger i {
+    font-size: 14px;
+  }
+
+  .task-list {
+    gap: 10px;
+    max-height: 400px;
+  }
+
+  .tasks,
+  .task-list li {
+    padding: 14px 16px;
+    font-size: 15px;
+    gap: 8px;
+  }
+
+  .task-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .task-info {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .task-text {
+    white-space: normal;
+    word-wrap: break-word;
+    flex-basis: 100%;
+  }
+
+  .task-count-badge {
+    font-size: 13px;
+    padding: 3px 10px;
+  }
+
+  .category-badge {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .task-actions {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+
+  .task-action-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+    /* Larger touch targets for mobile */
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .task-action-btn i {
+    font-size: 16px;
+  }
+
+  .task-notes-display {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .task-bulk-actions {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .task-bulk-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+    /* Larger touch targets */
+    min-height: 44px;
+  }
+
+  /* Better scrolling on mobile */
+  .task-list::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .task-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+
+  .task-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-container {
+    width: 98%;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 20px;
+  }
+
+  .task-title {
+    font-size: 22px;
+  }
+
+  .task-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .add-task-trigger {
+    font-size: 15px;
+    padding: 14px 20px;
+    width: 100%;
+    justify-content: center;
+    /* Even larger touch target on small phones */
+    min-height: 48px;
+  }
+
+  .task-list {
+    gap: 8px;
+    max-height: 350px;
+  }
+
+  .tasks,
+  .task-list li {
+    padding: 12px 14px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .task-main {
+    gap: 8px;
+  }
+
+  .task-info {
+    gap: 6px;
+  }
+
+  .task-text {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .task-count-badge {
+    font-size: 12px;
+    padding: 2px 8px;
+  }
+
+  .category-badge {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  .category-badge i {
+    font-size: 10px;
+  }
+
+  .task-actions {
+    gap: 8px;
+  }
+
+  .task-action-btn {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    /* Optimal touch target size */
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  .task-action-btn i {
+    font-size: 18px;
+  }
+
+  .task-notes-display {
+    font-size: 12px;
+    padding: 8px;
+    margin-top: 6px;
+  }
+
+  .task-bulk-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .task-bulk-btn {
+    font-size: 14px;
+    padding: 12px 20px;
+    width: 100%;
+    /* Full-width buttons on small screens */
+    min-height: 48px;
+  }
+
+  .no-tasks {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  /* Improve drag handle visibility on mobile */
+  .task-list li[draggable="true"]::before {
+    content: "⋮⋮";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 18px;
+    letter-spacing: -2px;
+  }
+
+  .task-list li[draggable="true"] {
+    padding-left: 25px;
+    position: relative;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .task-list {
+    max-height: 250px;
+  }
+
+  .task-container {
+    margin-top: 15px;
+  }
+}
+
+/* Extra small devices (very small phones) */
+@media (max-width: 360px) {
+  .task-container {
+    padding: 12px;
+  }
+
+  .task-title {
+    font-size: 20px;
+  }
+
+  .add-task-trigger {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .tasks,
+  .task-list li {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .task-text {
+    font-size: 14px;
+  }
+
+  .task-action-btn {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+  }
 }
