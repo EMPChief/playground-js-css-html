@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="css/tasks.css" />
     <link rel="stylesheet" href="css/quote.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/features.css" />
 
     <title>Pomodoro Timer</title>
 
@@ -67,10 +68,23 @@
         <span class="pomodoro-phase-badge" id="phase-indicator">Working</span>
       </div>
 
-      <!-- Timer Display -->
+      <!-- Timer Display with Circular Progress -->
       <div class="pomodoro-timer-display">
+        <svg class="progress-circle-container" width="280" height="280">
+          <defs>
+            <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle class="progress-circle-bg" cx="140" cy="140" r="130" />
+          <circle id="progress-circle-fill" class="progress-circle-fill" cx="140" cy="140" r="130" />
+        </svg>
         <p class="pomodoro-timer-text" id="timer">25:00</p>
       </div>
+
+      <!-- Break Suggestion Container -->
+      <div id="break-suggestion"></div>
 
       <!-- Control Buttons -->
       <div class="pomodoro-button-group">
@@ -89,30 +103,24 @@
       </div>
     </div>
 
-    <!-- Contaienr for list to input task and how many pomodoro you want to use on it-->
+    <!-- Task Container -->
     <div class="task-container">
-      <h2 class="task-title">Task list</h2>
-      <ul></ul>
-      <h2 class="task-title">Add Task</h2>
-      <form id="task-form">
-        <div class="task-form-inputs">
-          <input
-            type="text"
-            id="task-input"
-            placeholder="Enter your task"
-            required
-          />
-          <input
-            type="number"
-            id="pomodoro-count"
-            placeholder="Number of Pomodoros"
-            min="0.1"
-            step="0.1"
-            required
-          />
-        </div>
-        <button type="submit" class="add-task-button">Add Task</button>
+      <div class="task-header" style="display: flex !important; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2 class="task-title" style="margin: 0;">Tasks</h2>
+        <button id="add-task-btn" class="add-task-trigger" style="display: inline-flex !important; opacity: 1 !important; visibility: visible !important;">
+          <i class="fas fa-plus"></i> Add Task
+        </button>
+      </div>
+
+      <!-- Hidden form (kept for compatibility, modal will be used) -->
+      <form id="task-form" style="display: none;">
+        <input type="text" id="task-input" />
+        <input type="number" id="pomodoro-count" />
+        <select id="task-category"></select>
+        <textarea id="task-notes"></textarea>
       </form>
+
+      <!-- Task List -->
       <ul id="task-list" class="task-list"></ul>
     </div>
 
@@ -127,11 +135,7 @@
       </p>
     </div>
 
-    <!-- JavaScript -->
-    <script src="js/sounds.js"></script>
-    <script src="js/tasks.js"></script>
-    <script src="js/storage.js"></script>
-    <script src="js/timer.js"></script>
-    <script src="js/quotes.js"></script>
+    <!-- JavaScript - ES6 Modules -->
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>
